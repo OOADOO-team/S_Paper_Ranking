@@ -24,6 +24,7 @@ class PaperBean:
     @property
     def title(self):
         return self._title
+
     @title.setter
     def title(self,name):
         self._title = name
@@ -39,18 +40,22 @@ class PaperBean:
         else:
             self.authors += ',' + authors
 
-    def set_public_in(self, public_in):
-        self.public_in = public_in
+    @property
+    def references(self):
+        return self._references
 
+    @property
+    def citations(self):
+        return self._citations
 
+    @property
+    def public_in(self):
+        return self._public_in
 
     @property
     def data(self):
         return self._data
 
-    @data.setter
-    def set_data(self, data):
-        self.data = data
     @property
     def url(self):
         return str(self._url)
@@ -71,6 +76,23 @@ class PaperBean:
     def abstract(self, abstract):
         self.abstract = abstract
 
+    @citations.setter
+    def citations(self, citations):
+        self._citations = citations
+
+    @references.setter
+    def references(self,references):
+        self._references = references
+
+    @data.setter
+    def set_data(self, data):
+        self._data = data
+
+    @public_in.setter
+    def public_in(self, public_in):
+        self._public_in = public_in
+
+    # TODO： 该方法存在的必要性？
     def search(self, keywords):
         title = str.upper(self.title)
         abstract = str.upper(self.abstract)
@@ -83,13 +105,3 @@ class PaperBean:
             return True
         return False
 
-    def get_title(self, upper=False):
-        if upper:
-            return str.upper(self.title)
-        return self.title
-
-    def get_references(self):
-        return self.references
-
-    def get_citations(self):
-        return self.citations
