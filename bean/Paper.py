@@ -33,13 +33,6 @@ class PaperBean:
     def authors(self):
         return str(self._authors)
 
-
-    def add_authors(self, authors):
-        if self.authors == '':
-            self.authors = authors
-        else:
-            self.authors += ',' + authors
-
     @property
     def references(self):
         return self._references
@@ -104,4 +97,11 @@ class PaperBean:
         if keywords in title or keywords in abstract:
             return True
         return False
+
+    # TODO： 存在的必要性？
+    def add_authors(self, authors):
+        if self.authors == '':
+            self.authors = authors
+        else:
+            self.authors += ',' + authors
 
