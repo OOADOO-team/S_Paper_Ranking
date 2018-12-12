@@ -39,13 +39,19 @@ my_headers = [
 
 
 proxy_list = [
-    '183.95.80.102:8080',
-    '123.160.31.71:8080',
-    '115.231.128.79:8080',
-    '166.111.77.32:80',
-    '43.240.138.31:8080',
-    '218.201.98.196:3128'
+    '140.207.50.246:51426',
+    '60.191.201.38:45461',
+    '61.145.69.27:42380'
 ]
+
+
+def get_prox():
+    proxy = random.choice(proxy_list)
+    proxies = {
+        # 'https': 'https://' + proxy,
+        'http': 'http://' + proxy,
+    }
+    return proxies
 
 
 def get_Google_scholar(keyword):
@@ -54,7 +60,14 @@ def get_Google_scholar(keyword):
         url = 'https://scholar.google.com/scholar?start=' \
               + str(i * 10) + '&q=' + keyword + '&hl=zh-CN&as_sdt=1,5&as_vis = 1'
         header['User_Agent'] = random.choice(my_headers)
-        html = requests.get(url, headers=header, ip=random.choice(proxy_list))
+        try:
+            html = requests.get(url, headers=header, proxies=get_prox(), timeout=5)
+            if html.text.find('人机验证'):
+                print('你已经凉了！被Google墙了！')
+                return
+        except requests.exceptions.ConnectionError as e:
+            print('Error: ', e.args)
+            return
 
         pattern = re.compile(r'<div class="gs_ri">.*?</div></div></div>')
         m = re.findall(pattern, html.text)
@@ -100,7 +113,7 @@ def get_Google_scholar(keyword):
 
         file.close()
 
-        file = open("Google_scholar" + str(i) + ".txt", "w", encoding='utf-8')
+        file = open("Google_scholar_" + str(i) + ".txt", "w", encoding='utf-8')
         file.write(html.text)
         file.close()
         print('%.2f' % (time.time() - start_time))
@@ -110,7 +123,8 @@ def get_Google_scholar(keyword):
 def get_doc_ieee(doc_link):
     header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
-    doc = doc_link[-9:-1]
+    doc = doc_link[10:-1]
+    print(doc)
     url = 'https://ieeexplore.ieee.org' + doc_link
     html = requests.get(url, header)
     cookies = html.cookies
@@ -161,5 +175,5 @@ def get_doc_ieee(doc_link):
 
 
 if __name__ == '__main__':
-    # get_Google_scholar('carp')
+    get_Google_scholar('carp')
     get_doc_ieee('/document/7037784/')
