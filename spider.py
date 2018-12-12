@@ -57,11 +57,13 @@ def get_prox():
 def get_Google_scholar(keyword):
     start_time = time.time()
     for i in range(0, 1):
+        if i % 5 == 4:
+            time.sleep(10)
         url = 'https://scholar.google.com/scholar?start=' \
               + str(i * 10) + '&q=' + keyword + '&hl=zh-CN&as_sdt=1,5&as_vis = 1'
         header['User_Agent'] = random.choice(my_headers)
         try:
-            html = requests.get(url, headers=header, proxies=get_prox(), timeout=5)
+            html = requests.get(url, headers=header, proxies=get_prox(), timeout=5, COOKIES_ENABLES=False)
             if html.text.find('人机验证'):
                 print('你已经凉了！被Google墙了！')
                 return
