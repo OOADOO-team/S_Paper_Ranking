@@ -1,5 +1,5 @@
-from flask import Flask, redirect, url_for, request, render_template
-from Paper import Paper
+from flask import Flask, request, render_template
+from bean.Paper import Paper
 app = Flask(__name__)
 p1 = Paper(title= "paper1", authors='Wentao1', public_in='Sustech1', data='aaaaaaaa', url='localhost:5000',
                  abstract='this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper 1.', citations=[Paper(),Paper(),Paper()], references=[Paper(),Paper()])
