@@ -1,5 +1,5 @@
 # S_Paper_Ranking
-SUSTech CSE 2018 fall OOAD project
+SUSTech CSE 2018 fall OOAD project  
 Team Member: 宁文涛 林恺 叶梓元 卢致睿
 ## 如何在pycharm中连接github
 
