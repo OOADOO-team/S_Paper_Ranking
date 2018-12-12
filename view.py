@@ -12,7 +12,8 @@ p4 = Paper(title= "paper4", authors='Wentao4', public_in='Sustech4', data='aaaaa
 end_result = {1: p1, 2: p2, 3: p3, 4: p4}
 
 @app.route('/paper/<name>')
-def success(name):
+def success(paperBean):
+    paperBean.
     return 'welcome %s' % name
 
 
@@ -26,6 +27,7 @@ def search():
         keyword = request.form['keyword']
         rank = request.form['ranking']
         return render_template('results.html', name = keyword, ranking= rank, papers = end_result)
+
 
 if __name__ == '__main__':
     app.run(debug = True)
