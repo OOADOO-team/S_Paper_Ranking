@@ -107,20 +107,59 @@ def get_Google_scholar(keyword):
         start_time = time.time()
 
 
-def get_ieee():
+def get_doc_ieee(doc_link):
+    header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
-    url = 'https://ieeexplore.ieee.org/document/8472985'
+    doc = doc_link[-9:-1]
+    url = 'https://ieeexplore.ieee.org' + doc_link
     html = requests.get(url, header)
     cookies = html.cookies
-    url = url + '/references'
-    html = requests.get(url, cookies=cookies)
-    file = open("ieee.txt", "w", encoding='utf-8')
-    file.write(html.text)
-    file.close()
+
+    url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'references'
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_ref.txt", "w", encoding='utf-8')
+        info = re.compile(r'{"order":.*?","title":')
+        m = re.findall(info, html.text)
+        for item in m:
+            name_pattern = re.compile(r'\\".*?\\"')
+            name = re.search(name_pattern, item)
+            temp = name.group()[2:-2]
+            if temp.endswith(','):
+                temp = temp[:-1]
+            file.write(temp + '\r')
+        file.close()
+
+    url = url.replace('references', 'citations')
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_cit.txt", "w", encoding='utf-8')
+        info = re.compile(r'{"order":.*?","links":')
+        m = re.findall(info, html.text)
+        for item in m:
+            name_pattern = re.compile(r'\\".*?\\"')
+            name = re.search(name_pattern, item)
+            temp = name.group()[2:-2]
+            file.write(temp + '\r')
+        file.close()
+
+    url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_authors.txt", "w", encoding='utf-8')
+        info = re.compile(r'"name":".*?","affiliation"')
+        m = re.findall(info, html.text)
+        for item in m:
+            temp = item[8:-15]
+            file.write(temp + '\r')
+        file.close()
+
     print('%.2f' % (time.time() - start_time))
 
 
 if __name__ == '__main__':
-    keyword = 'carp'
-    get_Google_scholar(keyword)
-    # get_ieee()
+    # get_Google_scholar('carp')
+    get_doc_ieee('/document/7037784/')
