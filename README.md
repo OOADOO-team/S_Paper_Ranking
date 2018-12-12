@@ -1,6 +1,6 @@
 # S_Paper_Ranking
 SUSTech CSE 2018 fall OOAD project  
-Team Member: 宁文韬 林恺 叶梓元 卢致睿
+Team Member: 宁文韬 林恺 叶梓元 卢致睿 韦青茂
 ## 如何在pycharm中连接github
 
 * 安装git和在pycharm中绑定github账号：https://www.cnblogs.com/zhaoyingjie/p/6266011.html
