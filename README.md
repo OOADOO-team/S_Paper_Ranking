@@ -2,7 +2,7 @@
 SUSTech CSE 2018 fall OOAD project  
 Team Member: 宁文韬 林恺 叶梓元 卢致睿
 ## Updates:
-* 0.0.1 将架构更改为mvc(mtv)架构，比如:![structrue](https://images2015.cnblogs.com/blog/877318/201611/877318-20161120225842607-1712687818.png)  
+### 0.0.1 将架构更改为mvc(mtv)架构，比如:![structrue](https://images2015.cnblogs.com/blog/877318/201611/877318-20161120225842607-1712687818.png)  
         Projet/
             __init__.py
             static/
