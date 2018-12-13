@@ -13,7 +13,7 @@ p4 = PaperBean(title= "paper4", authors='Wentao4', public_in='Sustech4', data='a
 end_result = {1: p1, 2: p2, 3: p3, 4: p4}
 
 @app.route('/paper/<title>')
-def success(paperBean):
+def success(rank,paperBean):
     title = quote(paperBean.title)
     paperBean.authors
     paperBean.abstract
@@ -23,7 +23,9 @@ def success(paperBean):
     paperBean.url
     paperBean.num_citations
     paperBean.data
-    return render_template('details.html',)
+    return render_template('details.html',
+
+                           )
 
 
 @app.route('/')

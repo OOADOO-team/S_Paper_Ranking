@@ -57,26 +57,87 @@
         <label for="Publish Venue">Publish Venue</label>
         </form>
     </div>
+    <div id="container"
+         style="top:20%;left:20%;height: 80%;width: 60%; position: absolute;">
+        <div id="title"
+             style="margin-top: 5%;float: left;width: 70%;font-weight: bold;font-family: 'Segoe UI Light','sans-serif'; font-size: 30.0pt; color: #2A2A2A; padding-bottom: 34px">
+            {{ title }}
+        </div>
+        <div id="rank"
+             style="float: left;align-items: center;width: 30%">
+            <div style="text-align: center;  font-size: 5em;">
+                {{ rank }}
+            </div>
+            <div style="text-align: center; font-size: 1.5em;">
+                rank
+            </div>
+        </div>
+        <div id="authors"
+             style=" width:max-content;font-size: 15pt;">
+            <strong>Authors:&nbsp</strong>{{ authors }}
+        </div>
+        <hr style=" height:2px;border:none;border-top:2px solid #185598;"/>
+        <div id="abstract"
+             style="font-family: 'Segoe UI Light','sans-serif';">
+            <div id="abstract_title"
+                 style="font-weight: bold;font-size: 20pt">
+                Abstract:
+            </div>
+            <div id="abstract_content"
+                 style="font-size: 20pt">
+                {{ abstract }}
+            </div>
+            <br>
+            <div id="publish"
+                 style="font-family: 'Segoe UI Light','sans-serif';font-size: 20pt">
+                <strong>Published in:&nbsp</strong>{{ published_in }}
+            </div>
+            <div id="url"
+                 style="font-family: 'Segoe UI Light','sans-serif';font-size: 20pt">
+                <strong>URL:&nbsp</strong><a href="{{ url }}">{{ url }}</a>
+            </div>
+        </div>
+        <hr style=" height:2px;border:none;border-top:2px solid #185598;"/>
+        <div id="citations"
+             style="width: 40%; float: left;font-family: 'Segoe UI Light','sans-serif';font-size: 15pt">
+            <strong>Citations:&nbsp</strong>
+            {% if citations %}
+                <table width="40%" border="1px" frame="void" rules="group">
+                    <tbody>
+                    <tr>
+                        <td height="10px" colspan="3"></td>
+                    </tr>
+                    {% for c in citations %}
+                        <tr style="height: 20px;vertical-align: text-top;font-family: 'Segoe UI Light','sans-serif';
+font-size: 11pt">{% c %}</tr>
+                    {% endfor %}
+                    </tbody>
 
-    <div id="layer6"
-         style="margin:5px 55px 0px 55px; border:3px solid black; position: absolute; overflow: scroll;top:20%;left:0;height: 80%;width: 90%; z-index: 0;background-color: white; text-align: left;">
-        {% if papers|length == 0 %}
-            <center><h3>Nothing was found!</h3></center>
-        {% else %}
-            {% for ranking in papers.keys() %}
-                <div style="border-bottom:1px solid black; padding: 30px">
-                    <h2 style="font-family: Times, TimesNR; font-weight:normal;"><a
-                            href="{{ url_for("success", name = ranking ) }}">{{ papers[ranking].title }}</a></h2>
-                    <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px">{{ papers[ranking].authors }}
-                        &nbsp&nbsp {{ papers[ranking].public_in }}</div>
-                    <div style="font-family:arial,sans-serif; font-size:14px ; padding: 5px">{{ papers[ranking].abstract }}</div>
-                    <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px">Cited
-                        by {{ papers[ranking].citations | length }} articles
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+                </table>
+            {% else %}
+                0
+            {% endif %}
+        </div>
+    <div id="refrences"
+             style="width: 40%; float: right;font-family: 'Segoe UI Light','sans-serif';font-size: 15pt">
+            <strong>Refrences:&nbsp</strong>
+            {% if references %}
+                <table width="40%" border="1px" frame="void" rules="group">
+                    <tbody>
+                    <tr>
+                        <td height="10px" colspan="3"></td>
+                    </tr>
+                    {% for r in references %}
+                        <tr style="height: 20px;vertical-align: text-top;font-family: 'Segoe UI Light','sans-serif';
+font-size: 11pt">{% r %}</tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+            {% else %}
+                0
+            {% endif %}
+        </div>
     </div>
-</div>
 </body>
 </html>
