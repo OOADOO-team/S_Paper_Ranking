@@ -3,6 +3,7 @@ SUSTech CSE 2018 fall OOAD project
 
 Team Member: 宁文韬 林恺 叶梓元 卢致睿 韦青茂
 ## Updates:
+# 0.0.3 完成details页面
 ### 0.0.2 更改bean层的类方法getter和setter，将其修饰为property
 外部调用getter和setter时不再需要使用paper.getXX()和paper.setXX(),直接使用属性名即可  
 > print(paper.title)  
