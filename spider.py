@@ -39,22 +39,37 @@ my_headers = [
 
 
 proxy_list = [
-    '183.95.80.102:8080',
-    '123.160.31.71:8080',
-    '115.231.128.79:8080',
-    '166.111.77.32:80',
-    '43.240.138.31:8080',
-    '218.201.98.196:3128'
+    '140.207.50.246:51426',
+    '60.191.201.38:45461',
+    '61.145.69.27:42380'
 ]
+
+
+def get_prox():
+    proxy = random.choice(proxy_list)
+    proxies = {
+        # 'https': 'https://' + proxy,
+        'http': 'http://' + proxy,
+    }
+    return proxies
 
 
 def get_Google_scholar(keyword):
     start_time = time.time()
     for i in range(0, 1):
+        if i % 5 == 4:
+            time.sleep(10)
         url = 'https://scholar.google.com/scholar?start=' \
               + str(i * 10) + '&q=' + keyword + '&hl=zh-CN&as_sdt=1,5&as_vis = 1'
         header['User_Agent'] = random.choice(my_headers)
-        html = requests.get(url, headers=header, ip=random.choice(proxy_list))
+        try:
+            html = requests.get(url, headers=header, proxies=get_prox(), timeout=5, COOKIES_ENABLES=False)
+            if html.text.find('人机验证'):
+                print('你已经凉了！被Google墙了！')
+                return
+        except requests.exceptions.ConnectionError as e:
+            print('Error: ', e.args)
+            return
 
         pattern = re.compile(r'<div class="gs_ri">.*?</div></div></div>')
         m = re.findall(pattern, html.text)
@@ -100,27 +115,67 @@ def get_Google_scholar(keyword):
 
         file.close()
 
-        file = open("Google_scholar" + str(i) + ".txt", "w", encoding='utf-8')
+        file = open("Google_scholar_" + str(i) + ".txt", "w", encoding='utf-8')
         file.write(html.text)
         file.close()
         print('%.2f' % (time.time() - start_time))
         start_time = time.time()
 
 
-def get_ieee():
+def get_doc_ieee(doc_link):
+    header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
-    url = 'https://ieeexplore.ieee.org/document/8472985'
+    doc = doc_link[10:-1]
+    print(doc)
+    url = 'https://ieeexplore.ieee.org' + doc_link
     html = requests.get(url, header)
     cookies = html.cookies
-    url = url + '/references'
-    html = requests.get(url, cookies=cookies)
-    file = open("ieee.txt", "w", encoding='utf-8')
-    file.write(html.text)
-    file.close()
+
+    url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'references'
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_ref.txt", "w", encoding='utf-8')
+        info = re.compile(r'{"order":.*?","title":')
+        m = re.findall(info, html.text)
+        for item in m:
+            name_pattern = re.compile(r'\\".*?\\"')
+            name = re.search(name_pattern, item)
+            temp = name.group()[2:-2]
+            if temp.endswith(','):
+                temp = temp[:-1]
+            file.write(temp + '\r')
+        file.close()
+
+    url = url.replace('references', 'citations')
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_cit.txt", "w", encoding='utf-8')
+        info = re.compile(r'{"order":.*?","links":')
+        m = re.findall(info, html.text)
+        for item in m:
+            name_pattern = re.compile(r'\\".*?\\"')
+            name = re.search(name_pattern, item)
+            temp = name.group()[2:-2]
+            file.write(temp + '\r')
+        file.close()
+
+    url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
+    print(url)
+    html = requests.get(url, header, cookies=cookies)
+    if html is not None:
+        file = open(doc + "_authors.txt", "w", encoding='utf-8')
+        info = re.compile(r'"name":".*?","affiliation"')
+        m = re.findall(info, html.text)
+        for item in m:
+            temp = item[8:-15]
+            file.write(temp + '\r')
+        file.close()
+
     print('%.2f' % (time.time() - start_time))
 
 
 if __name__ == '__main__':
-    keyword = 'carp'
-    get_Google_scholar(keyword)
-    # get_ieee()
+    get_Google_scholar('carp')
+    get_doc_ieee('/document/7037784/')
