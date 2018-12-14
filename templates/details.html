@@ -87,26 +87,26 @@
 </head>
 
 <body>
-<div id="layer4" style="position: absolute; overflow: hidden;top:0%;left:0;height: 10%;
+<form action="{{ url_for("search") }}" method="POST">
+    <div id="layer4" style="position: absolute; overflow: hidden;top:0%;left:0;height: 10%;
 	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
-    <br>
-    <form action="http://localhost:5000/search" method="post">
+        <br>
         <input type="text" name="keyword" id="input" class="gray" value="{{ name }}"
                onfocus="if(this.value==defaultValue){this.value='';this.className='black'}"
                onblur="if(!value){this.value=defaultValue;this.className='gray'}"/>
         <input type="submit" value="Search" style="width:10%; background-color: white" id="search">
-    </form>
-</div>
-<div id="layer5" style="position: absolute; overflow: hidden;top:10%;left:0;height: 10%;
+    </div>
+    <div id="layer5" style="position: absolute; overflow: hidden;top:10%;left:0;height: 10%;
 	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
 
-    <strong>Ranking by:</strong> &nbsp &nbsp &nbsp &nbsp
-    <label for="Citation">Citation</label>
-    <input type="range" id="ranking" name="ranking"
-           min="0" max="100" value={{ ranking }} step="1">
-    <label for="Publish Venue">Publish Venue</label>
-    </form>
-</div>
+        <strong>Ranking by:</strong> &nbsp &nbsp &nbsp &nbsp
+        <label for="Citation">Citation</label>
+        <input type="range" id="ranking" name="ranking"
+               min="0" max="100" value={{ ranking }} step="1">
+        <label for="Publish Venue">Publish Venue</label>
+
+    </div>
+</form>
 
 <div id="container"
      style="top:20%;left:20%;height: 80%;width: 60%; position: absolute;">
