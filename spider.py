@@ -1,8 +1,9 @@
 import requests
 import time
 import re
-from Paper import *
+from bean.Paper import *
 import random
+import os
 
 # 设置headers，网站会根据这个判断你的浏览器及操作系统，很多网站没有此信息将拒绝你访问
 header = {
@@ -126,29 +127,32 @@ def get_doc_ieee(doc_link):
     header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
     doc = doc_link[10:-1]
-    print(doc)
     url = 'https://ieeexplore.ieee.org' + doc_link
     html = requests.get(url, header)
     cookies = html.cookies
 
     url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'references'
-    print(url)
     html = requests.get(url, header, cookies=cookies)
     if html is not None:
         file = open(doc + "_ref.txt", "w", encoding='utf-8')
-        info = re.compile(r'{"order":.*?","title":')
+        info = re.compile(r'{"order":.*?","context":')
         m = re.findall(info, html.text)
         for item in m:
-            name_pattern = re.compile(r'\\".*?\\"')
+            name_pattern = re.compile(r'title":".*?",')
             name = re.search(name_pattern, item)
-            temp = name.group()[2:-2]
-            if temp.endswith(','):
-                temp = temp[:-1]
-            file.write(temp + '\r')
+            try:
+                temp = name.group()[8:-2]
+                if temp.endswith(','):
+                    temp = temp[:-1]
+                file.write(temp + '\r')
+            except AttributeError as e:
+                file.write('\r' + html.text)
+                file.close()
+                print(e.args)
+                exit(0)
         file.close()
 
     url = url.replace('references', 'citations')
-    print(url)
     html = requests.get(url, header, cookies=cookies)
     if html is not None:
         file = open(doc + "_cit.txt", "w", encoding='utf-8')
@@ -157,12 +161,22 @@ def get_doc_ieee(doc_link):
         for item in m:
             name_pattern = re.compile(r'\\".*?\\"')
             name = re.search(name_pattern, item)
-            temp = name.group()[2:-2]
-            file.write(temp + '\r')
+            if name is None:
+                book_pattern = re.compile(r'<i>.*?</i>')
+                name = re.search(book_pattern, item)
+            try:
+                temp = name.group()[2:-2]
+                if temp.endswith('<'):
+                    temp = temp[1:-2]
+                file.write(temp + '\r')
+            except AttributeError as e:
+                file.write('\r' + html.text)
+                file.close()
+                print(e.args)
+                exit(0)
         file.close()
 
     url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
-    print(url)
     html = requests.get(url, header, cookies=cookies)
     if html is not None:
         file = open(doc + "_authors.txt", "w", encoding='utf-8')
@@ -193,6 +207,8 @@ def get_ieee_search(keyword):
                    '"returnFacets":["ALL"],"' \
                    'returnType":"SEARCH"}'
         else:
+            if i % 5 == 0:
+                time.sleep(10)
             data = '{"newsearch":true,' \
                    '"queryText":"' \
                    + keyword + \
@@ -214,13 +230,51 @@ def get_ieee_search(keyword):
             id = re.search(id_pattern, item).group().replace('punumber=', '')
             if id.endswith('"'):
                 id = id[:-1]
-            file.write(name + ' ' + id + '\r')
+            file.write(name.replace(' ', '_') + ' ' + id + '\r')
         file.close()
 
+    del header['Content-Type']
     print('%.2f' % (time.time() - start_time))
+
+
+def search_paper(keyword):
+    paper_list = []
+    get_ieee_search(keyword)
+    file = open(keyword + '.txt', "r", encoding='utf-8')
+    for line in file:
+        name = line.split(' ')[0].replace('_', ' ')
+        id = line.split(' ')[1][:-1]
+        temp = PaperBean(title=name)
+        get_doc_ieee('/document/'+ id + '/')
+
+        file2 = open(id + '_ref.txt', "r", encoding='utf-8')
+        for l in file2:
+            temp.add_references(PaperBean(title=l[:-1]))
+        file2.close()
+        os.remove(id + '_ref.txt')
+
+        file2 = open(id + '_cit.txt', "r", encoding='utf-8')
+        for l in file2:
+            temp.add_citations(PaperBean(title=l[:-1]))
+        file2.close()
+        os.remove(id + '_cit.txt')
+
+        file2 = open(id + '_authors.txt', "r", encoding='utf-8')
+        for l in file2:
+            temp.add_authors(PaperBean(title=l[:-1]))
+        file2.close()
+        os.remove(id + '_authors.txt')
+
+    file.close()
+    os.remove(keyword + '.txt')
+    return paper_list
 
 
 if __name__ == '__main__':
     # get_Google_scholar('carp')
-    get_ieee_search('Anomaly Detection')
-    # get_doc_ieee('/document/7037784/')
+    # get_ieee_search('Anomaly Detection')
+    # get_doc_ieee('/document/36/')
+    for i in search_paper('Anomaly Detection'):
+        print(i.title)
+        print(i.authors)
+        print('')
