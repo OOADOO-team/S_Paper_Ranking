@@ -9,7 +9,7 @@ class PaperBean:
         self._abstract = abstract
         self._citations = citations
         self._references = references
-
+        self._num_citations = 0
 
     def add_references(self, new_paper):
         self.references.append(new_paper)
@@ -19,7 +19,7 @@ class PaperBean:
 
     @property
     def num_citations(self):
-        return len(self._citations)
+        return max(len(self._citations), self._num_citations)
 
     @property
     def title(self):
@@ -59,7 +59,7 @@ class PaperBean:
 
     @authors.setter
     def authors(self, authors):
-        self.authors = authors
+        self._authors = authors
 
     @url.setter
     def url(self, url):
@@ -67,25 +67,29 @@ class PaperBean:
 
     @abstract.setter
     def abstract(self, abstract):
-        self.abstract = abstract
+        self._abstract = abstract
 
     @citations.setter
     def citations(self, citations):
         self._citations = citations
+
+    @num_citations.setter
+    def num_citations(self, num):
+        if self._num_citations < num:
+            self._num_citations = num
 
     @references.setter
     def references(self,references):
         self._references = references
 
     @data.setter
-    def set_data(self, data):
+    def data(self, data):
         self._data = data
 
     @public_in.setter
     def public_in(self, public_in):
         self._public_in = public_in
 
-    # TODO： 该方法存在的必要性？
     def search(self, keywords):
         title = str.upper(self.title)
         abstract = str.upper(self.abstract)
@@ -98,10 +102,9 @@ class PaperBean:
             return True
         return False
 
-    # TODO： 存在的必要性？
     def add_authors(self, authors):
         if self.authors == '':
-            self.authors = authors
+            self._authors = authors
         else:
-            self.authors += ',' + authors
+            self._authors += ',' + authors
 
