@@ -6,6 +6,24 @@ from bean.Paper import *
 import random
 import os
 
+'''
+生成以 Paper名为名的 txt 格式文件， 文件内容如下：( _ 均表示有空格
+name:_
+url:_
+public_in:_
+authors:_
+abstract:_
+citations_number:_ 注：本条目可能缺省
+References:_
+reference1文章名_文章链接
+reference2文章名_文章链接
+...
+Citation:_  注：本条目可能缺省，数目不大于citations_number，但citations_number缺省时仍有可能存在
+citation1文章名_文章链接
+citation2文章名_文章链接 
+...
+'''
+
 # 设置headers，网站会根据这个判断你的浏览器及操作系统，很多网站没有此信息将拒绝你访问
 header = {
     'Connection': 'Keep-Alive',
@@ -44,6 +62,7 @@ proxy_list = [
     '61.145.69.27:42380'
 ]
 
+N = 1 # 爬取搜索结果页数，注意，提高页数有可能导致被墙= =
 
 def get_prox():
     proxy = random.choice(proxy_list)
@@ -122,69 +141,102 @@ def get_Google_scholar(keyword):
         start_time = time.time()
 
 
-def get_doc_ieee(doc_link):
+def get_doc_ieee(doc_name, doc_link):
     header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
     doc = doc_link[10:-1]
     url = 'https://ieeexplore.ieee.org' + doc_link
-    html = requests.get(url, header)
+    html = requests.get(url, header, timeout=5)
     cookies = html.cookies
+    file_name = re.sub('[\\/:*?"<>|]', '-', doc_name)
+    url_pattern = re.compile(r'pdfUrl":".*?"')
+    publication_pattern = re.compile(r'"publicationTitle":".*?"')
+    abstract_pattern = re.compile(r'","abstract":".*?","doi"')
+    if os.path.exists(file_name + '.txt'):
+        return
+    file = open(file_name + '.txt', 'w', encoding='utf-8')
+    file.write('name: ' + doc_name + '\r')
+    paper_url = re.search(url_pattern, html.text).group()[9:-1]
+    paper_url = 'https://ieeexplore.ieee.org' + paper_url
+    file.write('url: ' + paper_url + '\r')
+    publication = re.search(publication_pattern, html.text).group()[21:-1]
+    file.write('public_in: ' + publication + '\r')
 
+    file.write('authors: ')
+    new_url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
+    html2 = requests.get(new_url, header, cookies=cookies)
+    if html2 is not None:
+        info = re.compile(r'"name":".*?","affiliation"')
+        m = re.findall(info, html2.text)
+        for item in m:
+            temp = item[8:-15]
+            file.write(temp + ',')
+    file.write('\r')
+
+    abstract = re.search(abstract_pattern, html.text).group()[14:-7]
+    file.write('abstract: ' + abstract + '\r')
+
+    file.write('References: \r')
     url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'references'
     html = requests.get(url, header, cookies=cookies)
     if html is not None:
-        file = open(doc + "_ref.txt", "w", encoding='utf-8')
-        info = re.compile(r'{"order":.*?","context":')
+        info = re.compile(r'{"order":.*?id":"ref.*?"}')
+        name_pattern = re.compile(r'title":".*?",')
+        doi_pattern = re.compile(r'"crossRefLink":".*?"')
+        ref_url_pattern = re.compile(r'"pdfLink":".*?"')
+        google_pattern = re.compile(r'"googleScholarLink":".*?"')
         m = re.findall(info, html.text)
         for item in m:
-            name_pattern = re.compile(r'title":".*?",')
-            name = re.search(name_pattern, item)
-            try:
-                temp = name.group()[8:-2]
-                if temp.endswith(','):
-                    temp = temp[:-1]
-                file.write(temp + '\r')
-            except AttributeError as e:
-                file.write('\r' + html.text)
-                file.close()
-                print(e.args)
-                exit(0)
-        file.close()
+            name = re.search(name_pattern, item).group()[8:-2]
+            if name.endswith(','):
+                name = name[:-1]
+            file.write(name + ' ')
+            doi = re.search(doi_pattern, item)
+            if doi is not None:
+                doi = doi.group()[16:-1]
+                file.write(doi + '\r')
+                continue
+            pdf = re.search(ref_url_pattern, item)
+            if pdf is not None:
+                pdf = pdf.group()[11:-1]
+                file.write(pdf + '\r')
+                continue
+            google_url = re.search(google_pattern, item)
+            if google_url is not None:
+                google_url = google_url.group()[21:-1]
+                file.write(google_url + '\r')
+                continue
+            file.write('\r')
 
     url = url.replace('references', 'citations')
     html = requests.get(url, header, cookies=cookies)
+    file.write('Citations: ')
     if html is not None:
-        file = open(doc + "_cit.txt", "w", encoding='utf-8')
-        info = re.compile(r'{"order":.*?","links":')
+        info = re.compile(r'{"order":.*?title":".*?"}')
+        name_pattern = re.compile(r'title":".*?"')
+        doi_pattern = re.compile(r'"crossRefLink":".*?"')
+        ref_url_pattern = re.compile(r'"pdfLink":".*?"')
+        google_pattern = re.compile(r'"googleScholarLink":".*?"')
         m = re.findall(info, html.text)
         for item in m:
-            name_pattern = re.compile(r'\\".*?\\"')
-            name = re.search(name_pattern, item)
-            if name is None:
-                book_pattern = re.compile(r'<i>.*?</i>')
-                name = re.search(book_pattern, item)
-            try:
-                temp = name.group()[2:-2]
-                if temp.endswith('<'):
-                    temp = temp[1:-2]
-                file.write(temp + '\r')
-            except AttributeError as e:
-                file.write('\r' + html.text)
-                file.close()
-                print(e.args)
-                exit(0)
-        file.close()
-
-    url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
-    html = requests.get(url, header, cookies=cookies)
-    if html is not None:
-        file = open(doc + "_authors.txt", "w", encoding='utf-8')
-        info = re.compile(r'"name":".*?","affiliation"')
-        m = re.findall(info, html.text)
-        for item in m:
-            temp = item[8:-15]
-            file.write(temp + '\r')
-        file.close()
+            name = re.search(name_pattern, item).group()[8:-1]
+            file.write(name + ' ')
+            doi = re.search(doi_pattern, item)
+            if doi is not None:
+                doi = doi.group()[16:-1]
+                file.write(doi + '\r')
+                continue
+            pdf = re.search(ref_url_pattern, item)
+            if pdf is not None:
+                pdf = pdf.group()[11:-1]
+                file.write(pdf + '\r')
+                continue
+            google_url = re.search(google_pattern, item)
+            if google_url is not None:
+                google_url = google_url.group()[21:-1]
+                file.write(google_url + '\r')
+                continue
+            file.write('\r')
 
     print('%.2f' % (time.time() - start_time))
 
@@ -197,7 +249,7 @@ def get_ieee_search(keyword):
     cookies = html.cookies
     header['Content-Type'] = 'application/json'
     url = 'https://ieeexplore.ieee.org/rest/search'
-    for i in range(0, 1):
+    for i in range(0, N):
         if i == 0:
             data = '{"newsearch":true,' \
                    '"queryText":"' \
@@ -218,10 +270,6 @@ def get_ieee_search(keyword):
         info = re.compile(r'"articleTitle":.*?","publicationLink":.*?punumber=.*?"')
         html = requests.post(url, data, cookies=cookies, headers=header)
         m = re.findall(info, html.text)
-        if i == 0:
-            file = open(keyword + ".txt", "w", encoding='utf-8')
-        else:
-            file = open(keyword + ".txt", "a", encoding='utf-8')
         for item in m:
             name_pattern = re.compile(r'tle":".*?","pub')
             id_pattern = re.compile(r'punumber=.*?"')
@@ -229,62 +277,10 @@ def get_ieee_search(keyword):
             id = re.search(id_pattern, item).group().replace('punumber=', '')
             if id.endswith('"'):
                 id = id[:-1]
-            file.write(name.replace(' ', '_') + ' ' + id + '\r')
-        file.close()
+            get_doc_ieee(name, '/document/' + id + '/')
 
     del header['Content-Type']
     print('%.2f' % (time.time() - start_time))
-
-
-def search_paper(keyword):
-    paper_list = []
-
-    get_ieee_search(keyword)
-    file = open(keyword + '.txt', "r", encoding='utf-8')
-    for line in file:
-        name = line.split(' ')[0].replace('_', ' ')
-        id = line.split(' ')[1][:-1]
-        temp = PaperBean(title=name)
-        time.sleep(5)
-        get_doc_ieee('/document/'+ id + '/')
-
-        file2 = open(id + '_ref.txt', "r", encoding='utf-8')
-        for l in file2:
-            temp.add_references(PaperBean(title=l[:-1]))
-        file2.close()
-        os.remove(id + '_ref.txt')
-
-        file2 = open(id + '_cit.txt', "r", encoding='utf-8')
-        for l in file2:
-            temp.add_citations(PaperBean(title=l[:-1]))
-        file2.close()
-        os.remove(id + '_cit.txt')
-
-        file2 = open(id + '_authors.txt', "r", encoding='utf-8')
-        for l in file2:
-            temp.add_authors(l[:-1])
-        file2.close()
-        paper_list.append(temp)
-        os.remove(id + '_authors.txt')
-    file.close()
-    os.remove(keyword + '.txt')
-
-    get_Baidu_scholar(keyword)
-    file = open(keyword + '.txt', "r", encoding='utf-8')
-    for line in file:
-        name = line.replace(' ', '_').replace(':', '-')[:-1]
-        file2 = open(name + '.txt', 'r', encoding='utf-8')
-        l = file2.readlines()
-        temp = PaperBean(title=l[0])
-        temp.add_authors(l[1][:-2])
-        temp.abstract = l[2][:-1]
-        temp.data = l[3][:-1]
-        paper_list.append(temp)
-        file2.close()
-        os.remove(name + '.txt')
-    file.close()
-    os.remove(keyword + '.txt')
-    return paper_list
 
 
 def get_Baidu_scholar(keyword):
@@ -294,12 +290,21 @@ def get_Baidu_scholar(keyword):
     id_pattern = re.compile(r'data-longsign=".*?"')
     body_pattern = re.compile(r'<a href=".*?data-click=.*?\'title\'}" target=.*?</a>')
     name_pattern = re.compile(r'">.*?</a>')
+    paper_url_pattern = re.compile(r'http://.*?"')
+    publication_pattern = re.compile(r'<span>来自.*?</a>', re.DOTALL)
     author_pattern = re.compile(r'<span><a href=.*?author.*?</a></span>')
     author_name_pattern = re.compile(r'">.*?</a></span>')
     abstract_pattern = re.compile(r'<p class="abstract".*?</p>')
     ref_pattern = re.compile(r'<p class="ref-wr-num".*?</a>', re.DOTALL)
     num_pattern = re.compile(r'[\s]+?[\d]+', re.DOTALL)
-    for i in range(0, 1):
+    token_pattern = re.compile(r'bds.cf.token = ".*?";')
+    ts_pattern = re.compile(r'bds.cf.ts = ".*?";')
+    sign_pattern = re.compile(r'bds.cf.sign = ".*?";')
+    paperid_pattern = re.compile(r'paperid: \'.*?\'')
+    ref_body_pattern = re.compile(r'"sc_longsign":\[".*?"sc_title":\[".*?"\]')
+    ref_name_pattern = re.compile(r'"sc_title":\[".*?"\]')
+    ref_id_pattern = re.compile(r'"sc_longsign":\[".*?"\]')
+    for i in range(0, N):
         if i != 0:
             time.sleep(10)
         header['User_Agent'] = random.choice(my_headers)
@@ -317,7 +322,6 @@ def get_Baidu_scholar(keyword):
         m = re.findall(class_pattern, html.text)
         cookie = html.cookies
         new_url = ''
-        temp = html.text
         try:
             for item in m:
                 new_url = re.search(url_pattern, item).group()[6:-1]
@@ -329,10 +333,19 @@ def get_Baidu_scholar(keyword):
                 html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                 body = re.search(body_pattern, html.text).group()
                 name = re.search(name_pattern, body).group()[2:-4]
-                file2 = open(name.replace(' ', '_').replace(':', "-") + '.txt', "w", encoding='utf-8')
-                file2.write(name + '\r')
+                file_name = re.sub('[\\/:*?"<>|]', '-', name)
+                if os.path.exists(file_name + '.txt'):
+                    continue
+                file2 = open(file_name + '.txt', "w", encoding='utf-8')
+                file2.write('name: ' + name + '\r')
+                paper_url = re.search(paper_url_pattern, body).group()[:-1]
+                file2.write('url: ' + paper_url + '\r')
                 file.write(name + '\r')
+                publication = re.search(publication_pattern, html.text).group()
+                publication = re.search(name_pattern, publication).group()[2:-4]
+                file2.write('public_in: ' + publication + '/r')
                 authors = re.findall(author_pattern, html.text)
+                file2.write('authors: ')
                 for author in authors:
                     it = re.search(author_name_pattern, author).group()
                     file2.write(it[2:-11] + ',')
@@ -340,22 +353,47 @@ def get_Baidu_scholar(keyword):
                 abstract = re.search(abstract_pattern, html.text).group()
                 abstract = abstract[abstract.find('>') + 1:-4]
                 abstract.replace('</p>', '')
-                file2.write(abstract + '\r')
+                file2.write('abstract: ' + abstract + '\r')
                 ref_num = re.search(ref_pattern, html.text).group()
                 number = re.search(num_pattern, ref_num).group()
                 number = re.search("\d+", number).group()
-                file2.write(number + '\r')
+                file2.write('citations_number: ' + number + '\r')
+                paperid = re.search(paperid_pattern, html.text).group()[10:-1]
+                ts = re.search(ts_pattern, html.text).group()[13:-2]
+                token = re.search(token_pattern, html.text).group()[16:-2]
+                sign = re.search(sign_pattern, html.text).group()[15:-2]
+                new_url = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
+                          + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A('\
+                          + paperid + ')&type=reference&rn=10&page_no=1'
+                html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
+                refbody = re.findall(ref_body_pattern, html.text)
+                file2.write('References: \r')
+                for ref in refbody:
+                    ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
+                    ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                    file2.write(ref_name + ' ')
+                    file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=7' + ref_id + '\r')
+                new_url = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
+                          + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A(' \
+                          + paperid + ')&type=citation&rn=10&page_no=1'
+                html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
+                refbody = re.findall(ref_body_pattern, html.text)
+                file2.write('Citation: \r')
+                for ref in refbody:
+                    ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
+                    ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                    file2.write(ref_name + ' ')
+                    file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=7' + ref_id + '\r')
                 file2.close()
         except AttributeError as e:
             file.write(new_url + '\r')
             print(e)
         file.close()
+        os.remove(keyword + '.txt')
     print('%.2f' % (time.time() - start_time))
 
 
 if __name__ == '__main__':
     # get_Google_scholar('Anomaly Detection')
-    for i in search_paper('Anomaly Detection'):
-        print(i.title)
-        print(i.authors)
-        print('')
+    get_Baidu_scholar('Anomaly Detection')
+    get_ieee_search('Anomaly Detection')
