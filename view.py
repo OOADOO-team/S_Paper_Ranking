@@ -1,8 +1,9 @@
 from flask import Flask, request, render_template
 from bean.Paper import *
 from urllib.parse import quote
+from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
+
 p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost:5000',
                abstract='this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper '
                         '1. this is the abstract of paper 1. this is the abstract of paper 1.',
@@ -21,10 +22,16 @@ p4 = PaperBean(number=4, title="paper4", authors='Wentao4', published_in='Sustec
                         '4. this is the abstract of paper 4. this is the abstract of paper 4. this is the abstract of paper '
                         '4. this is the abstract of paper 4. this is the abstract of paper 4.',
                citations=[1, 2], references=[3, 4])
+
 end_result = {1: p1, 2: p2, 3: p3, 4: p4}
 
 
-@app.route('/paper/<title>/<int:rank>')
+
+@app.route('/test')
+def test():
+    return render_template('base.html')
+
+@app.route('/paper?title=<title>/<int:rank>')
 def success(title, rank=99, paperBean=p4):
 
     paperBean = end_result[rank]
@@ -33,14 +40,14 @@ def success(title, rank=99, paperBean=p4):
     # print(request.get_json())
     title = quote(paperBean.title)
     # print(paperBean.citations)
-    return render_template('details.html',
-                           title=title,
+    return render_template('temp.html',
+                           title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
                            published_in=paperBean.published_in,
                            url=paperBean.url,
-                           citations=paperBean.citations,
-                           references=paperBean.references,
+                           references=paperBean.citations,
+                           citations=paperBean.references,
                            rank=rank
                            )
 
@@ -61,4 +68,4 @@ def search():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000,debug=True)
