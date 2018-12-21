@@ -1,5 +1,5 @@
 from read_database import get_refer_and_cita
-
+from builtins import *
 
 class PaperBean:
     def __init__(self, number=0, title='', authors='', published_in='', url='',

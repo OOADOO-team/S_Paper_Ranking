@@ -1,5 +1,7 @@
+from builtins import *
+
 from openpyxl import load_workbook
-from bean.Paper import PaperBean
+import bean.Paper
 import re
 
 
@@ -28,14 +30,14 @@ def get_infomation(keyword):
         judge1 = re.search(data_U, value_of_blockBn)
         judge2 = re.search(data_U, value_of_blockCn)
         if judge1 is not None or judge2 is not None:
-            paper = PaperBean(number=i,
-                              title=str(sheet.cell(row=i, column=2).value),
-                              authors=str(sheet.cell(row=i, column=3).value),
-                              published_in=str(sheet.cell(row=i, column=4).value),
-                              url=str(sheet.cell(row=i, column=6).value),
-                              abstract=str(sheet.cell(row=i, column=7).value),
-                              citations=sheet.cell(row=i, column=8).value,
-                              references=sheet.cell(row=i, column=9).value)
+            paper = bean.Paper.PaperBean(number=i,
+                                         title=str(sheet.cell(row=i+1, column=2).value),
+                                         authors=str(sheet.cell(row=i+1, column=3).value),
+                                         published_in=str(sheet.cell(row=i+1, column=4).value),
+                                         url=str(sheet.cell(row=i+1, column=5).value),
+                                         abstract=str(sheet.cell(row=i+1, column=6).value),
+                                         citations=sheet.cell(row=i+1, column=7).value,
+                                         references=sheet.cell(row=i+1, column=8).value)
             result.append(paper)
     return result
 
@@ -50,7 +52,7 @@ def get_refer_and_cita(citation_list):
         :return result： paper list
 
     """
-    wb = load_workbook("E:\ChormeDownload\S_Paper_Ranking\database.xlsx")
+    wb = load_workbook("database.xlsx")
     sheet = wb.worksheets[0]
     length = len(citation_list)
     result = []
@@ -58,14 +60,14 @@ def get_refer_and_cita(citation_list):
     for i in range(length):
         # 取得reference的编号，从而得到整篇paper
         row_num = citation_list[i]
-        print(sheet.cell(row=row_num, column=1).value)
-        paper = PaperBean(number=sheet.cell(row=row_num, column=1).value,
-                          title=str(sheet.cell(row=row_num, column=2).value),
-                          authors=str(sheet.cell(row=row_num, column=3).value),
-                          published_in=str(sheet.cell(row=row_num, column=4).value),
-                          url=str(sheet.cell(row=row_num, column=6).value),
-                          abstract=str(sheet.cell(row=row_num, column=7).value),
-                          citations=sheet.cell(row=row_num, column=8).value,
-                          references=sheet.cell(row=row_num, column=9).value)
+        print(sheet.cell(row=row_num+1, column=1).value)
+        paper = bean.Paper.PaperBean(number=sheet.cell(row=row_num+1, column=1).value,
+                                     title=str(sheet.cell(row=row_num+1, column=2).value),
+                                     authors=str(sheet.cell(row=row_num+1, column=3).value),
+                                     published_in=str(sheet.cell(row=row_num+1, column=4).value),
+                                     url=str(sheet.cell(row=row_num+1, column=5).value),
+                                     abstract=str(sheet.cell(row=row_num+1, column=6).value),
+                                     citations=sheet.cell(row=row_num+1, column=7).value,
+                                     references=sheet.cell(row=row_num+1, column=8).value)
         result.append(paper)
     return result

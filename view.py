@@ -3,6 +3,8 @@ from bean.Paper import *
 from urllib.parse import quote
 from flask_bootstrap import Bootstrap
 
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost:5000',
                abstract='this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper '
@@ -40,21 +42,23 @@ def success(title, rank=99, paperBean=p4):
     # print(request.get_json())
     title = quote(paperBean.title)
     # print(paperBean.citations)
+
     return render_template('temp.html',
                            title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
                            published_in=paperBean.published_in,
                            url=paperBean.url,
-                           references=paperBean.citations,
-                           citations=paperBean.references,
+                           references=paperBean.references,
+                           citations=paperBean.citations,
+
                            rank=rank
                            )
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('new_index.html')
 
 
 @app.route('/search', methods=['POST', 'GET'])
