@@ -34,13 +34,13 @@ def success(title, rank=99, paperBean=p4):
     title = quote(paperBean.title)
     # print(paperBean.citations)
     return render_template('temp.html',
-                           title=title,
+                           title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
                            public_in=paperBean.public_in,
                            url=paperBean.url,
-                           citations=paperBean.citations,
-                           references=paperBean.references,
+                           references=paperBean.citations,
+                           citations=paperBean.references,
                            rank=rank
                            )
 

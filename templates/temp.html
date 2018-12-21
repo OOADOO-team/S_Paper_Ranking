@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Details
+{% endblock %}
 
 {% block content %}
     {#    {{ super() }}#}
@@ -26,16 +29,14 @@
                 <div class="col-md-6 column">
                     <div class="page-header">
                         <h1>
-                            Paper title
+                            {{ title }}
                         </h1>
                     </div>
                     <h2>
                         Abstract
                     </h2>
                     <p>
-                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui.
+                        {{ abstract }}
                     </p>
                     <dl class="dl">
                         <dt>
@@ -48,7 +49,7 @@
                             Published in
                         </dt>
                         <dd>
-                            {{ published_in }}
+                            {{ public_in }}
                         </dd>
 
                         <dt>
@@ -62,10 +63,13 @@
 
 
                     <div class="panel-group" id="panel-865365">
+
+
                         <div class="panel panel-success">
                             <div class="panel-heading">
                                 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
-                                   href="#panel-element-001"><span class="badge">{{ citations | length }}</span>Citations</a>
+                                   href="#panel-element-001"><span
+                                        class="badge">{{ references | length }}</span>References</a>
                             </div>
                             <div id="panel-element-001" class="panel-collapse in">
                                 <div class="panel-body">
@@ -74,7 +78,7 @@
                                     <div class="panel-group" id="accordion" role="tablist"
                                          aria-multiselectable="true">
 
-                                        {% for c in citations %}
+                                        {% for c in references %}
 
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" role="tab" id="{{ 'head'+ c.title }}">
@@ -100,18 +104,20 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
                                    href="#panel-element-657219"><span
-                                        class="badge">{{ references | length }}</span>References</a>
+                                        class="badge">{{ citations | length }}</span>Cited</a>
                             </div>
                             <div id="panel-element-657219" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div class="panel-group" id="accordion" role="tablist"
                                          aria-multiselectable="true">
 
-                                        {% for r in references %}
+                                        {% for r in citations %}
 
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" role="tab" id="{{ 'head'+ r.title }}">
