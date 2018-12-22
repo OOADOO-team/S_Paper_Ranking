@@ -13,6 +13,8 @@
 
 #提供 搜索总数 num 和 详细的 get dict
 #get [0] -[num-1] 存详细信息 dict 存 dict 0-（num-1） 都是 dict
+from builtins import *
+
 get=dict()#给每个论文信息
 cite_tol=100#总被引用量
 
