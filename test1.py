@@ -28,7 +28,11 @@ for item in e:
 print(10/79.258 * 1.5)
 
 myList = [('dungeon',7),('winterfell',4),('bran',9),('meelo',6)]
-_list = sorted(myList, key=lambda x:x[1])
-print(_list)
-return_list = [item[0] for item in _list]
-print(return_list)
+final_result = zip(myList,range(1,5))
+print(final_result)
+for item in final_result:
+    print(item[0],item[1])
+# _list = sorted(myList, key=lambda x:x[1])
+# print(_list)
+# return_list = [item[0] for item in _list]
+# print(return_list)

@@ -43,4 +43,7 @@ def get_infomation(keyword,alpha):
                               )
             result.append(paper)
         result = r.rank_simple(result,alpha)
-    return result
+        length = len(result)
+        final_result = zip(range(1,length+1),result)
+
+    return final_result
