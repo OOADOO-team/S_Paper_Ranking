@@ -19,7 +19,7 @@ def get_infomation(keyword, alpha):
     """
     if keyword is "":
         keyword = " "
-    wb = load_workbook("E:\ChormeDownload\S_Paper_Ranking\dao\paper.xlsx")
+    wb = load_workbook("dao\paper.xlsx")
     sheet = wb.worksheets[0]
     length = len(sheet["B"])
     result = []
@@ -51,7 +51,7 @@ def get_infomation(keyword, alpha):
     print("read is correct， the result length is ", len(result))
     result = r.rank_simple(result,alpha)
     length = len(result)
-    final_result = zip(range(1,length+1),result)
+    final_result = list(zip(range(1,length+1),result))
     # final_result = {}
     # for i in range(length):
     #     final_result.update((i+1,result[i]))
@@ -59,8 +59,8 @@ def get_infomation(keyword, alpha):
     return final_result
 
 
-# if __name__ == '__main__':
-#     result = get_infomation(keyword="t",alpha=50)
-#     for item in result:
-#         # print(item[1].title,item[1].authors, item[1].published_in)
-#         print(item[1].title)
+if __name__ == '__main__':
+    result = get_infomation(keyword="",alpha=50)
+    for item in result:
+        # print(item[1].title,item[1].authors, item[1].published_in)
+        print(item[1].title)

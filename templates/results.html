@@ -21,7 +21,7 @@
                     padding: 30px
 ">
                         <h2 style="font-family: Times, TimesNR; font-weight:normal;"><a
-                                href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
+                                href="{{ url_for("success", title = papers[0].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
                         </h2>
                         <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px">{{ papers[ranking].authors }}
                             &nbsp&nbsp {{ papers[ranking].public_in }}</div>
