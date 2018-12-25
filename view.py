@@ -5,6 +5,8 @@ import builtins
 from flask_bootstrap import Bootstrap
 import read_database as r
 
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 # p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost:5000',
 #                abstract='this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper '
@@ -29,13 +31,12 @@ end_result = dict()
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
-
 @app.route('/test')
 def test():
     return render_template('base.html')
 
 @app.route('/paper?title=<title>/<int:rank>')
-def success(title, rank):
+def success(title, rank=99, paperBean=p4):
 
     paperBean = end_result[rank]
     # print(paperBean)
@@ -43,14 +44,16 @@ def success(title, rank):
     # print(request.get_json())
     title = quote(paperBean.title)
     # print(paperBean.citations)
-    return render_template('temp.html',
+
+    return render_template('details.html',
                            title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
                            published_in=paperBean.published_in,
                            url=paperBean.url,
-                           references=paperBean.citations,
-                           citations=paperBean.references,
+                           references=paperBean.references,
+                           citations=paperBean.citations,
+
                            rank=rank
                            )
 
@@ -65,9 +68,9 @@ def search():
     global end_result
     if request.method == 'POST':
         keyword = request.form['keyword']
-        rank = request.form['ranking']
-        end_result = r.get_infomation(keyword=keyword,alpha=rank)
-        print(end_result)
+        rank = int(request.form['ranking'])
+        end_result = r.get_infomation(keyword=keyword, alpha=rank)
+        # print(end_result)
         return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
 
 
