@@ -2,7 +2,6 @@
 import requests
 import time
 import re
-from bean.Paper import *
 import random
 import os
 
@@ -15,12 +14,12 @@ authors:_
 abstract:_
 citations_number:_ 注：本条目可能缺省
 Citation:_  注：数目不大于citations_number，但citations_number缺省时仍有可能存在
-citation1文章名_文章链接
-citation2文章名_文章链接 
+citation1文章名_"作者"_文章链接
+citation2文章名_"作者"_文章链接 
 ...
 References:_
-reference1文章名_文章链接
-reference2文章名_文章链接
+reference1文章名_"作者"_文章链接
+reference2文章名_"作者"_文章链接
 ...
 
 '''
@@ -58,14 +57,18 @@ my_headers = [
 ]
 
 proxy_list = [
-    '140.207.50.246:51426',
-    '60.191.201.38:45461',
-    '61.145.69.27:42380'
+    '116.62.134.173:9999',
+    # '111.177.168.240:3128',
+    # '119.101.116.195:9999',
+    # '114.112.70.150:43887',
+    # '47.104.74.174:8118',
+    # '121.232.148.82:9000'
 ]
 
-N = 30 # 爬取搜索结果页数，注意，提高页数有可能导致被墙= =
+N = 30  # 爬取搜索结果页数，注意，提高页数有可能导致被墙= =
 
-def get_prox():
+
+def get_proxies():
     proxy = random.choice(proxy_list)
     proxies = {
         # 'https': 'https://' + proxy,
@@ -143,12 +146,15 @@ def get_prox():
 
 
 def get_doc_ieee(doc_name, doc_link):
+    
     header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
     url = 'https://ieeexplore.ieee.org' + doc_link
     html = requests.get(url, header, timeout=5)
     cookies = html.cookies
-    file_name = re.sub('[\\/:*?"<>|]', '-', doc_name)
+    file_name = re.sub(r'[/:*?"<>|]', '-', doc_name)
+    if file_name.find('//') != -1:
+        file_name = file_name.replace('//', ' ')
     url_pattern = re.compile(r'pdfUrl":".*?"')
     publication_pattern = re.compile(r'"publicationTitle":".*?"')
     abstract_pattern = re.compile(r'[^{]"abstract":".*?\."')
@@ -164,7 +170,7 @@ def get_doc_ieee(doc_name, doc_link):
         try:
             paper_url = re.search(url_pattern, html.text).group()[9:-1]
             paper_url = 'https://ieeexplore.ieee.org' + paper_url
-        except AttributeError as e:
+        except AttributeError:
             file.close()
             os.remove(file_name + '.txt')
             return
@@ -174,7 +180,7 @@ def get_doc_ieee(doc_name, doc_link):
 
         file.write('authors: ')
         new_url = 'https://ieeexplore.ieee.org' + doc_link + 'authors'
-        html2 = requests.get(new_url, header, cookies=cookies)
+        html2 = requests.get(new_url, header, cookies=cookies, timeout=5)
         if html2 is not None:
             info = re.compile(r'"name":".*?","affiliation"')
             m = re.findall(info, html2.text)
@@ -197,7 +203,7 @@ def get_doc_ieee(doc_name, doc_link):
         exit(0)
 
     url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'citations'
-    html = requests.get(url, header, cookies=cookies)
+    html = requests.get(url, header, cookies=cookies, timeout=5)
     file.write('Citations: \r')
     if html is not None:
         info = re.compile(r'{"order":.*?title":".*?"}')
@@ -205,10 +211,23 @@ def get_doc_ieee(doc_name, doc_link):
         doi_pattern = re.compile(r'"crossRefLink":".*?"')
         ref_url_pattern = re.compile(r'"pdfLink":".*?"')
         google_pattern = re.compile(r'"googleScholarLink":".*?"')
+        ref_author_pattern = re.compile(r'ext":".*?"')
         m = re.findall(info, html.text)
         for item in m:
-            name = re.search(name_pattern, item).group()[8:-1]
-            file.write(name + ' ')
+            if item.find('[online]') != -1:
+                continue
+            try:
+                name = re.search(name_pattern, item).group()[8:-2]
+                if name.endswith(','):
+                    name = name[:-1]
+                file.write(name + ' ')
+            except AttributeError:
+                continue
+            ref_authors = re.search(ref_author_pattern, item).group()[6:-2]
+            ref_authors = ref_authors.split(',')
+            for ref_aut in ref_authors:
+                if ref_aut != '':
+                    file.write('"' + ref_aut + '"')
             doi = re.search(doi_pattern, item)
             if doi is not None:
                 doi = doi.group()[16:-1]
@@ -228,7 +247,7 @@ def get_doc_ieee(doc_name, doc_link):
 
     file.write('References: \r')
     url = 'https://ieeexplore.ieee.org/rest' + doc_link + 'references'
-    html = requests.get(url, header, cookies=cookies)
+    html = requests.get(url, header, cookies=cookies, timeout=5)
     print(url)
     if html is not None:
         info = re.compile(r'{"order":.*?id":"ref.*?"}')
@@ -236,6 +255,7 @@ def get_doc_ieee(doc_name, doc_link):
         doi_pattern = re.compile(r'"crossRefLink":".*?"')
         ref_url_pattern = re.compile(r'"pdfLink":".*?"')
         google_pattern = re.compile(r'"googleScholarLink":".*?"')
+        ref_author_pattern = re.compile(r'ext":".*?"')
         m = re.findall(info, html.text)
         for item in m:
             if item.find('[online]') != -1:
@@ -247,6 +267,11 @@ def get_doc_ieee(doc_name, doc_link):
                 file.write(name + ' ')
             except AttributeError:
                 continue
+            ref_authors = re.search(ref_author_pattern, item).group()[6:-2]
+            ref_authors = ref_authors.split(',')
+            for ref_aut in ref_authors:
+                if ref_aut != '':
+                    file.write('"' + ref_aut + '"')
             doi = re.search(doi_pattern, item)
             if doi is not None:
                 doi = doi.group()[16:-1]
@@ -270,9 +295,10 @@ def get_doc_ieee(doc_name, doc_link):
 
 def get_ieee_search(keyword):
     header['User_Agent'] = random.choice(my_headers)
+    
     start_time = time.time()
     url = 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=' + keyword
-    html = requests.get(url, header)
+    html = requests.get(url, header, timeout=5)
     cookies = html.cookies
     header['Content-Type'] = 'application/json'
     url = 'https://ieeexplore.ieee.org/rest/search'
@@ -294,7 +320,7 @@ def get_ieee_search(keyword):
                    '"returnType":"SEARCH",' \
                    '"pageNumber":' + str(i + 1) + '}'
         info = re.compile(r'documentLink":".*?"articleTitle":".*?"')
-        html = requests.post(url, data, cookies=cookies, headers=header)
+        html = requests.post(url, data, cookies=cookies, headers=header, timeout=5)
         cookies = html.cookies
         m = re.findall(info, html.text)
         if html.text == '':
@@ -314,7 +340,10 @@ def get_ieee_search(keyword):
             if id.endswith('"'):
                 id = id[:-2]
             print(name, id)
-            get_doc_ieee(name, '/document/' + id + '/')
+            try:
+                get_doc_ieee(name, '/document/' + id + '/')
+            except TimeoutError:
+                pass
 
     del header['Content-Type']
     print('%.2f' % (time.time() - start_time))
@@ -339,9 +368,11 @@ def get_Baidu_scholar(keyword):
     paperid_pattern = re.compile(r'paperid: \'.*?\'')
     ref_body_pattern = re.compile(r'"sc_longsign":\[".*?"sc_title":\[".*?"\]')
     ref_name_pattern = re.compile(r'"sc_title":\[".*?"\]')
+    ref_author_pattern = re.compile(r'sc_name":\[".*?"')
     ref_id_pattern = re.compile(r'"sc_longsign":\[".*?"\]')
     for i in range(0, N):
         start_time = time.time()
+        
         if i != 0:
             time.sleep(10)
         header['User_Agent'] = random.choice(my_headers)
@@ -352,10 +383,10 @@ def get_Baidu_scholar(keyword):
         except requests.exceptions.ConnectionError as e:
             print('Error: ', e.args)
             return
-        if i == 0:
-            file = open(keyword + '.txt', "w", encoding='utf-8')
-        else:
+        if os.path.exists(keyword + '.txt'):
             file = open(keyword + '.txt', "a", encoding='utf-8')
+        else:
+            file = open(keyword + '.txt', "w", encoding='utf-8')
         m = re.findall(class_pattern, html.text)
         cookie = html.cookies
         new_url = ''
@@ -375,9 +406,11 @@ def get_Baidu_scholar(keyword):
                 html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                 body = re.search(body_pattern, html.text).group()
                 name = re.search(name_pattern, body).group()[2:-4]
-                file_name = re.sub('[\\\/:*?"<>|]', '-', name)
+                file_name = re.sub(r'[/:*?"<>|]', '-', name)
+                if file_name.find('\\') != -1:
+                    file_name = file_name.replace('\\', '')
                 while file_name.find('[') != -1 and file_name.find(']') != -1:
-                    file_name = file_name[:file_name.find('[')-1] + file_name[file_name.find(']')+1:]
+                    file_name = file_name[:file_name.find('[')] + file_name[file_name.find(']')+1:]
                 if os.path.exists(file_name + '.txt'):
                     continue
                 if len(file_name) > 150:
@@ -402,30 +435,42 @@ def get_Baidu_scholar(keyword):
                     it = re.search(author_name_pattern, author).group()
                     file2.write(it[2:-11] + ',')
                 file2.write('\r')
-                abstract = re.search(abstract_pattern, html.text).group()
-                abstract = abstract[abstract.find('>') + 1:-4]
-                abstract.replace('</p>', '')
+                try:
+                    abstract = re.search(abstract_pattern, html.text).group()
+                    abstract = abstract[abstract.find('>') + 1:-4]
+                    abstract.replace('</p>', '')
+                except AttributeError:
+                    abstract = 'None'
                 file2.write('abstract: ' + abstract + '\r')
                 ref_num = re.search(ref_pattern, html.text).group()
                 number = re.search(num_pattern, ref_num).group()
-                number = re.search("\d+", number).group()
+                number = re.search(r'\d+', number).group()
                 file2.write('citations_number: ' + number + '\r')
                 paperid = re.search(paperid_pattern, html.text).group()[10:-1]
                 ts = re.search(ts_pattern, html.text).group()[13:-2]
                 token = re.search(token_pattern, html.text).group()[16:-2]
                 sign = re.search(sign_pattern, html.text).group()[15:-2]
 
-                new_url = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
-                          + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=refpaperuri%3A(' \
-                          + paperid + ')&type=citation&rn=10&page_no=1'
-                html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
-                refbody = re.findall(ref_body_pattern, html.text)
                 file2.write('Citation: \r')
-                for ref in refbody:
-                    ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
-                    ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
-                    file2.write(ref_name + ' ')
-                    file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
+                try:
+                    new_url = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
+                              + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=refpaperuri%3A(' \
+                              + paperid + ')&type=citation&rn=10&page_no=1'
+                    html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
+                    refbody = re.findall(ref_body_pattern, html.text)
+                    for ref in refbody:
+                        ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
+                        ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                        file2.write(ref_name + ' ')
+                        ref_authors = re.findall(ref_author_pattern, ref)
+                        for ref_aut in ref_authors:
+                            if ref_aut.find(r'\u'):
+                                ref_aut = ref_aut.encode().decode('unicode_escape')
+                            file2.write(ref_aut[10:] + ' ')
+                        file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
+                except requests.ReadTimeout:
+                    print("cit timeout")
+                    pass
 
                 mark = 1
                 first_ref = ''
@@ -433,25 +478,36 @@ def get_Baidu_scholar(keyword):
                           + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A(' \
                           + paperid + ')&type=reference&rn=10&page_no='
                 file2.write('References: \r')
-                while True:
-                    new_url = new_url_src + str(mark)
-                    mark += 1
-                    num = 0
-                    html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
-                    refbody = re.findall(ref_body_pattern, html.text)
-                    for ref in refbody:
-                        ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
-                        if num == 0:
-                            if first_ref == ref_id:
-                                break
-                            else:
-                                first_ref = ref_id
-                        num += 1
-                        ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
-                        file2.write(ref_name + ' ')
-                        file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
-                    if num < 10:
-                        break
+                try:
+                    while True:
+                        new_url = new_url_src + str(mark)
+                        mark += 1
+                        num = 0
+                        html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
+                        refbody = re.findall(ref_body_pattern, html.text)
+                        for ref in refbody:
+                            ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
+                            if num == 0:
+                                if first_ref == ref_id:
+                                    break
+                                else:
+                                    first_ref = ref_id
+                            num += 1
+                            ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                            file2.write(ref_name + ' ')
+                            ref_authors = re.findall(ref_author_pattern, ref)
+                            for ref_aut in ref_authors:
+                                if ref_aut.find(r'\u'):
+                                    ref_aut = ref_aut.encode().decode('unicode_escape')
+                                if ref_aut.find('全网免费下载') >= 0:
+                                    continue
+                                file2.write(ref_aut[10:] + ' ')
+                            file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
+                        if num < 10:
+                            break
+                except requests.ReadTimeout:
+                    print("ref timeout")
+                    pass
                 file2.close()
             except AttributeError as e:
                 print(new_url)
@@ -459,9 +515,11 @@ def get_Baidu_scholar(keyword):
                 file2.close()
                 os.remove(file_name + '.txt')
                 print(e.args)
-            except ConnectionError as e:
+            except requests.ReadTimeout as e:
                 print(new_url)
                 print(url)
+                file2.close()
+                os.remove(file_name + '.txt')
                 print(e.args)
         file.close()
         os.remove(keyword + '.txt')
@@ -470,5 +528,5 @@ def get_Baidu_scholar(keyword):
 
 if __name__ == '__main__':
     # get_Google_scholar('Anomaly Detection')   谷歌没写好
-    get_ieee_search('CARP')
-    get_Baidu_scholar('Anomaly Detection')
+    # get_ieee_search('network')
+    get_Baidu_scholar('A Machine-Learning Approach')
