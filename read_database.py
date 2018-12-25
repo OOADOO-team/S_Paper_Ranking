@@ -22,8 +22,10 @@ def get_infomation(keyword,alpha):
     # get each line of xlsx
     for i in range(length):
         # get the value of B0 to Bn
-        value_of_blockBn = str(sheet.cell(row=i, column=2).value).upper()
-        value_of_blockCn = str(sheet.cell(row=i, column=3).value).upper()
+        value_of_blockBn = str(sheet.cell(row=i+1, column=2).value).upper()
+        print("value_of_blockBn",value_of_blockBn)
+        value_of_blockCn = str(sheet.cell(row=i+1, column=3).value).upper()
+        print("value_of_blockCn is ",value_of_blockCn)
         data_U = keyword.upper()
         # remove the useless word
         judge1 = re.search(data_U, value_of_blockBn)
@@ -42,8 +44,14 @@ def get_infomation(keyword,alpha):
                             citation_number = sheet.cell(row=i + 1, column=11).value
                               )
             result.append(paper)
-        result = r.rank_simple(result,alpha)
-        length = len(result)
-        final_result = zip(range(1,length+1),result)
+    print("read is correct， the result length is ", len(result))
+    result = r.rank_simple(result,alpha)
+    length = len(result)
+    final_result = zip(range(1,length+1),result)
 
     return final_result
+
+
+if __name__ == '__main__':
+    result = get_infomation(keyword="approaches",alpha=50)
+    print(result)

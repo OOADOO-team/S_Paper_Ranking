@@ -7,16 +7,18 @@ import re
 
 def rank_simple(paperlist, alpha):
     # 读取publish的name和对应的IF值
-    publish_excel = load_workbook("dao\publish.xlsx",
-                                  read_only=True)  # 默认可读写，若有需要可以指定write_only和read_only为True
-    pe = publish_excel.active
-    maxR = pe.max_row  # 获取最大列
+    pe = load_workbook("dao\publish.xlsx")  # 默认可读写，若有需要可以指定write_only和read_only为True
+    sheet = pe.worksheets[0]
+    print("load database is correct")
+    length = len(sheet["B"])
     publish_name = []
     publish_if = []
-    for i in range(1, maxR + 1):  # range默认从0开始，到后面参数的-1结束，而openpyxl都是从第一行第一列开始的，所以参数为1，maxC+1；意思就是遍历第一列到最后一列，
-        publish_name.append(pe.cell(i, 1))
-        publish_if.append(pe.cell(i, 2))
+    for i in range(1, length + 1):  # range默认从0开始，到后面参数的-1结束，而openpyxl都是从第一行第一列开始的，所以参数为1，maxC+1；意思就是遍历第一列到最后一列，
+        publish_name.append(str(sheet.cell(i, 1).value))
+        # print(sheet.cell(i, 2).value)
+        publish_if.append(float(sheet.cell(i, 2).value))
 
+    print("read publish is correct")
     # ==== 读取paper的citation的值，找到对应的publish并赋值。最后加权排序 =====
 
     total_list = []
@@ -24,14 +26,15 @@ def rank_simple(paperlist, alpha):
     # 根据10/79.258得到的publish_value应该乘的weight
     weight = 0.12617
     for paper in paperlist:
-        citation = paper.citation_numer()
-        publish = paper.published_in()
+        print("跑paperlist呢")
+        citation = paper.citation_number
+        publish = paper.published_in
         valuep = 0
         valuec = find_citation_value(citation)
         flag = False
 
         # 找publish
-        for i in range(maxR):
+        for i in range(length):
             judge = re.search(str(publish).upper(), str(publish_name[i]).upper())
             if judge is not None:
                 valuep = publish_if[i] * weight

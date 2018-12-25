@@ -1,3 +1,4 @@
+import re
 a = "Statistical methods for meta-analysis http://xueshu.baidu.com/usercenter/paper/show?paperid=746363d4a61cd593cbb3b4e915f450f84"
 index_ = a.index("http:")
 name = a[:index_]
@@ -29,9 +30,12 @@ print(10/79.258 * 1.5)
 
 myList = [('dungeon',7),('winterfell',4),('bran',9),('meelo',6)]
 final_result = zip(myList,range(1,5))
-print(final_result)
-for item in final_result:
-    print(item[0],item[1])
+a = "approaches".upper()
+b = "Successful approaches in the TREC video retrieval evaluations ".upper()
+print(re.search(a,b))
+
+# for item in final_result:
+#     print(item[0],item[1])
 # _list = sorted(myList, key=lambda x:x[1])
 # print(_list)
 # return_list = [item[0] for item in _list]
