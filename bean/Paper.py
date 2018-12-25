@@ -119,11 +119,11 @@ class PaperBean:
         self._references_url = references_url
 
     @property
-    def citation_number(self):
+    def citations_number(self):
 
-        return max(int(self._citation_number), len(self.citations_name))
+        return max(int(self._citations_number), len(self.citations_name))
 
-    @citation_number.setter
-    def citation_number(self, cita_num):
-        self._citation_number = int(cita_num)
+    @citations_number.setter
+    def citations_number(self, cita_num):
+        self._citations_number = int(cita_num)
 

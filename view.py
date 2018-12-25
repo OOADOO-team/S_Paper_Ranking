@@ -80,7 +80,7 @@ def search():
         keyword = request.form['keyword']
         rank = int(request.form['ranking'])
         end_result = r.get_infomation(keyword=keyword, alpha=rank)
-        # print(end_result)
+        # print(end_result[0].citations_number)
         return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
 
 
