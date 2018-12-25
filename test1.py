@@ -20,19 +20,21 @@ print(a)
 # for i in text:
 #     temp += i
 # print(temp)
-
-c = ["a","b","c"]
-d = [1,2,3]
-e=zip(c,d)
-for item in e:
-    print(item[0],item[1])
-print(10/79.258 * 1.5)
-
-myList = [('dungeon',7),('winterfell',4),('bran',9),('meelo',6)]
-final_result = zip(myList,range(1,5))
-a = "approaches".upper()
-b = "Successful approaches in the TREC video retrieval evaluations ".upper()
-print(re.search(a,b))
+#
+# c = ["a","b","c"]
+# d = [1,2,3]
+# e=zip(c,d)
+# for item in e:
+#     print(item[0],item[1])
+# print(10/79.258 * 1.5)
+#
+# myList = [('dungeon',7),('winterfell',4),('bran',9),('meelo',6)]
+# final_result = zip(myList,range(1,5))
+# final_result = dict(final_result)
+# print(final_result)
+# a = "approaches".upper()
+# b = "Successful approaches in the TREC video retrieval evaluations ".upper()
+# print(re.search(a,b))
 
 # for item in final_result:
 #     print(item[0],item[1])
@@ -40,3 +42,5 @@ print(re.search(a,b))
 # print(_list)
 # return_list = [item[0] for item in _list]
 # print(return_list)
+a = ""
+print(a is "")

@@ -7,7 +7,7 @@ import re
 
 def rank_simple(paperlist, alpha):
     # 读取publish的name和对应的IF值
-    pe = load_workbook("dao\publish.xlsx")  # 默认可读写，若有需要可以指定write_only和read_only为True
+    pe = load_workbook("E:\ChormeDownload\S_Paper_Ranking\dao\publish.xlsx")  # 默认可读写，若有需要可以指定write_only和read_only为True
     sheet = pe.worksheets[0]
     print("load database is correct")
     length = len(sheet["B"])
@@ -44,7 +44,7 @@ def rank_simple(paperlist, alpha):
         if flag == False:
             valuep = 0.189255
 
-        total_value = valuep * alpha + (100 - alpha) * valuec
+        total_value = float(valuep) * float(alpha) + float(100 - alpha) * float(valuec)
         total_list.append((paper, total_value))
 
     # 根据total_value对paper进行排序
