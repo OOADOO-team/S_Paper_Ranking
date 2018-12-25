@@ -15,7 +15,7 @@ def get_infomation(keyword,alpha):
         :param keyword: 用户输入于界面的keyword
         :return result： paper list
     """
-    wb = load_workbook("database.xlsx")
+    wb = load_workbook("dao\paper.xlsx")
     sheet = wb.worksheets[0]
     length = len(sheet["B"])
     result = []

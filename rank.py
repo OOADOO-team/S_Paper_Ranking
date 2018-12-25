@@ -7,7 +7,7 @@ import re
 
 def rank_simple(paperlist, alpha):
     # 读取publish的name和对应的IF值
-    publish_excel = load_workbook("E:\ChormeDownload\S_Paper_Ranking\dao\publish.xlsx",
+    publish_excel = load_workbook("dao\publish.xlsx",
                                   read_only=True)  # 默认可读写，若有需要可以指定write_only和read_only为True
     pe = publish_excel.active
     maxR = pe.max_row  # 获取最大列
