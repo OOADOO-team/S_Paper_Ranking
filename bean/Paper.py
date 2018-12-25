@@ -1,4 +1,4 @@
-from read_database import get_refer_and_cita
+# from read_database import get_refer_and_cita
 from builtins import *
 
 class PaperBean:
@@ -26,7 +26,7 @@ class PaperBean:
         # paper的reference的list 里面存 url list
         self._references_url = reference_url
         # paper的citation数目
-        self._citation_number = citation_number
+        self._citation_number = (citation_number)
 
     @property
     def number(self):
@@ -123,7 +123,7 @@ class PaperBean:
 
     @property
     def citation_number(self):
-        return max(self._citation_number, len(self.citations_name))
+        return max(int(self._citation_number), len(self.citations_name))
 
     @citation_number.setter
     def citation_number(self, cita_num):
