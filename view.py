@@ -43,7 +43,7 @@ def success(title, rank=99, paperBean=p4):
     title = quote(paperBean.title)
     # print(paperBean.citations)
 
-    return render_template('temp.html',
+    return render_template('details.html',
                            title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
@@ -58,7 +58,7 @@ def success(title, rank=99, paperBean=p4):
 
 @app.route('/')
 def index():
-    return render_template('new_index.html')
+    return render_template('index.html')
 
 
 @app.route('/search', methods=['POST', 'GET'])
