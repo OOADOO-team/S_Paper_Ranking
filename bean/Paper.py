@@ -120,9 +120,10 @@ class PaperBean:
 
     @property
     def citation_number(self):
-        return max(self._citation_number, len(self.citations_name))
+
+        return max(int(self._citation_number), len(self.citations_name))
 
     @citation_number.setter
     def citation_number(self, cita_num):
-        self._citation_number = cita_num
+        self._citation_number = int(cita_num)
 
