@@ -30,7 +30,7 @@ bootstrap = Bootstrap(app)
 end_result = dict()
 
 app = Flask(__name__)
-
+bootstrap = Bootstrap(app)
 @app.route('/test')
 def test():
     return render_template('base.html')
