@@ -41,7 +41,7 @@ def rank_simple(paperlist, alpha):
         if flag == False:
             valuep = 0.189255
 
-        total_value = valuec * alpha + (1 - alpha) * valuep
+        total_value = valuep * alpha + (100 - alpha) * valuec
         total_list.append((paper, total_value))
 
     # 根据total_value对paper进行排序

@@ -3,6 +3,7 @@ from bean.Paper import *
 from urllib.parse import quote
 import builtins
 from flask_bootstrap import Bootstrap
+import read_database as r
 
 
 p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost:5000',
@@ -64,6 +65,7 @@ def search():
     if request.method == 'POST':
         keyword = request.form['keyword']
         rank = request.form['ranking']
+        end_result = r.get_infomation(keyword=keyword,alpha=rank)
         print(keyword, rank)
         return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
 
