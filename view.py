@@ -27,7 +27,7 @@ bootstrap = Bootstrap(app)
 #                         '4. this is the abstract of paper 4. this is the abstract of paper 4.',
 #                citations=[1, 2], references=[3, 4],citation_number=0)
 
-end_result = dict()
+end_result = []
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -36,23 +36,29 @@ def test():
     return render_template('base.html')
 
 @app.route('/paper?title=<title>/<int:rank>')
-def success(title, rank=99, paperBean=p4):
+def success(title, rank=99):
 
     paperBean = end_result[rank]
     # print(paperBean)
     # print(request.args)
     # print(request.get_json())
+    # print(end_result)
     title = quote(paperBean.title)
     # print(paperBean.citations)
 
+    refs = list(zip(paperBean.references_name.replace('\'','').split(','),paperBean.references_url.replace('\'','').split(',')))
+    cites = list(zip(paperBean.citations_name, paperBean.citations_url))
+    print(paperBean.references_name.replace('\'','').split(',')[0])
+    print(refs)
+    # print(refs[0][0])
     return render_template('details.html',
                            title=paperBean.title,
                            authors=paperBean.authors,
                            abstract=paperBean.abstract,
                            published_in=paperBean.published_in,
                            url=paperBean.url,
-                           references=paperBean.references,
-                           citations=paperBean.citations,
+                           references=refs,
+                           citations=cites,
 
                            rank=rank
                            )

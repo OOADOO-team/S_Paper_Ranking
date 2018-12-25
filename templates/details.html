@@ -69,7 +69,7 @@
                             <div class="panel-heading">
                                 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
                                    href="#panel-element-001"><span
-                                        class="badge">{{ references | length }}</span>References</a>
+                                        class="badge">{{ refs | length }}</span>References</a>
                             </div>
                             <div id="panel-element-001" class="panel-collapse in">
                                 <div class="panel-body">
@@ -78,23 +78,23 @@
                                     <div class="panel-group" id="accordion" role="tablist"
                                          aria-multiselectable="true">
 
-                                        {% for c in references %}
+                                        {% for c in refs %}
 
                                             <div class="panel panel-default">
-                                                <div class="panel-heading" role="tab" id="{{ 'head'+ c.title }}">
+                                                <div class="panel-heading" role="tab" id="{{ 'head'+ c[0] }}">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" role="button" data-toggle="collapse"
-                                                           data-parent="#accordion" href="#{{ c.title }}"
-                                                           aria-expanded="false" aria-controls="{{ c.title }}">
-                                                            {{ c.title }}
+                                                           data-parent="#accordion" href="#{{ c[0] }}"
+                                                           aria-expanded="false" aria-controls="{{ c[0] }}">
+                                                            {{ c[0] }}
                                                         </a>
                                                     </h4>
                                                 </div>
-                                                <div id="{{ c.title }}" class="panel-collapse collapse" role="tabpanel"
-                                                     aria-labelledby="{{ 'head'+c.title }}">
+                                                <div id="{{ c[0] }}" class="panel-collapse collapse" role="tabpanel"
+                                                     aria-labelledby="{{ 'head'+c[0] }}">
                                                     <div class="panel-body">
-                                                        {{ c.abstract[:100] + "..." }}
-                                                        <a class="btn" href=" {{ "http://"+c.url }} ">View details »</a>
+
+                                                        <a class="btn" href=" {{ "http://"+c[1] }} ">View details »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -120,20 +120,20 @@
                                         {% for r in citations %}
 
                                             <div class="panel panel-default">
-                                                <div class="panel-heading" role="tab" id="{{ 'head'+ r.title }}">
+                                                <div class="panel-heading" role="tab" id="{{ 'head'+ r[0] }}">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" role="button" data-toggle="collapse"
-                                                           data-parent="#accordion" href="#{{ r.title }}"
-                                                           aria-expanded="false" aria-controls="{{ r.title }}">
-                                                            {{ r.title }}
+                                                           data-parent="#accordion" href="#{{ r[0] }}"
+                                                           aria-expanded="false" aria-controls="{{ r[0] }}">
+                                                            {{ r[0] }}
                                                         </a>
                                                     </h4>
                                                 </div>
-                                                <div id="{{ r.title }}" class="panel-collapse collapse" role="tabpanel"
-                                                     aria-labelledby="{{ 'head'+r.title }}">
+                                                <div id="{{ r[0] }}" class="panel-collapse collapse" role="tabpanel"
+                                                     aria-labelledby="{{ 'head'+r[0] }}">
                                                     <div class="panel-body">
-                                                        {{ r.abstract[:100] + "..." }}
-                                                        <a class="btn" href=" {{ "http://"+r.url }} ">View details »</a>
+
+                                                        <a class="btn" href=" {{ "http://"+r[1] }} ">View details »</a>
                                                     </div>
                                                 </div>
                                             </div>

@@ -33,7 +33,7 @@ def get_infomation(keyword,alpha):
         judge1 = re.search(data_U, value_of_blockBn)
         judge2 = re.search(data_U, value_of_blockCn)
         if judge1 is not None or judge2 is not None:
-<<<<<<<<< Temporary merge branch 1
+
             paper = p.PaperBean(number=i,
                              title=str(sheet.cell(row=i+2, column=2).value),
                              authors=str(sheet.cell(row=i+2, column=3).value),
@@ -47,15 +47,15 @@ def get_infomation(keyword,alpha):
                             citation_number = sheet.cell(row=i + 2, column=11).value
                               )
             result.append(paper)
-    print("read is correct， the result length is ", len(result))
-    result = r.rank_simple(result,alpha)
-    length = len(result)
-    final_result = list(zip(range(1,length+1),result))
+    # print("read is correct， the result length is ", len(result))
+    # result = r.rank_simple(result,alpha)
+    # length = len(result)
+    # final_result = list(zip(range(1,length+1),result))
     # final_result = {}
     # for i in range(length):
     #     final_result.update((i+1,result[i]))
 
-    return final_result
+    return result
 
 
 if __name__ == '__main__':
