@@ -26,7 +26,7 @@ def rank_simple(paperlist, alpha):
     # 根据10/79.258得到的publish_value应该乘的weight
     weight = 0.12617
     for paper in paperlist:
-        print("跑paperlist呢")
+        # print("跑paperlist呢")
         citation = paper.citation_number
         publish = paper.published_in
         valuep = 0

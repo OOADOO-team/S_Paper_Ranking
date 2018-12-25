@@ -23,9 +23,9 @@ def get_infomation(keyword,alpha):
     for i in range(length):
         # get the value of B0 to Bn
         value_of_blockBn = str(sheet.cell(row=i+1, column=2).value).upper()
-        print("value_of_blockBn",value_of_blockBn)
+        # print("value_of_blockBn",value_of_blockBn)
         value_of_blockCn = str(sheet.cell(row=i+1, column=3).value).upper()
-        print("value_of_blockCn is ",value_of_blockCn)
+        # print("value_of_blockCn is ",value_of_blockCn)
         data_U = keyword.upper()
         # remove the useless word
         judge1 = re.search(data_U, value_of_blockBn)
@@ -52,6 +52,7 @@ def get_infomation(keyword,alpha):
     return final_result
 
 
-if __name__ == '__main__':
-    result = get_infomation(keyword="approaches",alpha=50)
-    print(result)
+# if __name__ == '__main__':
+#     result = get_infomation(keyword="approaches",alpha=50)
+#     for item in result:
+#         print(item[1].title)
