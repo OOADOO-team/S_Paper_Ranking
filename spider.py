@@ -383,29 +383,36 @@ def get_Baidu_scholar(keyword):
         except requests.exceptions.ConnectionError as e:
             print('Error: ', e.args)
             return
-        if os.path.exists(keyword + '.txt'):
-            file = open(keyword + '.txt', "a", encoding='utf-8')
+        if os.path.exists('Error_message' + '.txt'):
+            file = open('Error_message' + '.txt', "a", encoding='utf-8')
         else:
-            file = open(keyword + '.txt', "w", encoding='utf-8')
+            file = open('Error_message' + '.txt', "w", encoding='utf-8')
         m = re.findall(class_pattern, html.text)
         cookie = html.cookies
         new_url = ''
         for item in m:
+            file_name = ''
+            file2 = None
+            error_num = 0
             try:
                 new_url = re.search(url_pattern, item).group()[6:-1]
+                error_num += 1
                 new_url = 'http://xueshu.baidu.com' + new_url
                 html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                 id = re.search(id_pattern, html.text)
                 if id is None:
                     continue
                 id = id.group().replace('data-longsign="', '')[:-1]
+                error_num += 1
                 if id == '':
                     continue
                 new_url = 'http://xueshu.baidu.com/usercenter/paper/show?paperid=' \
                           + id + '&site=xueshu_se'
                 html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                 body = re.search(body_pattern, html.text).group()
+                error_num += 1
                 name = re.search(name_pattern, body).group()[2:-4]
+                error_num += 1
                 file_name = re.sub(r'[/:*?"<>|]', '-', name)
                 if file_name.find('\\') != -1:
                     file_name = file_name.replace('\\', '')
@@ -421,6 +428,7 @@ def get_Baidu_scholar(keyword):
 
                 file2.write('name: ' + name + '\r')
                 paper_url = re.search(paper_url_pattern, body).group()[:-1]
+                error_num += 1
                 file2.write('url: ' + paper_url + '\r')
                 file.write(name + '\r')
                 try:
@@ -434,6 +442,7 @@ def get_Baidu_scholar(keyword):
                 for author in authors:
                     it = re.search(author_name_pattern, author).group()
                     file2.write(it[2:-11] + ',')
+                error_num += 1
                 file2.write('\r')
                 try:
                     abstract = re.search(abstract_pattern, html.text).group()
@@ -442,14 +451,22 @@ def get_Baidu_scholar(keyword):
                 except AttributeError:
                     abstract = 'None'
                 file2.write('abstract: ' + abstract + '\r')
-                ref_num = re.search(ref_pattern, html.text).group()
-                number = re.search(num_pattern, ref_num).group()
-                number = re.search(r'\d+', number).group()
+                try:
+                    ref_num = re.search(ref_pattern, html.text).group()
+                    number = re.search(num_pattern, ref_num).group()
+                    number = re.search(r'\d+', number).group()
+                except AttributeError:
+                    number = '0'
+                error_num += 1
                 file2.write('citations_number: ' + number + '\r')
                 paperid = re.search(paperid_pattern, html.text).group()[10:-1]
+                error_num += 1
                 ts = re.search(ts_pattern, html.text).group()[13:-2]
+                error_num += 1
                 token = re.search(token_pattern, html.text).group()[16:-2]
+                error_num += 1
                 sign = re.search(sign_pattern, html.text).group()[15:-2]
+                error_num += 1
 
                 file2.write('Citation: \r')
                 try:
@@ -461,10 +478,12 @@ def get_Baidu_scholar(keyword):
                     for ref in refbody:
                         ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
                         ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                        if ref_name.find(r'\\u'):
+                            ref_name = ref_name.encode().decode('unicode_escape')
                         file2.write(ref_name + ' ')
                         ref_authors = re.findall(ref_author_pattern, ref)
                         for ref_aut in ref_authors:
-                            if ref_aut.find(r'\u'):
+                            if ref_aut.find(r'\\u'):
                                 ref_aut = ref_aut.encode().decode('unicode_escape')
                             file2.write(ref_aut[10:] + ' ')
                         file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
@@ -473,6 +492,7 @@ def get_Baidu_scholar(keyword):
                     pass
 
                 mark = 1
+                error_num += 1
                 first_ref = ''
                 new_url_src = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
                           + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A(' \
@@ -494,10 +514,12 @@ def get_Baidu_scholar(keyword):
                                     first_ref = ref_id
                             num += 1
                             ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
+                            if ref_name.find(r'\\u'):
+                                ref_name = ref_name.encode().decode('unicode_escape')
                             file2.write(ref_name + ' ')
                             ref_authors = re.findall(ref_author_pattern, ref)
                             for ref_aut in ref_authors:
-                                if ref_aut.find(r'\u'):
+                                if ref_aut.find(r'\\u'):
                                     ref_aut = ref_aut.encode().decode('unicode_escape')
                                 if ref_aut.find('全网免费下载') >= 0:
                                     continue
@@ -512,9 +534,13 @@ def get_Baidu_scholar(keyword):
             except AttributeError as e:
                 print(new_url)
                 print(url)
-                file2.close()
-                os.remove(file_name + '.txt')
+                print(error_num)
+                if file2 is not None:
+                    file2.close()
+                if file_name != '':
+                    os.remove(file_name + '.txt')
                 print(e.args)
+                file.write(html.text)
             except requests.ReadTimeout as e:
                 print(new_url)
                 print(url)
@@ -522,11 +548,11 @@ def get_Baidu_scholar(keyword):
                 os.remove(file_name + '.txt')
                 print(e.args)
         file.close()
-        os.remove(keyword + '.txt')
         print('%.2f' % (time.time() - start_time))
+    os.remove('Error_message' + '.txt')
 
 
 if __name__ == '__main__':
     # get_Google_scholar('Anomaly Detection')   谷歌没写好
     # get_ieee_search('network')
-    get_Baidu_scholar('A Machine-Learning Approach')
+    get_Baidu_scholar('OOAD')
