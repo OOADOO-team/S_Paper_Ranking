@@ -4,10 +4,14 @@ from urllib.parse import quote
 import builtins
 from flask_bootstrap import Bootstrap
 import read_database as r
+from flask_bootstrap import WebCDN
 
 app = Flask(__name__)
-bootstrap = Bootstrap(app)
 
+bootstrap = Bootstrap(app)
+app.extensions['bootstrap']['cdns']['jquery'] = WebCDN(
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/4.6.0/'
+)
 # p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost:5000',
 #                abstract='this is the abstract of paper 1. this is the abstract of paper 1. this is the abstract of paper '
 #                         '1. this is the abstract of paper 1. this is the abstract of paper 1.',
@@ -33,7 +37,7 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 @app.route('/test')
 def test():
-    return render_template('base.html')
+    return render_template('SJR.html')
 
 @app.route('/paper?title=<title>/<int:rank>')
 def success(title, rank=99):
@@ -46,9 +50,9 @@ def success(title, rank=99):
     title = quote(paperBean.title)
     # print(paperBean.citations)
 
-    refs = list(zip(paperBean.references_name.replace('\'','').split(','),paperBean.references_url.replace('\'','').split(',')))
+    refs = list(zip(paperBean.references_name,paperBean.references_url))
     cites = list(zip(paperBean.citations_name, paperBean.citations_url))
-    print(paperBean.references_name.replace('\'','').split(',')[0])
+
     print(refs)
     # print(refs[0][0])
     return render_template('details.html',
