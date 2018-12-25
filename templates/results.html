@@ -7,26 +7,19 @@
 
 {% block content %}
     <div class="container">
-        <div id="table" class="table table-striped table-hover"
-             style="
-             {#margin:5px 55px 0px 55px;#}
-             {#border:3px solid black;#}
-             {#overflow: scroll;#}
-             {#top:20%;#}
-             {#left:0;#}
-             {#height: 80%;#}
-             {#width: 90%;#}
-             z-index: 0;
-             {#background-color: white; #}
-             text-align: left;"
-        >
 
+        <table class="table  table-hover">
+        <tbody>
 
-            {% if papers|length == 0 %}
+                {% if papers|length == 0 %}
                 <center><h3>Nothing was found!</h3></center>
             {% else %}
                 {% for ranking in papers.keys() %}
-                    <div style="border-bottom:1px solid black; padding: 30px">
+                    <tr>
+                    <td style="
+                    {#border-bottom:1px solid black;#}
+                    padding: 30px
+">
                         <h2 style="font-family: Times, TimesNR; font-weight:normal;"><a
                                 href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
                         </h2>
@@ -36,11 +29,20 @@
                         <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px">Cited
                             by {{ papers[ranking].citations | length }} articles
                         </div>
-                    </div>
+                    </td>
+                    </tr>
                 {% endfor %}
             {% endif %}
-        </div>
+					<tr>
+						<td>
+							1
+						</td>
+					</tr>
+
+				</tbody>
+    </table>
     </div>
+
 {% endblock %}
 
 </html>
