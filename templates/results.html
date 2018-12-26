@@ -7,7 +7,6 @@
     {{ super() }}
     <script>
 
-
         $(window).on('load', function () { // makes sure the whole site is loaded
 
             $('.loader').fadeOut(); // will fade out the white DIV that covers the website.
@@ -20,18 +19,9 @@
 {% block styles %}
     {{ super() }}
     <style>
-        {##preloader {#}
-        {#    position: fixed;#}
-        {#    top: 0;#}
-        {#    left: 0;#}
-        {#    right: 0;#}
-        {#    bottom: 0;#}
-        {#    background-color: #f5f5f5;#}
-        {#    /* change if the mask should have another color then white */#}
-        {#    z-index: 99;#}
-        {#    /* makes sure it stays on top */#}
-        {
-        #}#}
+        .btn.btn-square {
+            border-radius: 0;
+        }
     </style>
 {% endblock %}
 
@@ -43,28 +33,52 @@
 
             <div class="col-md-12">
                 {% if papers|length == 0 %}
-                        <center><h3>Nothing was found!</h3></center>
-                    {% else %}
-                {% for ranking in range( papers| length) %}
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" ><a style="font-family: Times, TimesNR;color: #1a0dab"
-                                    href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a></h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ papers[ranking].authors }}</h6>
-                            <p class="card-text">{{ papers[ranking].abstract[:200] + "..."}}</p>
-                            <p  class="card-text">{{ papers[ranking].public_in }}</p>
-                            <p class="card-text">Cited by {{ papers[ranking].citations_number }}</p>
+                    <center><h3>Nothing was found!</h3></center>
+                {% else %}
+                    {% for ranking in range( papers| length) %}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    {% if ranking == 0 %}
+                                        <div align="right" style="padding: 0.5em"><a
+                                                class="btn-floating  btn btn-lg btn-amber z-depth-2" style="padding: 0.4em 0.7em; width: 4.5em; height: 4.5em; align-content: center; vertical-align: center"><label style="alignment: center; font-size: 2.8em; font-style: italic">{{ ranking + 1 }}</label></a>
+                                        </div>
+
+                                    {% elif ranking == 1 %}
+                                        <div align="right" style="padding: 0.5em;"><a
+                                                class="btn-floating  btn btn-sm btn-amber rounded-0 z-depth-2" style="padding: 0.7em 0.6em; width: 4em; height: 4em; align-content: center;vertical-align: center"><label style="align-content: center; font-size: 2.4em; font-style: italic;">{{ ranking + 1 }}</label></a>
+                                        </div>
+                                    {% elif ranking == 2 %}
+                                        <div align="right" style="padding: 0.5em"><a
+                                                class="btn-floating btn-lg btn-amber rounded-0 z-depth-2" style="padding: 0.4em 0.7em; width: 2em; height: 2em; align-content: center; vertical-align: center"><i>{{ ranking + 1 }}</i></a>
+                                        </div>
+                                    {% else %}
+                                        <div align="right" style="padding-top: 0.6em"><a
+                                                class="btn-floating btn-sm btn-amber z-depth-2"><i>{{ ranking + 1 }}</i></a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="card col-md-10">
+                                    <div class="card-body ">
+                                        <h5 class="card-title"><a style="font-family: Times, TimesNR;color: #1a0dab"
+                                                                  href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
+                                        </h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">{{ papers[ranking].authors }}</h6>
+                                        <p class="card-text">{{ papers[ranking].abstract[:200] + "..." }}</p>
+                                        <p class="card-text">{{ papers[ranking].public_in }}</p>
+                                        <p class="card-text">Cited by {{ papers[ranking].citations_number }}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
+                {% endif %}
 
-                {% endfor %}
-            {% endif %}
-
-
-
-
+            </div>
+            <button onclick="topFunction()" class="btn btn-amber " id="myBtn" style=" border-radius: 0" title="Go to top"><i style="font-size: 2em" class="fas fa-angle-up"></i></button>
+{#            <i style="font-size: 2em" class="fas fa-arrow-circle-up"></i>#}
+{#<i class="fas fa-angle-up"></i>#}
         </div>
-    </div>
     </div>
 
 {% endblock %}
