@@ -4,83 +4,98 @@
     Simple Paper Ranking
 {% endblock %}
 
+{% block scripts %}
+{{ super() }}
+    <script>
+    $( "body" ).prepend( '<div id="toTop"><div class="btn"> </div></div>' );
+    $(document).ready(function(){
+      $('body').append('<div id="toTop" ><span class="glyphicon glyphicon-chevron-up"></span> Back to Top</div>');
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		});
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+    </script>
+
+{% endblock %}
+
+
 
 
 
 
 {% block content %}
+    <div class="container" style="background-image: url(/static/img/lightbg.jpg)">
+        <div class="jumbotron" style="background: none">
+            <div class="container">
 
-    <div class="row" align="center">
-        <h2 class="text-info" style="font-weight:bold;font-size:6em">Welcome</h2>
-        <br>
-        <div class="text-muted"></div>
-        <br>
+                <h2 class="display-4"> Welcome</h2>
 
-
-
-
-
-        <br>
-        <p>
-        <div class="col-3">
-            <img src="../static/js/boy.png" style="
-                    {#width:50%;height:50%; #}
-                    ">
-        </div>
-        <div class="col-6">
-
-
-
-
-
-            <div class="form-group">
-
-                <form action="/search" method="post">
-                    <div class="form-group ">
-                        <br>
-
-                        <input type="text" name="keyword" id="input" class=" form-control"
-                               style="float: left; width: 85%" placeholder="Scholar search"
-                               onfocus="if(this.value==defaultValue){this.value='';}"
-                               onblur="if(!value){this.value=defaultValue;}"/>
-
-
-                        <button type="submit" class="btn btn-default "><i class="fa fa-search"
-                                                                          style=" color:#ff9d00;"></i></button>
-
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <label for="customRange1">Example range</label>
-                    <input type="range" class="custom-control" id="customRange1">
-                    <p>
-
-                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20"
-                               data-slider-step="1" data-slider-value="14"/>
-                    <div id="layer3" style="text-align: left">
-                        <!-- <div> -->
-
-
-                        <strong>Ranking by:</strong>
-                        <!-- <div> -->
-                        <input type="range" id="ranking" name="ranking"
-                               class="slider"
-                               min="0" max="100" value="50" step="1">
-                        <label style="text-align: left" for="Citation">Citation</label>
-
-                        <label style="float: right" for="Publish Venue">Publish Venue</label>
-
-
-                    </div>
-                    </p>
-                </form>
             </div>
         </div>
 
-        </p>
-    </div>
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-md">
+                    <img src="../static/js/boy.png" style="
+                            {#width:50%;height:50%; #}
+                            ">
+                </div>
+                <div class="col-md">
 
+
+                    <div class="form-group">
+
+                        <form class="form-inline ml-auto" action="/search" method="post">
+                            <div class="form-group ">
+                                <br>
+
+                                <input type="text" name="keyword" id="input" class=" form-control"
+                                       style="" placeholder="Scholar search"
+                                       onfocus="if(this.value==defaultValue){this.value='';}"
+                                       onblur="if(!value){this.value=defaultValue;}"/>
+
+
+                                <button type="submit" class="btn btn-amber "><i class="fa fa-search"
+                                                                                style=" "></i></button>
+
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+
+
+
+
+                            <div id="layer3" style="text-align: left">
+                                <!-- <div> -->
+
+
+                                <strong>Ranking by:</strong>
+                                <!-- <div> -->
+                                <input type="range" id="ranking" name="ranking"
+                                       class="custom-range"
+                                       min="0" max="100" value="50" step="1">
+                                <label style="float: left" for="Citation">Citation</label>
+
+                                <label style="float: right" for="Publish Venue">Publish Venue</label>
+
+
+                            </div>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}

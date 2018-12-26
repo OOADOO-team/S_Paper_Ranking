@@ -8,9 +8,9 @@
     {#    {{ super() }}#}
 
     <div class="row" style="background-image: url(/static/img/star-bg.svg);">
-        <div class="row clearfix">
+        <div class="row">
 
-            <div class="col-md-2" style="">
+            <div class="col-md-2 " >
                 <p class="lead text-success text-center">
                 <div id="rank"
                      style="align-items: center;background-image:url('../static/img/ganlan.png');background-size: 10em 10em;background-repeat: no-repeat space;background-position-x: center ">
@@ -37,19 +37,36 @@
                 {#                        {{ title }}#}
                 {#                    </h2>#}
                 {#                </div>#}
-                <div class="col-xl-10 col-md-11 col-10">
-                    <h5 class="font-weight-bold mb-3">Abstract</h5>
-                    <p class="">{{ abstract }}.</p>
-                </div>
+                <div class="col-xl-12 col-md-12 col-12">
 
-                <div class="col-xl-10 col-md-11 col-5">
-                    <h5 class="font-weight-bold mb-3">Authors</h5>
-                    <p class="">{{ authors }}.</p>
-                </div>
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-align-left pr-2"></i>Abstract</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ abstract }}.</p>
+                        </div>
 
-                <div class="col-xl-10 col-md-11 col-10">
-                    <h5 class="font-weight-bold mb-3">Published in</h5>
-                    <p class="">{{ published_in }}.</p>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12 col-12">
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Authors</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ authors }}.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12 col-12">
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-book pr-2"></i>Sourcce</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ published_in }}.</p>
+                        </div>
+
+                    </div>
                 </div>
 
 
@@ -64,7 +81,7 @@
                             <a data-toggle="collapse" href="#collapseOne" aria-expanded="true"
                                aria-controls="collapseOne">
                                 <h5 class="mb-0">
-                                    Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+                                    Cited<i class="fas fa-angle-down rotate-icon"></i>
                                 </h5>
                             </a>
                         </div>
@@ -73,18 +90,7 @@
                         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
                              data-parent="#accordionEx">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                Brunch 3 wolf
-                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch
-                                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                ea proident.
-                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-                                denim aesthetic
-                                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                hh1
                             </div>
                         </div>
                     </div>
@@ -98,7 +104,7 @@
                             <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
                                aria-controls="collapseTwo">
                                 <h5 class="mb-0">
-                                    Collapsible Group Item #2 <i class="fas fa-angle-down rotate-icon"></i>
+                                    Reference<i class="fas fa-angle-down rotate-icon"></i>
                                 </h5>
                             </a>
                         </div>
@@ -107,60 +113,15 @@
                         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
                              data-parent="#accordionEx">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                Brunch 3 wolf
-                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch
-                                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                ea proident.
-                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-                                denim aesthetic
-                                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                hhh2
                             </div>
                         </div>
                     </div>
                     <!-- Accordion card -->
 
-                    <!-- Accordion card -->
-                    <div class="card">
 
-                        <!-- Card header -->
-                        <div class="card-header" role="tab" id="headingThree">
-                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false"
-                               aria-controls="collapseThree">
-                                <h5 class="mb-0">
-                                    Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
-                                </h5>
-                            </a>
-                        </div>
-
-                        <!-- Card body -->
-                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
-                             data-parent="#accordionEx">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute,
-                                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                Brunch 3 wolf
-                                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                shoreditch
-                                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                ea proident.
-                                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
-                                denim aesthetic
-                                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion card -->
                 </div>
                 <!--/.Accordion wrapper-->
-
-
                 <div class="panel-group" id="panel-865365">
 
 
@@ -245,10 +206,12 @@
                 </div>
             </div>
 
-            <div class="col-md-2">
-            </div>
-
         </div>
+
+    </div>
+
+
+    </div>
     </div>
 
 

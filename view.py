@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from bean.Paper import *
 from urllib.parse import quote
-import builtins
+# import builtins
 from flask_bootstrap import Bootstrap
 import read_database as r
 from flask_bootstrap import WebCDN
@@ -70,7 +70,7 @@ def success(title, rank=99):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('SJR.html')
 
 
 @app.route('/search', methods=['POST', 'GET'])
@@ -79,8 +79,15 @@ def search():
     if request.method == 'POST':
         keyword = request.form['keyword']
         rank = int(request.form['ranking'])
+        print('keyword is:',keyword,rank)
         end_result = r.get_infomation(keyword=keyword, alpha=rank)
         # print(end_result[0].citations_number)
+        return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
+    if request.method == 'GET':
+        print(request.args.get('keyword'))
+        keyword = request.args.get('keyword')
+        rank = request.args.get('ranking')
+        end_result = r.get_infomation(keyword=keyword, alpha=rank)
         return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
 
 

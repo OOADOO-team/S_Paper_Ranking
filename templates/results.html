@@ -3,45 +3,78 @@
 {% block title %}
     Results
 {% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script>
 
+
+        $(window).on('load', function () { // makes sure the whole site is loaded
+
+            $('.loader').fadeOut(); // will fade out the white DIV that covers the website.
+            $('body').delay(1000).css({'overflow': 'visible'});
+        })
+
+
+    </script>
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        {##preloader {#}
+        {#    position: fixed;#}
+        {#    top: 0;#}
+        {#    left: 0;#}
+        {#    right: 0;#}
+        {#    bottom: 0;#}
+        {#    background-color: #f5f5f5;#}
+        {#    /* change if the mask should have another color then white */#}
+        {#    z-index: 99;#}
+        {#    /* makes sure it stays on top */#}
+        {
+        #}#}
+    </style>
+{% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-2 "></div>
-        <div class="col-8 ">
-            <table  >
-                <tbody>
+    <div class="container">
 
-                {% if papers|length == 0 %}
-                    <center><h3>Nothing was found!</h3></center>
-                {% else %}
-                    {% for ranking in range( papers| length) %}
-                        <tr >
-                            <td style="
-                                    {#border-bottom:1px solid black;#}
-                                    padding: 30px
-                                    ">
-                                <h5 style="font-family: Times, TimesNR; font-weight: lighter"><a
-                                        href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
-                                </h5>
-                                <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px;">{{ papers[ranking].authors }}
-                                    &nbsp&nbsp {{ papers[ranking].public_in }}</div>
-                                <div style="font-family:arial,sans-serif; font-size:14px ; padding: 5px;">{{ papers[ranking].abstract }}</div>
-                                <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px;">
-                                    Cited
-                                    by {{ papers[ranking].citations_number }} articles
-                                </div>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                {% endif %}
-                <tr>
+        <div class="row">
 
-                </tr>
-                </tbody>
-            </table>
+
+            <div class="col-md-12">
+                <table class="table  table-hover">
+                    <tbody>
+
+                    {% if papers|length == 0 %}
+                        <center><h3>Nothing was found!</h3></center>
+                    {% else %}
+                        {% for ranking in range( papers| length) %}
+                            <tr class="col-12 col-md-12" data-width="100%">
+                                <td class="col-12 col-md-12" data-width="100%">
+                                    <h5 style="font-family: Times, TimesNR; font-weight: lighter"><a
+                                            href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
+                                    </h5>
+                                    <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px;">{{ papers[ranking].authors }}
+                                        &nbsp&nbsp {{ papers[ranking].public_in }}</div>
+                                    <div style="font-family:arial,sans-serif; font-size:14px ; padding: 5px;">{{ papers[ranking].abstract[:100] }}</div>
+                                    <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px;">
+                                        Cited
+                                        by {{ papers[ranking].citations_number }} articles
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                    <tr>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+{#            <div class="col-2 col-md-2 ">#}
+
+            </div>
         </div>
-    <div class="col-2 "></div>
     </div>
 
 {% endblock %}
