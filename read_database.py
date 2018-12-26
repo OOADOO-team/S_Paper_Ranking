@@ -59,8 +59,8 @@ def get_infomation(keyword, alpha):
     return final_result
 
 
-# if __name__ == '__main__':
-#     result = get_infomation(keyword="t",alpha=50)
-#     for item in result:
-#         # print(item[1].title,item[1].authors, item[1].published_in)
-#         print(item[1].title)
+if __name__ == '__main__':
+    result = get_infomation(keyword=" ",alpha=50)
+    for item in result:
+        # print(item[1].title,item[1].authors, item[1].published_in)
+        print(item[1].title)

@@ -83,7 +83,7 @@ class PaperBean:
 
     @citations_name.setter
     def citations_name(self, citations_name):
-        self._citations_name = citations_name
+        self._citations_name = (citations_name)[1:-1].split("','")
 
     @property
     def citations_url(self):
@@ -105,7 +105,7 @@ class PaperBean:
 
     @references_name.setter
     def references_name(self, references_name):
-        self._references_name = references_name
+        self._references_name = str(references_name)[1:-1].split("','")
 
     @property
     def references_url(self):
