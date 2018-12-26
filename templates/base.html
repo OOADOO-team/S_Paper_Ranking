@@ -23,7 +23,20 @@
     {##}
 
     <link href="../static/css/mdb.min.css" rel="stylesheet">
+    <style>
+        .bg {
+            /* The image used */
+            background-image: url(/static/img/star-bg.svg);
 
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 
 {% endblock %}
 
@@ -45,7 +58,8 @@
                 <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Simple Paper Ranking</strong></h2>
                 <p class="mx-5 mb-5">An OOAD project
                 </p>
-                <a href="{{ url_for("test") }}" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> View project</a>
+                <a href="{{ url_for("test") }}" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i>
+                    View project</a>
             </div>
         </div>
     </div>

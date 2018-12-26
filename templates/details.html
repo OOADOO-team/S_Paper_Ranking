@@ -6,11 +6,11 @@
 
 {% block content %}
     {#    {{ super() }}#}
-
+    <div class="bg"></div>
     <div class="row" style="background-image: url(/static/img/star-bg.svg);">
         <div class="row">
 
-            <div class="col-md-2 " >
+            <div class="col-md-2 ">
                 <p class="lead text-success text-center">
                 <div id="rank"
                      style="align-items: center;background-image:url('../static/img/ganlan.png');background-size: 10em 10em;background-repeat: no-repeat space;background-position-x: center ">
@@ -27,11 +27,11 @@
                 </p>
             </div>
             <div class="col-md-8">
-                <br>
-                <br>
-                <br>
-                <h2 class="h1-responsive font-weight-bold text-center col-10"><a style=""
-                                                                                 href="{{ url }}">{{ title }}</a></h2>
+                {#                <br>#}
+                {#                <br>#}
+                {#                <br>#}
+                <h2 class=" font-weight-bold text-left ml-4 col-10"><a style="color: #1A0DAB"
+                                                                       href="{{ url }}">{{ title }}</a></h2>
                 {#                <div class="page-header">#}
                 {#                    <h2>#}
                 {#                        {{ title }}#}
@@ -39,7 +39,7 @@
                 {#                </div>#}
                 <div class="col-xl-12 col-md-12 col-12">
 
-                    <h5 class="font-weight-bold mb-3"><i class="fas fa-align-left pr-2"></i>Abstract</h5>
+                    <h5 class="font-weight-bold ml-4 mb-3"><i class="fas fa-align-left pr-2"></i>Abstract</h5>
                     <div class="row">
                         <div class="col-1 "></div>
                         <div class="col-8 ">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-xl-12 col-md-12 col-12">
-                    <h5 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Authors</h5>
+                    <h5 class="font-weight-bold ml-4 mb-3"><i class="fas fa-user pr-2"></i>Authors</h5>
                     <div class="row">
                         <div class="col-1 "></div>
                         <div class="col-8 ">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-xl-12 col-md-12 col-12">
-                    <h5 class="font-weight-bold mb-3"><i class="fas fa-book pr-2"></i>Sourcce</h5>
+                    <h5 class="font-weight-bold ml-4 mb-3"><i class="fas fa-book pr-2"></i>Sourcce</h5>
                     <div class="row">
                         <div class="col-1 "></div>
                         <div class="col-8 ">
@@ -71,7 +71,7 @@
 
 
                 <!--Accordion wrapper-->
-                <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                <div class="accordion" id="accor" role="tablist" aria-multiselectable="true">
 
                     <!-- Accordion card -->
                     <div class="card">
@@ -88,11 +88,12 @@
 
                         <!-- Card body -->
                         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
-                             data-parent="#accordionEx">
+                             data-parent="#accor">
                             <div class="card-body">
                                 hh1
                             </div>
                         </div>
+
                     </div>
                     <!-- Accordion card -->
 
@@ -111,7 +112,7 @@
 
                         <!-- Card body -->
                         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
-                             data-parent="#accordionEx">
+                             data-parent="#accor">
                             <div class="card-body">
                                 hhh2
                             </div>
@@ -122,12 +123,13 @@
 
                 </div>
                 <!--/.Accordion wrapper-->
-                <div class="panel-group" id="panel-865365">
+
+                <div class="accordion" id="panel-865365" role="tablist" aria-multiselectable="true">
 
 
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
+                    <div class="card z-depth-5">
+                        <div class="card-header"    role="tab" id="headingTwo">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#panel-865365"
                                href="#panel-element-001"><span
                                     class="badge">{{ refs | length }}</span>References</a>
                         </div>
