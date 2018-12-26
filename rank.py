@@ -14,7 +14,7 @@ def rank_simple(paperlist, alpha):
     publish_name = []
     publish_if = []
     for i in range(1, length + 1):  # range默认从0开始，到后面参数的-1结束，而openpyxl都是从第一行第一列开始的，所以参数为1，maxC+1；意思就是遍历第一列到最后一列，
-        publish_name.append(str(sheet.cell(i, 1).value))
+        publish_name.append(str(sheet.cell(i, 1).value).upper())
         # print(sheet.cell(i, 2).value)
         publish_if.append(float(sheet.cell(i, 2).value))
 
@@ -27,7 +27,7 @@ def rank_simple(paperlist, alpha):
     weight = 0.12617
     for paper in paperlist:
         # print("跑paperlist呢")
-        citation = paper.citation_number
+        citation = paper.citations_number
         publish = paper.published_in
         valuep = 0
         valuec = find_citation_value(citation)
@@ -35,13 +35,15 @@ def rank_simple(paperlist, alpha):
 
         # 找publish
         for i in range(length):
-            judge = re.search(str(publish).upper(), str(publish_name[i]).upper())
+            if str(publish)[0] == "《":
+                publish = str(publish)[1:-1]
+            judge = re.search(publish_name[i],publish.upper())
             if judge is not None:
                 valuep = publish_if[i] * weight
+                # print(publish)
                 flag = True
                 break
-
-        if flag == False:
+        if flag==False:
             valuep = 0.189255
 
         total_value = valuep * alpha + (100 - alpha) * valuec
@@ -50,6 +52,8 @@ def rank_simple(paperlist, alpha):
     # 根据total_value对paper进行排序
     _list = sorted(total_list, key=lambda x: x[1])
     return_list = [item[0] for item in _list]
+    for item in _list:
+        print(item[0].title,item[1])
     return return_list
 
 

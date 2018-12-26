@@ -63,7 +63,6 @@ def success(title, rank=99):
                            url=paperBean.url,
                            references=refs,
                            citations=cites,
-
                            rank=rank
                            )
 
