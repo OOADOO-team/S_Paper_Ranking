@@ -21,11 +21,12 @@ print(a)
 #     temp += i
 # print(temp)
 #
-# c = ["a","b","c"]
-# d = [1,2,3]
-# e=zip(c,d)
-# for item in e:
-#     print(item[0],item[1])
+c = ["a","b","c"]
+d = [1,3,3]
+e=zip(c,d)
+print(list(e))
+for item in e:
+    print(item[0],item[1])
 # print(10/79.258 * 1.5)
 #
 # myList = [('dungeon',7),('winterfell',4),('bran',9),('meelo',6)]
