@@ -94,7 +94,7 @@
                                                      aria-labelledby="{{ 'head'+c.title }}">
                                                     <div class="panel-body">
                                                         {{ c.abstract[:100] + "..." }}
-                                                        <a class="btn" href=" getAddress(r) ">View details »</a>
+                                                        <a class="btn" href=" {{ "http://"+c.url }} ">View details »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,7 +133,7 @@
                                                      aria-labelledby="{{ 'head'+r.title }}">
                                                     <div class="panel-body">
                                                         {{ r.abstract[:100] + "..." }}
-                                                        <a class="btn" href=" getAddress(r) ">View details »</a>
+                                                        <a class="btn" href=" {{ "http://"+r.url }} ">View details »</a>
                                                     </div>
                                                 </div>
                                             </div>

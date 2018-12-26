@@ -1,84 +1,72 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Scholar Search</title>
+{% extends 'base.html' %}
 
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+{% block title %}
+    Results
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script>
 
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-    <style type="text/css">
-        #input {
-            border-radius: 40px;
-            width: 40%;
-            height: 30px;
-            font-size: 100%;
 
-        }
+        $(window).on('load', function () { // makes sure the whole site is loaded
 
-        #search {
-            border-radius: 40px;
-            height: 30px;
-            font-size: 100%;
-        }
+            $('.loader').fadeOut(); // will fade out the white DIV that covers the website.
+            $('body').delay(1000).css({'overflow': 'visible'});
+        })
 
-        p,
-        label {
-            font: 1rem 'Fira Sans', sans-serif;
-        }
 
-        input {
-            margin: .4rem;
-        }
+    </script>
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style>
+        {##preloader {#}
+        {#    position: fixed;#}
+        {#    top: 0;#}
+        {#    left: 0;#}
+        {#    right: 0;#}
+        {#    bottom: 0;#}
+        {#    background-color: #f5f5f5;#}
+        {#    /* change if the mask should have another color then white */#}
+        {#    z-index: 99;#}
+        {#    /* makes sure it stays on top */#}
+        {
+        #}#}
     </style>
+{% endblock %}
 
-</head>
+{% block content %}
+    <div class="container">
 
-<body>
-<div>
-    <form action="{{ url_for("search") }}" method="POST">
-        <div id="layer4" style="position: absolute; overflow: hidden;top:0%;left:0;height: 10%;
-	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
-            <br>
+        <div class="row">
 
-            <input type="text" name="keyword" id="input" class="gray" value="{{ name }}"
-                   onfocus="if(this.value==defaultValue){this.value='';this.className='black'}"
-                   onblur="if(!value){this.value=defaultValue;this.className='gray'}"/>
-            <input type="submit" value="Search" style="width:10%; background-color: white" id="search">
-        </div>
-        <div id="layer5" style="position: absolute; overflow: hidden;top:10%;left:0;height: 10%;
-	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
 
-            <strong>Ranking by:</strong> &nbsp &nbsp &nbsp &nbsp
-            <label for="Citation">Citation</label>
-            <input type="range" id="ranking" name="ranking"
-                   min="0" max="100" value={{ ranking }} step="1">
-            <label for="Publish Venue">Publish Venue</label>
-
-        </div>
-    </form>
-    <div id="layer6"
-         style="margin:5px 55px 0px 55px; border:3px solid black; position: absolute; overflow: scroll;top:20%;left:0;height: 80%;width: 90%; z-index: 0;background-color: white; text-align: left;">
-
-        {% if papers|length == 0 %}
-            <center><h3>Nothing was found!</h3></center>
-        {% else %}
-            {% for ranking in papers.keys() %}
-                <div style="border-bottom:1px solid black; padding: 30px">
-                    <h2 style="font-family: Times, TimesNR; font-weight:normal;"><a
-                            href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
-                    </h2>
-                    <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px">{{ papers[ranking].authors }}
-                        &nbsp&nbsp {{ papers[ranking].public_in }}</div>
-                    <div style="font-family:arial,sans-serif; font-size:14px ; padding: 5px">{{ papers[ranking].abstract }}</div>
-                    <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px">Cited
-                        by {{ papers[ranking].citations | length }} articles
+            <div class="col-md-12">
+                {% if papers|length == 0 %}
+                        <center><h3>Nothing was found!</h3></center>
+                    {% else %}
+                {% for ranking in range( papers| length) %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" ><a style="font-family: Times, TimesNR;color: #1a0dab"
+                                    href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ papers[ranking].authors }}</h6>
+                            <p class="card-text">{{ papers[ranking].abstract[:200] + "..."}}</p>
+                            <p  class="card-text">{{ papers[ranking].public_in }}</p>
+                            <p class="card-text">Cited by {{ papers[ranking].citations_number }}</p>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+
+                {% endfor %}
+            {% endif %}
+
+
+
+
+        </div>
     </div>
-</div>
-</body>
+    </div>
+
+{% endblock %}
+
 </html>

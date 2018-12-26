@@ -1,70 +1,101 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Scholar Search</title>
-	
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-    <style type="text/css">
-    #input{
-      border-radius:40px;
-      width:40%;
-      height:50px;
-      font-size:100%;
-    
-    }
-    #search{
-	    border-radius:40px;
-	    height:50px;
-	    font-size:100%;
-    }
-	p,
-	label {
-	    font: 1rem 'Fira Sans', sans-serif;
-	}
+{% extends 'base.html' %}
 
-	input {
-	    margin: .4rem;
-	}
-    </style>
+{% block title %}
+    Simple Paper Ranking
+{% endblock %}
 
-  </head>
-  
-  <body >
-  	<div>
+{% block scripts %}
+{{ super() }}
+    <script>
+    $( "body" ).prepend( '<div id="toTop"><div class="btn"> </div></div>' );
+    $(document).ready(function(){
+      $('body').append('<div id="toTop" ><span class="glyphicon glyphicon-chevron-up"></span> Back to Top</div>');
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() != 0) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		});
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+    </script>
 
-  	<div id="layer1" style="position:absolute;overflow: hidden;top:0;left:0;width: 100%;
-	  	height: 30%;z-index: 0;text-align: center">
-		  	<img src="../static/img/icon.png" style="width:20%;height:15%; ">
-  	</div>
-  	<div id="layer2" style="position: absolute; overflow: hidden;top:30%;left:0;height: 70%;
-	  	width: 100%;z-index: 0;background-color: white;text-align: center">
-	      <br>
-	      <form action="/search" method="post">
-	        <input type="text" name="keyword" id="input" class="gray" value="Scholar Search"
-	        onfocus="if(this.value==defaultValue){this.value='';this.className='black'}"
-	         onblur="if(!value){this.value=defaultValue;this.className='gray'}"/>
-	        <input type="submit" value="Search" style="width:10%" id="search">
+{% endblock %}
 
-     </div>
-     <div id="layer3" style="position: absolute; overflow: hidden;top:50%;left:0;height: 70%;
-	  	width: 100%;z-index: 0;background-color: white;text-align: center">
-     	<!-- <div> -->
-        
 
-     <strong>Ranking by:</strong>&nbsp &nbsp &nbsp &nbsp
-     <!-- <div> -->
-     	<label for="Citation">Citation</label>
-  		<input type="range" id="ranking" name="ranking" 
-         min="0" max="100" value="50" step="1">
-  		<label for="Publish Venue">Publish Venue</label>
-      </div>
-              </form>
-	<!-- </div> -->
-     <!-- </div> -->
-  	</div>
-  </body>
-</html>
+
+
+
+
+{% block content %}
+    <div class="container" style="background-image: url(/static/img/lightbg.jpg)">
+        <div class="jumbotron" style="background: none">
+            <div class="container">
+
+                <h2 class="display-4"> Welcome</h2>
+
+            </div>
+        </div>
+
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-md">
+                    <img src="../static/js/boy.png" style="
+                            {#width:50%;height:50%; #}
+                            ">
+                </div>
+                <div class="col-md">
+
+
+                    <div class="form-group">
+
+                        <form class="form-inline ml-auto" action="/search" method="post">
+                            <div class="form-group ">
+                                <br>
+
+                                <input type="text" name="keyword" id="input" class=" form-control"
+                                       style="" placeholder="Scholar search"
+                                       onfocus="if(this.value==defaultValue){this.value='';}"
+                                       onblur="if(!value){this.value=defaultValue;}"/>
+
+
+                                <button type="submit" class="btn btn-amber "><i class="fa fa-search"
+                                                                                style=" "></i></button>
+
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+
+
+
+
+                            <div id="layer3" style="text-align: left">
+                                <!-- <div> -->
+
+
+                                <strong>Ranking by:</strong>
+                                <!-- <div> -->
+                                <input type="range" id="ranking" name="ranking"
+                                       class="custom-range"
+                                       min="0" max="100" value="50" step="1">
+                                <label style="float: left" for="Citation">Citation</label>
+
+                                <label style="float: right" for="Publish Venue">Publish Venue</label>
+
+
+                            </div>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

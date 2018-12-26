@@ -1,7 +1,7 @@
 class PaperBean:
     def __init__(self, number=0, title='', authors='', published_in='', url='',
                  abstract='', citations_name=[], references_name=[], citations_url=[],
-                 reference_url=[], citation_number=0):
+                 references_url=[], citations_number=0):
         # 记录paper的编号
         self._number = number
         # paper的名字
@@ -21,9 +21,9 @@ class PaperBean:
         # paper的reference的list 里面存 name list
         self._references_name = references_name
         # paper的reference的list 里面存 url list
-        self._references_url = reference_url
+        self._references_url = references_url
         # paper的citation数目
-        self._citation_number = citation_number
+        self._citations_number = citations_number
 
     @property
     def number(self):
@@ -83,7 +83,7 @@ class PaperBean:
 
     @citations_name.setter
     def citations_name(self, citations_name):
-        self._citations_name = (citations_name)[1:-1].split("','")
+        self._citations_name = str(citations_name)[1:-1].split("','")
 
     @property
     def citations_url(self):
@@ -119,11 +119,11 @@ class PaperBean:
         self._references_url = references_url
 
     @property
-    def citation_number(self):
+    def citations_number(self):
 
-        return max(int(self._citation_number), len(self.citations_name))
+        return max(int(self._citations_number), len(self.citations_name))
 
-    @citation_number.setter
-    def citation_number(self, cita_num):
-        self._citation_number = int(cita_num)
+    @citations_number.setter
+    def citations_number(self, cita_num):
+        self._citations_number = int(cita_num)
 
