@@ -1,107 +1,129 @@
 class PaperBean:
-    def __init__(self, title='', authors='', public_in='', data='', url='',
-                 abstract='', citations=[], references=[]):
+    def __init__(self, number=0, title='', authors='', published_in='', url='',
+                 abstract='', citations_name=[], references_name=[], citations_url=[],
+                 references_url=[], citations_number=0):
+        # 记录paper的编号
+        self._number = number
+        # paper的名字
         self._title = title
+        # paper的作者，可以有多个作者
         self._authors = authors
-        self._public_in = public_in
-        self._data = data
+        # 出版社的名字
+        self._published_in = published_in
+        # paper对应的网址
         self._url = url
+        # paper的简介
         self._abstract = abstract
-        self._citations = citations
-        self._references = references
-
-
-    def add_references(self, new_paper):
-        self.references.append(new_paper)
-
-    def add_citations(self, new_paper):
-        self.citations.append(new_paper)
+        # paper的citation的list 里面存 name list
+        self._citations_name = citations_name
+        # paper的citation的list 里面存 url list
+        self._citations_url = citations_url
+        # paper的reference的list 里面存 name list
+        self._references_name = references_name
+        # paper的reference的list 里面存 url list
+        self._references_url = references_url
+        # paper的citation数目
+        self._citations_number = citations_number
 
     @property
-    def num_citations(self):
-        return len(self._citations)
+    def number(self):
+        return int(self._number)
+
+    @number.setter
+    def number(self, num):
+        self._number = num
 
     @property
     def title(self):
-        return self._title
+        return str(self._title)
 
     @title.setter
-    def title(self,name):
+    def title(self, name):
         self._title = name
 
     @property
     def authors(self):
         return str(self._authors)
 
-    @property
-    def references(self):
-        return self._references
+    @authors.setter
+    def authors(self, authors):
+        self._authors = authors
 
     @property
-    def citations(self):
-        return self._citations
+    def published_in(self):
+        return self._published_in
 
-    @property
-    def public_in(self):
-        return self._public_in
-
-    @property
-    def data(self):
-        return self._data
+    @published_in.setter
+    def published_in(self, publish_in):
+        self._published_in = publish_in
 
     @property
     def url(self):
         return str(self._url)
 
-    @property
-    def abstract(self):
-        return str(self._abstract)
-
-    @authors.setter
-    def authors(self, authors):
-        self.authors = authors
-
     @url.setter
     def url(self, url):
         self._url = url
 
+    @property
+    def abstract(self):
+        return str(self._abstract)
+
     @abstract.setter
     def abstract(self, abstract):
-        self.abstract = abstract
+        self._abstract = abstract
 
-    @citations.setter
-    def citations(self, citations):
-        self._citations = citations
-
-    @references.setter
-    def references(self,references):
-        self._references = references
-
-    @data.setter
-    def set_data(self, data):
-        self._data = data
-
-    @public_in.setter
-    def public_in(self, public_in):
-        self._public_in = public_in
-
-    # TODO： 该方法存在的必要性？
-    def search(self, keywords):
-        title = str.upper(self.title)
-        abstract = str.upper(self.abstract)
-        try:
-            keywords = str.upper(keywords)
-        except TypeError as e:
-            print(e)
-            return False
-        if keywords in title or keywords in abstract:
-            return True
-        return False
-
-    # TODO： 存在的必要性？
-    def add_authors(self, authors):
-        if self.authors == '':
-            self.authors = authors
+    @property
+    def citations_name(self):
+        if len(self._citations_name) != 0:
+            # print(self._citations)
+            return self._citations_name
         else:
-            self.authors += ',' + authors
+            return None
+
+    @citations_name.setter
+    def citations_name(self, citations_name):
+        self._citations_name = str(citations_name)[1:-1].split("','")
+
+    @property
+    def citations_url(self):
+        if len(self._citations_url) != 0:
+            return self._citations_url
+        else:
+            return None
+
+    @citations_url.setter
+    def citations_url(self, citations_url):
+        self._citations_url = citations_url
+
+    @property
+    def references_name(self):
+        if len(self._references_name) != 0:
+            return self._references_name
+        else:
+            return None
+
+    @references_name.setter
+    def references_name(self, references_name):
+        self._references_name = references_name
+
+    @property
+    def references_url(self):
+        if len(self._references_url) != 0:
+            return self._references_url
+        else:
+            return None
+
+    @references_url.setter
+    def references_url(self, references_url):
+        self._references_url = references_url
+
+    @property
+    def citations_number(self):
+
+        return max(int(self._citations_number), len(self.citations_name))
+
+    @citations_number.setter
+    def citations_number(self, cita_num):
+        self._citations_number = int(cita_num)
 
