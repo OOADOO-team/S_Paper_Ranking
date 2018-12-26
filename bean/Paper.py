@@ -1,9 +1,7 @@
-from read_database import get_refer_and_cita
-from builtins import *
-
 class PaperBean:
     def __init__(self, number=0, title='', authors='', published_in='', url='',
-                 abstract='', citations=[], references=[]):
+                 abstract='', citations_name=[], references_name=[], citations_url=[],
+                 references_url=[], citations_number=0):
         # 记录paper的编号
         self._number = number
         # paper的名字
@@ -16,36 +14,31 @@ class PaperBean:
         self._url = url
         # paper的简介
         self._abstract = abstract
-        # paper的citation的list
-        self._citations = citations
-        # paper的reference的list
-        self._references = references
+        # paper的citation的list 里面存 name list
+        self._citations_name = citations_name
+        # paper的citation的list 里面存 url list
+        self._citations_url = citations_url
+        # paper的reference的list 里面存 name list
+        self._references_name = references_name
+        # paper的reference的list 里面存 url list
+        self._references_url = references_url
         # paper的citation数目
-        self._num_citations = 0
+        self._citations_number = citations_number
 
     @property
     def number(self):
         return int(self._number)
 
-    @property
-    def num_citations(self):
-        """
-        set时存的是 目前获取的该paper最大的citation number
-        get时放的是 citation list的长度 和 number of citation 中的最大值
-        """
-        return max(len(self._citations), self._num_citations)
-
-    @num_citations.setter
-    def num_citations(self, num):
-        if self._num_citations < num:
-            self._num_citations = num
+    @number.setter
+    def number(self, num):
+        self._number = num
 
     @property
     def title(self):
         return str(self._title)
 
     @title.setter
-    def title(self,name):
+    def title(self, name):
         self._title = name
 
     @property
@@ -55,37 +48,6 @@ class PaperBean:
     @authors.setter
     def authors(self, authors):
         self._authors = authors
-
-    @property
-    def references(self):
-        """
-        set时存的是 references number 的 list
-        get时放的是 根据 references number 的 list 获取到的 paper的 list
-        """
-        if len(self._references) != 0:
-            return get_refer_and_cita(self._references)
-        else:
-            return None
-
-    @references.setter
-    def references(self, references):
-        self._references = references
-
-    @property
-    def citations(self):
-        """
-        set时存的是 citation number 的 list
-        get时放的是 根据 citation number 的 list 获取到的 paper的 list
-        """
-        if len(self._citations) != 0:
-            print(self._citations)
-            return get_refer_and_cita(self._citations)
-        else:
-            return None
-
-    @citations.setter
-    def citations(self, citations):
-        self._citations = citations
 
     @property
     def published_in(self):
@@ -111,29 +73,57 @@ class PaperBean:
     def abstract(self, abstract):
         self._abstract = abstract
 
-# ========================== method ===================================
-
-    def search(self, keywords):
-        title = str.upper(self.title)
-        abstract = str.upper(self.abstract)
-        try:
-            keywords = str.upper(keywords)
-        except TypeError as e:
-            print(e)
-            return False
-        if keywords in title or keywords in abstract:
-            return True
-        return False
-
-    def add_authors(self, authors):
-        if self.authors == '':
-            self._authors = authors
+    @property
+    def citations_name(self):
+        if len(self._citations_name) != 0:
+            # print(self._citations)
+            return self._citations_name
         else:
-            self._authors += ',' + authors
+            return None
 
-    def add_references(self, new_paper_num):
-        self.references.append(new_paper_num)
+    @citations_name.setter
+    def citations_name(self, citations_name):
+        self._citations_name = str(citations_name)[1:-1].split("','")
 
-    def add_citations(self, new_paper_num):
-        self.citations.append(new_paper_num)
+    @property
+    def citations_url(self):
+        if len(self._citations_url) != 0:
+            return self._citations_url
+        else:
+            return None
+
+    @citations_url.setter
+    def citations_url(self, citations_url):
+        self._citations_url = citations_url
+
+    @property
+    def references_name(self):
+        if len(self._references_name) != 0:
+            return self._references_name
+        else:
+            return None
+
+    @references_name.setter
+    def references_name(self, references_name):
+        self._references_name = references_name
+
+    @property
+    def references_url(self):
+        if len(self._references_url) != 0:
+            return self._references_url
+        else:
+            return None
+
+    @references_url.setter
+    def references_url(self, references_url):
+        self._references_url = references_url
+
+    @property
+    def citations_number(self):
+
+        return max(int(self._citations_number), len(self.citations_name))
+
+    @citations_number.setter
+    def citations_number(self, cita_num):
+        self._citations_number = int(cita_num)
 

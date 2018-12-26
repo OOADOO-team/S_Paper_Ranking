@@ -1,199 +1,218 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
+{% extends 'base.html' %}
 
-        div.header {
-            font-family: "Segoe UI Light", "sans-serif";
-            font-size: 20.0pt;
-            color: #2A2A2A;
-            padding-bottom: 34px;
-        }
+{% block title %}
+    Details
+{% endblock %}
 
-        a link1 {
-            font-family: "Segoe UI SemiLight", "sans-serif";
-            font-size: 11.0pt;
-            color: #00749E;
-            text-decoration: none;
-        }
+{% block content %}
+    {#    {{ super() }}#}
 
-        table tr.Header {
-            font-family: "Segoe UI Semibold", "sans-serif";
-            font-size: 11.0pt;
-            color: #000000;
-            text-decoration: none;
-        }
+    <div class="row" style="background-image: url(/static/img/star-bg.svg);">
+        <div class="row">
 
-        table tr td.Regular {
-            height: 20px;
-            vertical-align: text-top;
-            font-family: "Segoe UI SemiLight", "sans-serif";
-            font-size: 11.0pt;
-            color: #000000;
-            text-decoration: none;
-        }
+            <div class="col-md-2 " >
+                <p class="lead text-success text-center">
+                <div id="rank"
+                     style="align-items: center;background-image:url('../static/img/ganlan.png');background-size: 10em 10em;background-repeat: no-repeat space;background-position-x: center ">
 
-        table tr td.Secondary {
-            height: 20px;
-            vertical-align: text-top;
-            font-family: "Segoe UI SemiLight", "sans-serif";
-            font-size: 11.0pt;
-            color: #707070;
-            text-decoration: none;
-        }
+                    {#                    <img class="img-responsive" src="../static/img/ganlan.png" style="width:20%;height:15%; ">#}
+                    <div style="text-align: center;  font-size: 6em;">
+
+                        {{ rank+1 }}
+                    </div>
+                    <div style="text-align: center; font-size: 1em;">
+                        rank
+                    </div>
+                </div>
+                </p>
+            </div>
+            <div class="col-md-8">
+                <br>
+                <br>
+                <br>
+                <h2 class="h1-responsive font-weight-bold text-center col-10"><a style=""
+                                                                                 href="{{ url }}">{{ title }}</a></h2>
+                {#                <div class="page-header">#}
+                {#                    <h2>#}
+                {#                        {{ title }}#}
+                {#                    </h2>#}
+                {#                </div>#}
+                <div class="col-xl-12 col-md-12 col-12">
+
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-align-left pr-2"></i>Abstract</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ abstract }}.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12 col-12">
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-user pr-2"></i>Authors</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ authors }}.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12 col-12">
+                    <h5 class="font-weight-bold mb-3"><i class="fas fa-book pr-2"></i>Sourcce</h5>
+                    <div class="row">
+                        <div class="col-1 "></div>
+                        <div class="col-8 ">
+                            <p class="">{{ published_in }}.</p>
+                        </div>
+
+                    </div>
+                </div>
 
 
-        table {
+                <!--Accordion wrapper-->
+                <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
-            border-top-style: hidden;
-            border-bottom-style: hidden;
-            border-left-style: hidden;
-            border-right-style: hidden;
-            border-collapse: collapse;
-        }
-    </style>
-    <title>Details</title>
+                    <!-- Accordion card -->
+                    <div class="card">
 
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                        <!-- Card header -->
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                               aria-controls="collapseOne">
+                                <h5 class="mb-0">
+                                    Cited<i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
 
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-    <style type="text/css">
-        #input {
-            border-radius: 40px;
-            width: 40%;
-            height: 30px;
-            font-size: 100%;
+                        <!-- Card body -->
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
+                             data-parent="#accordionEx">
+                            <div class="card-body">
+                                hh1
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion card -->
 
-        }
+                    <!-- Accordion card -->
+                    <div class="card">
 
-        #search {
-            border-radius: 40px;
-            height: 30px;
-            font-size: 100%;
-        }
+                        <!-- Card header -->
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false"
+                               aria-controls="collapseTwo">
+                                <h5 class="mb-0">
+                                    Reference<i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
 
-        p,
-        label {
-            font: 1rem 'Fira Sans', sans-serif;
-        }
+                        <!-- Card body -->
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+                             data-parent="#accordionEx">
+                            <div class="card-body">
+                                hhh2
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion card -->
 
-        input {
-            margin: .4rem;
-        }
-    </style>
 
-</head>
+                </div>
+                <!--/.Accordion wrapper-->
+                <div class="panel-group" id="panel-865365">
 
-<body>
-<form action="{{ url_for("search") }}" method="POST">
-    <div id="layer4" style="position: absolute; overflow: hidden;top:0%;left:0;height: 10%;
-	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
-        <br>
-        <input type="text" name="keyword" id="input" class="gray" value="{{ name }}"
-               onfocus="if(this.value==defaultValue){this.value='';this.className='black'}"
-               onblur="if(!value){this.value=defaultValue;this.className='gray'}"/>
-        <input type="submit" value="Search" style="width:10%; background-color: white" id="search">
-    </div>
-    <div id="layer5" style="position: absolute; overflow: hidden;top:10%;left:0;height: 10%;
-	  	width: 100%;z-index: 0;background-color:  #CCCCCC;text-align: center">
 
-        <strong>Ranking by:</strong> &nbsp &nbsp &nbsp &nbsp
-        <label for="Citation">Citation</label>
-        <input type="range" id="ranking" name="ranking"
-               min="0" max="100" value={{ ranking }} step="1">
-        <label for="Publish Venue">Publish Venue</label>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
+                               href="#panel-element-001"><span
+                                    class="badge">{{ refs | length }}</span>References</a>
+                        </div>
+                        <div id="panel-element-001" class="panel-collapse in">
+                            <div class="panel-body">
 
-    </div>
-</form>
 
-<div id="container"
-     style="top:20%;left:20%;height: 80%;width: 60%; position: absolute;">
-    <div id="title"
-         style="margin-top: 5%;float: left;width: 70%;font-weight: bold;font-family: 'Segoe UI Light','sans-serif'; font-size: 30.0pt; color: #2A2A2A; padding-bottom: 34px">
-        {{ title }}
-    </div>
-    <div id="rank"
-         style="float: left;align-items: center;width: 30%">
-        <div style="text-align: center;  font-size: 5em;">
-            {{ rank }}
+                                <div class="panel-group" id="accordion" role="tablist"
+                                     aria-multiselectable="true">
+
+                                    {% for c in refs %}
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="{{ 'head'+ c[0] }}">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                       data-parent="#accordion" href="#{{ c[0] }}"
+                                                       aria-expanded="false" aria-controls="{{ c[0] }}">
+                                                        {{ c[0] }}
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="{{ c[0] }}" class="panel-collapse collapse" role="tabpanel"
+                                                 aria-labelledby="{{ 'head'+c[0] }}">
+                                                <div class="panel-body">
+
+                                                    <a class="btn" href=" {{ c[1] }} ">View details »</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-865365"
+                               href="#panel-element-657219"><span
+                                    class="badge">{{ citations | length }}</span>Cited</a>
+                        </div>
+                        <div id="panel-element-657219" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="panel-group" id="accordion" role="tablist"
+                                     aria-multiselectable="true">
+
+                                    {% for r in citations %}
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="{{ 'head'+ r[0] }}">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                       data-parent="#accordion" href="#{{ r[0] }}"
+                                                       aria-expanded="false" aria-controls="{{ r[0] }}">
+                                                        {{ r[0] }}
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="{{ r[0] }}" class="panel-collapse collapse" role="tabpanel"
+                                                 aria-labelledby="{{ 'head'+r[0] }}">
+                                                <div class="panel-body">
+
+                                                    <a class="btn" href=" {{ r[1] }} ">View details »</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div style="text-align: center; font-size: 1.5em;">
-            rank
-        </div>
-    </div>
-    <div id="authors"
-         style=" width:max-content;font-size: 15pt;">
-        <strong>Authors:&nbsp</strong>{{ authors }}
-    </div>
-    <hr style=" height:2px;border:none;border-top:2px solid #185598;"/>
-    <div id="abstract"
-         style="font-family: 'Segoe UI Light','sans-serif';">
-        <div id="abstract_title"
-             style="font-weight: bold;font-size: 20pt">
-            Abstract:
-        </div>
-        <div id="abstract_content"
-             style="font-size: 20pt">
-            {{ abstract }}
-        </div>
-        <br>
-        <div id="publish"
-             style="font-family: 'Segoe UI Light','sans-serif';font-size: 20pt">
-            <strong>Published in:&nbsp</strong>{{ published_in }}
-        </div>
-        <div id="url"
-             style="font-family: 'Segoe UI Light','sans-serif';font-size: 20pt">
-            <strong>URL:&nbsp</strong><a href="{{ url }}">{{ url }}</a>
-        </div>
-    </div>
-    <hr style=" height:2px;border:none;border-top:2px solid #185598;"/>
-    <div id="citations"
-         style="width: 40%; float: left;font-family: 'Segoe UI Light','sans-serif';font-size: 15pt">
-        <strong>Citations:&nbsp</strong>
-        {% if citations %}
-            <table width="45%">
-                <tbody>
-                <tr>
-                    <td height="10px" colspan="3"></td>
-                </tr>
-                {% for c in citations %}
-                    <tr style="height: 20px;vertical-align: text-top;font-family: 'Segoe UI Light','sans-serif';font-size: 11pt">
-                        <td class="Regular">{{ c.title }}</td>
-                        <td class="Secondary">{{ c.authors }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
 
-            </table>
-        {% else %}
-            0
-        {% endif %}
     </div>
-    <div id="refrences"
-         style="width: 40%; float: right;font-family: 'Segoe UI Light','sans-serif';font-size: 15pt">
-        <strong>References:&nbsp</strong>
-        {% if references %}
-            <table width="45%">
-                <tbody>
-                <tr>
-                    <td height="10px" colspan="3"></td>
-                </tr>
-                {% for r in references %}
-                    <tr>
-                        <td class="Regular">{{ r.title }}</td>
-                        <td class="Secondary">{{ r.authors }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
 
-            </table>
-        {% else %}
-            0
-        {% endif %}
+
     </div>
-</div>
+    </div>
 
-</body>
-</html>
+
+{% endblock %}

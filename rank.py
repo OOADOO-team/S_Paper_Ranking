@@ -1,37 +1,76 @@
+import bean.Paper as p
+from openpyxl import load_workbook
+import bean.Paper as p
+import os
+import re
 
 
+def rank_simple(paperlist, alpha):
+    # 读取publish的name和对应的IF值
+    pe = load_workbook("dao\publish.xlsx")  # 默认可读写，若有需要可以指定write_only和read_only为True
+    sheet = pe.worksheets[0]
+    print("load database is correct")
+    length = len(sheet["B"])
+    publish_name = []
+    publish_if = []
+    for i in range(1, length + 1):  # range默认从0开始，到后面参数的-1结束，而openpyxl都是从第一行第一列开始的，所以参数为1，maxC+1；意思就是遍历第一列到最后一列，
+        publish_name.append(str(sheet.cell(i, 1).value))
+        # print(sheet.cell(i, 2).value)
+        publish_if.append(float(sheet.cell(i, 2).value))
+
+    print("read publish is correct")
+    # ==== 读取paper的citation的值，找到对应的publish并赋值。最后加权排序 =====
+
+    total_list = []
+
+    # 根据10/79.258得到的publish_value应该乘的weight
+    weight = 0.12617
+    for paper in paperlist:
+        # print("跑paperlist呢")
+        citation = paper.citation_number
+        publish = paper.published_in
+        valuep = 0
+        valuec = find_citation_value(citation)
+        flag = False
+
+        # 找publish
+        for i in range(length):
+            judge = re.search(str(publish).upper(), str(publish_name[i]).upper())
+            if judge is not None:
+                valuep = publish_if[i] * weight
+                flag = True
+                break
+
+        if flag == False:
+            valuep = 0.189255
+
+        total_value = valuep * alpha + (100 - alpha) * valuec
+        total_list.append((paper, total_value))
+
+    # 根据total_value对paper进行排序
+    _list = sorted(total_list, key=lambda x: x[1])
+    return_list = [item[0] for item in _list]
+    return return_list
 
 
-
-
-
-
-
-# 获取 模糊搜索的结果
-#存储 部分补一下
-
-
-#提供 搜索总数 num 和 详细的 get dict
-#get [0] -[num-1] 存详细信息 dict 存 dict 0-（num-1） 都是 dict
-from builtins import *
-
-get=dict()#给每个论文信息
-cite_tol=100#总被引用量
-
-#获取拉条值
-cite=1#被引用量占比
-
-
-
-def rank(cite,cite_tol,get,num):
-    rank=dict()
-    end_result=dict()
-    for i in range(num):
-        rank[i]=get[i]["cite"]/cite_tol*cite/100+get[i]["publish"]*(1-cite/100)
-    rank=sorted(rank.items(), key=lambda d: d[1], reverse=True)
-
-    for i in range(1,num+1):
-        end_result[i]=get[rank[i-1][0]]
-    return end_result
-#返回 排序 以及 dict 的数据
-
+def find_citation_value(citation):
+    if citation > 1000:
+        return 10
+    elif citation > 900:
+        return 9
+    elif citation > 800:
+        return 8
+    elif citation > 700:
+        return 7
+    elif citation > 600:
+        return 6
+    elif citation > 500:
+        return 5
+    elif citation > 400:
+        return 4
+    elif citation > 300:
+        return 3
+    elif citation > 200:
+        return 2
+    else:
+        return 1

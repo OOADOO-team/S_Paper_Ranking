@@ -1,4 +1,9 @@
-{% extends "bootstrap/base.html" %}
+{% extends 'base.html' %}
+
+{% block title %}
+    Simple Paper Ranking
+{% endblock %}
+
 
 {% block styles %}
     {{ super() }}
@@ -9,16 +14,18 @@
 
 
 {% block content %}
-    <div class="jumbotron">
+
         <div class="container" align="center">
-            <h2 class="text-info" style="font-weight:bold;font-size:49px">Simple Paper Ranking</h2>
+            <h2 class="text-info" style="font-weight:bold;font-size:6em">Welcome</h2>
             <br>
-            <div class="text-muted">An OOAD project.</div>
+            <div class="text-muted"></div>
             <br>
             <br>
             <p>
             <div class="col-md-3">
-                <img src="../static/img/icon.png" style="width:50%;height:50%; ">
+                <img src="../static/js/boy.png" style="
+                {#width:50%;height:50%; #}
+">
             </div>
             <div class="col-md-6">
 
@@ -63,5 +70,5 @@
         </div>
 
     </div>
-    </div>
+
 {% endblock %}
