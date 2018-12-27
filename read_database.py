@@ -57,11 +57,13 @@ def get_infomation(keyword, alpha):
     #             exist.add(str(sheet.cell(row=i + 2, column=2).value))
 
     result = read_DB(keyword=keyword)
-    start_time = time.time()
+    # print(result[0].references_name)
+    # start_time = time.time()
     result_final = r.rank_simple(result,alpha)
-    print("In rank the time is", time.time() - start_time)
+    # print("In rank the time is", time.time() - start_time)
     # for i in range(length):
     #     insert_DB(result[i])
+    # print(result_final[0].references_name)
     return result_final
 
 

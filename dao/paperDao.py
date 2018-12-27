@@ -88,10 +88,10 @@ def read_DB(keyword):
             url=item.url,
             abstract=item.abstract,
             citations_number=item.citations_number,
-            citations_name=item.citations_name.split(),
-            citations_url=item.citations_url.split(),
-            references_name=item.references_name.split(),
-            references_url=item.references_url.split()
+            citations_name=item.citations_name.split("', '"),
+            citations_url=item.citations_url.replace("'", "").replace(",", "").replace("\\n", "").split(),
+            references_name=item.references_name.split("', '"),
+            references_url=item.references_url.replace("'", "").replace(",", "").replace("\\n", "").split()
         )
         result.append(new_paper)
     return result
