@@ -23,6 +23,7 @@ def get_infomation(keyword, alpha):
     result = []
     # get each line of xlsx
     exist = set()
+    print('Reading!!!!!')
     for i in range(length):
         # get the value of B0 to Bn
         value_of_blockBn = str(sheet.cell(row=i + 2, column=2).value).upper()
@@ -58,7 +59,7 @@ def get_infomation(keyword, alpha):
                 result.append(paper)
                 exist.add(str(sheet.cell(row=i + 2, column=2).value))
     result = r.rank_simple(result,alpha)
-
+    print('Result return!!!!!')
     return result
 
 

@@ -55,6 +55,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
         #myBtn {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed/sticky position */
@@ -141,21 +142,41 @@
 
                 </ul>
                 <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline " action="/search" method="get">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false"><i class="fas fa-sliders-h"></i></a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#"><a id="sliderBar" style="text-align: left">
+                                <strong>Ranking by:</strong>
+                                <!-- <div> -->
+                                <input type="range" id="ranking" name="ranking"
+                                       class="custom-range"
+                                       min="0" max="100" value="50" step="1">
+                                <label style="float: left" for="Citation">C</label>
+                                <label style="float: right" for="Publish Venue">P</label>
+                            </a></a>
 
-                <form class="form-inline " action="/search">
-                    <div class="md-form my-0">
-                        <input type="text" name="keyword" id="input" class=" form-control"
-                               style="" placeholder="Scholar search"
-                               onfocus="if(this.value==defaultValue){this.value='';}"
-                               onblur="if(!value){this.value=defaultValue;}"/>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                        <div class="md-form my-0">
+                            <input type="text" name="keyword" id="input" class=" form-control"
+                                   style="" placeholder="Scholar search"
+                                   onfocus="if(this.value==defaultValue){this.value='';}"
+                                   onblur="if(!value){this.value=defaultValue;}"/>
 
 
-                        <button type="submit" class="btn btn-amber btn-sm "><i class="fa fa-search"></i></button>
-                        {#                    <div class="md-form my-0">#}
-                        {#                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">#}
-                        {#                    </div>#}
-                    </div>
-                </form>
+                            <button type="submit" class="btn btn-amber btn-sm "><i class="fa fa-search"></i></button>
+                            {#                    <div class="md-form my-0">#}
+                            {#                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">#}
+                            {#                    </div>#}
+                        </div>
+                        </li>
+                    </form>
+                </ul>
             </div>
 
         </div>
