@@ -1,78 +1,181 @@
-# MysqlPython.py
-# 首先导入pymysql，我们目前只用连接的方法
-from pymysql import connect
+# from pymysql import connect
+from bean.Paper import PaperBean
+from sqlalchemy import *
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+
+localhost = "10.21.92.180"
+
+engine = create_engine("mysql+mysqlconnector://user:user@10.21.92.180:3306/sys", echo=True)
+
+metadata = MetaData(engine)
+
+PaperTable = Table('paper', metadata,
+                   Column('id', Integer, primary_key=True),
+                   Column('title', String(1000)),
+                   Column('authors', String(100)),
+                   Column('published_in', TEXT),
+                   Column('url', TEXT),
+                   Column('abstract', TEXT),
+                   Column('citations_number', Integer),
+                   Column('citations_name', TEXT),
+                   Column('citations_url', TEXT),
+                   Column('references_name', TEXT),
+                   Column('references_url', TEXT),
+                   )
+
+Base = declarative_base()
 
 
-# 创建类
-class MysqlHelp(object):
-    # 初始化方法
-    def __init__(self, database, host='localhost', user='root', password='123456', charset='utf8', port=3306):
-        self.database = database
-        self.host = host
-        self.user = user
-        self.password = password
-        self.charset = charset
-        self.port = port
-
-    # 初始化完后连接到数据库并创建好游标
-    def open(self):
-        # 连接数据库
-        self.conn = connect(host=self.host, user=self.user, password=self.password, database=self.database,
-                            charset=self.charset, port=self.port)
-        # 创建游标
-        self.cur = self.conn.cursor()
-
-    # 有连接数据库，就得有关闭数据库
-    def close(self):
-        self.cur.close()
-        self.conn.close()
-
-    # 增删改
-    def sql_execute(self, sql, L=[]):
-        # 操作就得打开数据库吧
-        self.open()
-        # 对sql语句处理（即开始操作数据库了）,有成功有失败
-        try:
-            self.cur.execute(sql, L)  # 执行sql命令
-            self.conn.commit()  # 提交到数据库执行
-            print('ok')
-        except Exception as e:
-            self.conn.rollback()
-            print('failed', e)
-        # 打开数据库就得关闭吧
-        self.close()
-
-    # 查
-    def getAll(self, sql, L=[]):
-        self.open()
-        self.cur.execute(sql, L)
-        # 查询结果用result绑定
-        result = self.cur.fetchAll()
-        self.close()
-        # 将查询到的结果返回回去
-        return result
+class Paper(Base):
+    __tablename__ = 'paper'
+    id = Column(Integer, primary_key=True)
+    title = Column(String(1000))
+    authors = Column(String(100))
+    published_in = Column(TEXT)
+    url = Column(TEXT)
+    abstract = Column(TEXT)
+    citations_number = Column(Integer)
+    citations_name = Column(TEXT)
+    citations_url = Column(TEXT)
+    references_name = Column(TEXT)
+    references_url = Column(TEXT)
 
 
-def search(name):
-    mysql = MysqlHelp('db4')
-    # 要执行的sql语句
-    sql_select = 'select * from sys;'
-    # 去调用MysqlPython工具里的查询方法
-    result = mysql.getAll(sql_select)  # 返回一个元组
-    # 打印结果
-    for i in result:
-        print(i)
+metadata.create_all(engine)
+DBSession = sessionmaker(bind=engine)
 
 
-def remove(name):
-    from MysqlPython import MysqlHelp
-    mysql = MysqlHelp('db4')
-    sql_delete = 'delete from sheng where s_name=%s'
-    mysql.workOn(sql_delete, ['湖北'])
+# 插入一条
+def insert_DB(paper=PaperBean()):
+    session = DBSession()
+    # 创建新User对象: id自增
+    if len(paper.title)<400 and len(paper.authors)<99 :
+        new_paper = Paper(
+            title=paper.title,
+            authors=paper.authors,
+            published_in=paper.published_in,
+            url=paper.url,
+            abstract=paper.abstract,
+            citations_number=paper.citations_number,
+            citations_name=str(paper.citations_name)[1:-1],
+            citations_url=str(paper.citations_url)[1:-1],
+            references_name=str(paper.references_name)[1:-1],
+            references_url=str(paper.references_url)[1:-1]
+        )
+        # 添加到session:
+        session.add(new_paper)
+        # 提交即保存到数据库:
+        session.commit()
+        # 关闭session:
+        session.close()
 
 
-def insert(paper):
-    from MysqlPython import MysqlHelp
-    mysql = MysqlHelp('db4')
-    sql_insert = 'insert into sheng(s_id, s_name) values(%s, %s);'
-    mysql.workOn(sql_insert, ['500001', '北京市'])
+def read_DB(keyword):
+    session = DBSession()
+    keyword = '%'+keyword+'%'
+    ret = list()
+    ret = session.query(Paper).filter(or_(Paper.title.like(keyword),Paper.authors.like(keyword))).all()
+
+    return ret
+
+
+conn = engine.connect()
+print(conn)
+
+print('title' in metadata.tables)
+
+if __name__ == '__main__':
+    p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost',
+                   abstract="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+                   citations_name=[1, 2, 3], citations_url=[4, 5, 6], references_name=[7, 8, 9],
+                   references_url=[9, 8, 7],
+                   citations_number=5)
+    # insert_DB(p1)
+
+    for p in read_DB('carp'):
+        print(p.title,p.id)
+
+# 打开数据库连接
+# db = connect(host=localhost, port=3306, user='user', passwd='user', db='sys')
+
+# 使用cursor()方法获取操作游标
+# cursor = db.cursor()
+
+
+# def insert_DB(pa):
+#     sql = "INSERT INTO paper(ID, title, authors, published_in, \
+#     url, abstract, citations_name, citations_url,  references_name,\
+#     references_url, citations_number)\
+#              VALUES (%d,\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',\'%s\',%d)" % \
+#           (pa.number,
+#            pa.title,
+#            pa.authors,
+#            pa.published_in,
+#            pa.url,
+#            pa.abstract,
+#            str(pa.citations_name)[1:-1],
+#            str(pa.citations_url)[1:-1],
+#            str(pa.references_name)[1:-1],
+#            str(pa.references_url)[1:-1],
+#            pa.citations_number)
+#     try:
+#         # 执行sql语句
+#         cursor.execute(sql)
+#         # 提交到数据库执行
+#         db.commit()
+#
+#     except Exception as e:
+#         print(e)
+#     #     # 如果发生错误则回滚
+#         db.rollback()
+#
+#     # 关闭数据库连接
+#     db.close()
+
+
+# def read_DB(keyword):
+#     sql = " SELECT * FROM paper WHERE title LIKE '%{}%' or '%{}' or '{}%' OR authors LIKE '%{}%' or '%{}' or '{}%'".\
+#         format(keyword, keyword, keyword, keyword, keyword, keyword)
+#
+#     try:
+#         # 执行SQL语句
+#         cursor.execute(sql)
+#         # 获取所有记录列表
+#         result_list = []
+#         results_DB = cursor.fetchall()
+#         for row in results_DB:
+#             number = row[0]
+#             title = row[1]
+#             authors = row[2]
+#             published_in = row[3]
+#             url = row[4]
+#             abstract = row[5]
+#             citations_name = row[6]
+#             citations_url = row[7]
+#             references_name = row[8]
+#             references_url = row[9]
+#             citations_number = row[10]
+#             result_list.append(PaperBean(number=number,
+#                                            title=title,
+#                                            authors=authors,
+#                                            published_in=published_in,
+#                                            url=url,
+#                                            abstract=abstract,
+#                                            citations_name=citations_name,
+#                                            citations_url=citations_url,
+#                                            references_name=references_name,
+#                                            reference_url=references_url,
+#                                            citation_number=citations_number))
+#         return result_list
+#     except Exception as e:
+#         print(e)
+
+
+# if __name__ == '__main__':
+#     p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost',
+#                    abstract="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+#                    citations_name=[1, 2, 3], citations_url=[4, 5, 6], references_name=[7, 8, 9],
+#                    references_url=[9, 8, 7],
+#                    citations_number=5)
+#     insert_DB(p1)
