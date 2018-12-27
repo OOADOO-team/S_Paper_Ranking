@@ -1,8 +1,6 @@
-from openpyxl import load_workbook
-import bean.Paper as p
-import re
 import rank as r
-from MysqlPy import *
+from dao.paperDao import *
+import time
 
 
 # ================================================================
@@ -58,16 +56,20 @@ def get_infomation(keyword, alpha):
     #                                 )
     #             result.append(paper)
     #             exist.add(str(sheet.cell(row=i + 2, column=2).value))
-    result = read_DB(keyword=keyword)
-    result_final = r.rank_simple(result,alpha)
 
+    result = read_DB(keyword=keyword)
+    start_time = time.time()
+    result_final = r.rank_simple(result,alpha)
+    print("In rank the time is", time.time() - start_time)
     # for i in range(length):
     #     insert_DB(result[i])
     return result_final
 
 
 if __name__ == '__main__':
-    result = get_infomation(keyword="", alpha=100)
+    start_time = time.time()
+    result = get_infomation(keyword="carp", alpha=100)
+    print("total time is",time.time()-start_time)
     # for item in result:
     #     print(item[1].title,item[1].authors, item[1].published_in)
     #     print(item.title)
