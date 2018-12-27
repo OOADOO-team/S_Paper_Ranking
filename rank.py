@@ -34,16 +34,20 @@ def rank_simple(paperlist, alpha):
 
     # 根据10/79.258得到的publish_value应该乘的weight
     weight = 0.12617
+    iterr=0
     for paper in paperlist:
-        # print("跑paperlist呢")
+        iterr+=1
+        print("跑paperlist呢",iterr)
         citation = paper.citations_number
         publish = paper.published_in
         valuep = 0
         valuec = find_citation_value(citation)
         flag = False
 
-        # 找publish
+        #
+        print("找publish")
         valuep = read_DB(publish)
+        print("找l")
         if valuep is not None:
             valuep *= weight
             flag = True
@@ -54,7 +58,7 @@ def rank_simple(paperlist, alpha):
         total_value = valuep * alpha + (100 - alpha) * valuec
 
         total_list.append((paper, total_value))
-
+        print("好的", iterr)
     # 根据total_value对paper进行排序
     _list = sorted(total_list, key=lambda x: x[1])
     return_list = [item[0] for item in _list]

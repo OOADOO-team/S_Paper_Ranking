@@ -94,7 +94,7 @@
     <div class="card card-image" id="top1" style="background-image: url(/static/img/wall.jpg);">
         <div class="text-white text-center py-5 px-4 my-5">
             <div>
-                <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Simple Paper Ranking</strong></h2>
+                <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Paper Ranking</strong></h2>
                 <p class="mx-5 mb-5">An OOAD project
                 </p>
                 <a href="{{ url_for("test") }}" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i>
@@ -111,7 +111,7 @@
     " style="background-color: #de8100;">
         <div class="container">
 
-            <a class="navbar-brand" href="{{ url_for("index") }}">Paper Ranking</a>
+            <a class="navbar-brand" href="{{ url_for("index") }}"> Paper Ranking</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -153,7 +153,7 @@
                                 <strong>Ranking by:</strong>
                                 <!-- <div> -->
                                 <input type="range" id="ranking" name="ranking"
-                                       class="custom-range"
+                                       class="form-control custom-range"
                                        min="0" max="100" value="50" step="1">
                                 <label style="float: left" for="Citation">C</label>
                                 <label style="float: right" for="Publish Venue">P</label>

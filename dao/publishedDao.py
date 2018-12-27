@@ -5,7 +5,7 @@ from bean.publishedBean import *
 
 localhost = "10.21.92.180"
 
-engine = create_engine("mysql+mysqlconnector://user:user@10.21.92.180:3306/sys", echo=True)
+engine = create_engine("mysql+mysqlconnector://user:user@10.21.92.180:3306/sys", echo=False)
 
 metadata = MetaData(engine)
 
@@ -47,10 +47,11 @@ def read_DB(keyword):
     try:
         ret = session.query(Published).filter(Published.published_name.like(keyword)).one()
     except:
+        session.close()
         return None
 
     # IF_value=ret.IF_value
-
+    session.close()
     return ret.IF_value
 
 
