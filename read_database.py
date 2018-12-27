@@ -1,7 +1,6 @@
-from openpyxl import load_workbook
-import bean.Paper as p
-import re
 import rank as r
+from dao.paperDao import *
+import time
 
 
 # ================================================================
@@ -17,54 +16,60 @@ def get_infomation(keyword, alpha):
     """
     if keyword is "":
         keyword = " "
-    wb = load_workbook("dao\paper.xlsx")
-    sheet = wb.worksheets[0]
-    length = len(sheet["B"])
-    result = []
-    # get each line of xlsx
-    exist = set()
-    print('Reading!!!!!')
-    for i in range(length):
-        # get the value of B0 to Bn
-        value_of_blockBn = str(sheet.cell(row=i + 2, column=2).value).upper()
-        # print("value_of_blockBn",value_of_blockBn)
-        value_of_blockCn = str(sheet.cell(row=i + 2, column=3).value).upper()
-        # print("value_of_blockCn is ",value_of_blockCn)
-        data_U = keyword.upper()
-        # remove the useless word
-        judge1 = re.search(data_U, value_of_blockBn)
-        judge2 = re.search(data_U, value_of_blockCn)
-        if judge1 is not None or judge2 is not None:
-            if str(sheet.cell(row=i + 2, column=2).value) not in exist:
-                # print(str(sheet.cell(row=i + 2, column=2).value))
-                paper = p.PaperBean(number=i,
-                                    title=str(sheet.cell(row=i + 2, column=2).value),
-                                    authors=str(sheet.cell(row=i + 2, column=3).value),
-                                    published_in=str(sheet.cell(row=i + 2, column=4).value),
-                                    url=str(sheet.cell(row=i + 2, column=5).value),
-                                    abstract=str(sheet.cell(row=i + 2, column=6).value),
-                                    citations_name=list(str(sheet.cell(row=i + 2, column=7).value)[1:-1].split("', '")),
-                                    citations_url=list(
-                                        str(sheet.cell(row=i + 2, column=8).value).replace("'", "").replace(",",
-                                                                                                            "").replace(
-                                            "\\n", "").split()),
-                                    references_name=list(str(sheet.cell(row=i + 2, column=9).value)[1:-1].split("', '")),
-                                    references_url=list(
-                                        str(sheet.cell(row=i + 2, column=10).value).replace("'", "").replace(",",
-                                                                                                             "").replace(
-                                            "\\n", "").split()),
-                                    citations_number=int(sheet.cell(row=i + 2, column=11).value) if sheet.cell(row=i + 2,
-                                                                                                              column=11).value else 0
-                                    )
-                result.append(paper)
-                exist.add(str(sheet.cell(row=i + 2, column=2).value))
-    result = r.rank_simple(result,alpha)
-    print('Result return!!!!!')
-    return result
+    # wb = load_workbook("dao\paper.xlsx")
+    # sheet = wb.worksheets[0]
+    # length = len(sheet["B"])
+    # result = []
+    # # get each line of xlsx
+    # exist = set()
+    # for i in range(length):
+    #     # get the value of B0 to Bn
+    #     value_of_blockBn = str(sheet.cell(row=i + 2, column=2).value).upper()
+    #     # print("value_of_blockBn",value_of_blockBn)
+    #     value_of_blockCn = str(sheet.cell(row=i + 2, column=3).value).upper()
+    #     # print("value_of_blockCn is ",value_of_blockCn)
+    #     data_U = keyword.upper()
+    #     # remove the useless word
+    #     judge1 = re.search(data_U, value_of_blockBn)
+    #     judge2 = re.search(data_U, value_of_blockCn)
+    #     if judge1 is not None or judge2 is not None:
+    #         if str(sheet.cell(row=i + 2, column=2).value) not in exist:
+    #             # print(str(sheet.cell(row=i + 2, column=2).value))
+    #             paper = p.PaperBean(number=i,
+    #                                 title=str(sheet.cell(row=i + 2, column=2).value),
+    #                                 authors=str(sheet.cell(row=i + 2, column=3).value),
+    #                                 published_in=str(sheet.cell(row=i + 2, column=4).value),
+    #                                 url=str(sheet.cell(row=i + 2, column=5).value),
+    #                                 abstract=str(sheet.cell(row=i + 2, column=6).value),
+    #                                 citations_name=list(str(sheet.cell(row=i + 2, column=7).value)[1:-1].split("', '")),
+    #                                 citations_url=list(
+    #                                     str(sheet.cell(row=i + 2, column=8).value).replace("'", "").replace(",",
+    #                                                                                                         "").replace(
+    #                                         "\\n", "").split()),
+    #                                 references_name=list(str(sheet.cell(row=i + 2, column=9).value)[1:-1].split("', '")),
+    #                                 references_url=list(
+    #                                     str(sheet.cell(row=i + 2, column=10).value).replace("'", "").replace(",",
+    #                                                                                                          "").replace(
+    #                                         "\\n", "").split()),
+    #                                 citations_number=int(sheet.cell(row=i + 2, column=11).value) if sheet.cell(row=i + 2,
+    #                                                                                                           column=11).value else 0
+    #                                 )
+    #             result.append(paper)
+    #             exist.add(str(sheet.cell(row=i + 2, column=2).value))
+
+    result = read_DB(keyword=keyword)
+    start_time = time.time()
+    result_final = r.rank_simple(result,alpha)
+    print("In rank the time is", time.time() - start_time)
+    # for i in range(length):
+    #     insert_DB(result[i])
+    return result_final
 
 
 if __name__ == '__main__':
-    result = get_infomation(keyword="machine", alpha=100)
+    start_time = time.time()
+    result = get_infomation(keyword="carp", alpha=100)
+    print("total time is",time.time()-start_time)
     # for item in result:
     #     print(item[1].title,item[1].authors, item[1].published_in)
     #     print(item.title)

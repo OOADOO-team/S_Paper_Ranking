@@ -11,5 +11,8 @@
       <user-name>user</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
+    <data-source name="sys@localhost" uuid="4866b882-18c1-4700-b0ed-6e0f1d0fe1b8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
+    </data-source>
   </component>
 </project>

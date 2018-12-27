@@ -49,7 +49,7 @@ def write_file(filepath):
                 wb1.cell(length, CITATION_URL, str(p.citations_url)[1:-1])
                 wb1.cell(length, REFERENCE_NAME, str(p.references_name)[1:-1])
                 wb1.cell(length, REFERENCE_URL, str(p.references_url)[1:-1])
-                wb1.cell(length, CITATION_NUM, p.citation_number)
+                wb1.cell(length, CITATION_NUM, p.citations_number)
 
                 count += 1
                 length += 1
