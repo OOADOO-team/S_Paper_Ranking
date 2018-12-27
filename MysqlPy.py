@@ -76,8 +76,22 @@ def read_DB(keyword):
     keyword = '%'+keyword+'%'
     ret = list()
     ret = session.query(Paper).filter(or_(Paper.title.like(keyword),Paper.authors.like(keyword))).all()
-
-    return ret
+    result = []
+    for item in ret:
+        new_paper = Paper(
+            title=item.id,
+            authors=item.title,
+            published_in=item.published_in,
+            url=item.url,
+            abstract=item.abstract,
+            citations_number=item.citations_number,
+            citations_name=item.citations_name.split(),
+            citations_url=item.citations_url.split(),
+            references_name=item.references_name.split(),
+            references_url=item.references_url.split()
+        )
+        result.append(new_paper)
+    return result
 
 
 conn = engine.connect()
