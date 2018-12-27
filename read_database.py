@@ -2,6 +2,7 @@ from openpyxl import load_workbook
 import bean.Paper as p
 import re
 import rank as r
+from MysqlPy import *
 
 
 # ================================================================
@@ -23,7 +24,6 @@ def get_infomation(keyword, alpha):
     result = []
     # get each line of xlsx
     exist = set()
-    print('Reading!!!!!')
     for i in range(length):
         # get the value of B0 to Bn
         value_of_blockBn = str(sheet.cell(row=i + 2, column=2).value).upper()
@@ -58,13 +58,15 @@ def get_infomation(keyword, alpha):
                                     )
                 result.append(paper)
                 exist.add(str(sheet.cell(row=i + 2, column=2).value))
-    result = r.rank_simple(result,alpha)
-    print('Result return!!!!!')
-    return result
+    # result = r.rank_simple(result,alpha)
+
+    for i in range(length):
+        insert_DB(result[i])
+    # return result
 
 
 if __name__ == '__main__':
-    result = get_infomation(keyword="machine", alpha=100)
+    result = get_infomation(keyword="", alpha=100)
     # for item in result:
     #     print(item[1].title,item[1].authors, item[1].published_in)
     #     print(item.title)

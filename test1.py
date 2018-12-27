@@ -45,3 +45,6 @@ for item in e:
 # print(return_list)
 a = ""
 print(a is "")
+string = r"u1355sdf{}",123
+print(string)
+# print(re.search("\\\\u",string))
