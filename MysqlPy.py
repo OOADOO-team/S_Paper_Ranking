@@ -85,16 +85,16 @@ print(conn)
 
 print('title' in metadata.tables)
 
-if __name__ == '__main__':
-    p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost',
-                   abstract="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-                   citations_name=[1, 2, 3], citations_url=[4, 5, 6], references_name=[7, 8, 9],
-                   references_url=[9, 8, 7],
-                   citations_number=5)
-    # insert_DB(p1)
-
-    for p in read_DB('carp'):
-        print(p.title,p.id)
+# if __name__ == '__main__':
+#     p1 = PaperBean(number=1, title="paper1", authors='Wentao1', published_in='Sustech1', url='localhost',
+#                    abstract="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+#                    citations_name=[1, 2, 3], citations_url=[4, 5, 6], references_name=[7, 8, 9],
+#                    references_url=[9, 8, 7],
+#                    citations_number=5)
+#     # insert_DB(p1)
+#
+#     for p in read_DB('carp'):
+#         print(p.title,p.id)
 
 # 打开数据库连接
 # db = connect(host=localhost, port=3306, user='user', passwd='user', db='sys')
