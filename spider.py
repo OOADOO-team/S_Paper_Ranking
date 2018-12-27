@@ -65,7 +65,7 @@ proxy_list = [
     # '121.232.148.82:9000'
 ]
 
-N = 30  # 爬取搜索结果页数，注意，提高页数有可能导致被墙= =
+N_num = 30  # 爬取搜索结果页数，注意，提高页数有可能导致被墙= =
 
 
 def get_proxies():
@@ -146,7 +146,6 @@ def get_proxies():
 
 
 def get_doc_ieee(doc_name, doc_link):
-    
     header['User_Agent'] = random.choice(my_headers)
     start_time = time.time()
     url = 'https://ieeexplore.ieee.org' + doc_link
@@ -293,9 +292,9 @@ def get_doc_ieee(doc_name, doc_link):
     print('%.2f' % (time.time() - start_time))
 
 
-def get_ieee_search(keyword):
+def get_ieee_search(keyword, N):
     header['User_Agent'] = random.choice(my_headers)
-    
+
     start_time = time.time()
     url = 'https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=' + keyword
     html = requests.get(url, header, timeout=5)
@@ -349,7 +348,7 @@ def get_ieee_search(keyword):
     print('%.2f' % (time.time() - start_time))
 
 
-def get_Baidu_scholar(keyword):
+def get_Baidu_scholar(keyword, N):
     class_pattern = re.compile(r'<h3 class="t c_font">[\s\S]*?</a>')
     url_pattern = re.compile(r'href=".*?"')
     id_pattern = re.compile(r'data-longsign=".*?"')
@@ -372,9 +371,9 @@ def get_Baidu_scholar(keyword):
     ref_id_pattern = re.compile(r'"sc_longsign":\[".*?"\]')
     for i in range(0, N):
         start_time = time.time()
-        
-        if i != 0:
-            time.sleep(10)
+
+        # if i != 0:
+        #     time.sleep(10)
         header['User_Agent'] = random.choice(my_headers)
         url = 'http://xueshu.baidu.com/s?wd=' + keyword.replace(' ', '%20') + '&pn=' + str(i * 10) + \
               '&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_f_para=sc_tasktype%3D%7BfirstSimpleSearch%7D&sc_hit=1 '
@@ -417,7 +416,7 @@ def get_Baidu_scholar(keyword):
                 if file_name.find('\\') != -1:
                     file_name = file_name.replace('\\', '')
                 while file_name.find('[') != -1 and file_name.find(']') != -1:
-                    file_name = file_name[:file_name.find('[')] + file_name[file_name.find(']')+1:]
+                    file_name = file_name[:file_name.find('[')] + file_name[file_name.find(']') + 1:]
                 if os.path.exists(file_name + '.txt'):
                     continue
                 if len(file_name) > 150:
@@ -475,16 +474,22 @@ def get_Baidu_scholar(keyword):
                               + paperid + ')&type=citation&rn=10&page_no=1'
                     html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                     refbody = re.findall(ref_body_pattern, html.text)
+                    if len(refbody) == 0:
+                        raise ReferenceError
                     for ref in refbody:
                         ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
                         ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
-                        if ref_name.find(r'\\u'):
-                            ref_name = ref_name.encode().decode('unicode_escape')
+                        while ref_name.find('\\u') != -1:
+                            pos = ref_name.find('\\u')
+                            ref_name = ref_name[:pos] + \
+                                       ref_name[pos:pos + 6].encode().decode('unicode_escape') + ref_name[pos + 6:]
                         file2.write(ref_name + ' ')
                         ref_authors = re.findall(ref_author_pattern, ref)
                         for ref_aut in ref_authors:
-                            if ref_aut.find(r'\\u'):
-                                ref_aut = ref_aut.encode().decode('unicode_escape')
+                            while ref_aut.find('\\u') != -1:
+                                pos = ref_aut.find('\\u')
+                                ref_aut = ref_aut[:pos] + \
+                                          ref_aut[pos:pos + 6].encode().decode('unicode_escape') + ref_aut[pos + 6:]
                             file2.write(ref_aut[10:] + ' ')
                         file2.write('http://xueshu.baidu.com/usercenter/paper/show?paperid=' + ref_id + '\r')
                 except requests.ReadTimeout:
@@ -495,8 +500,8 @@ def get_Baidu_scholar(keyword):
                 error_num += 1
                 first_ref = ''
                 new_url_src = 'http://xueshu.baidu.com/usercenter/paper/search?_token=' \
-                          + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A(' \
-                          + paperid + ')&type=reference&rn=10&page_no='
+                              + token + '&_ts=' + ts + '&_sign=' + sign + '&wd=citepaperuri%3A(' \
+                              + paperid + ')&type=reference&rn=10&page_no='
                 file2.write('References: \r')
                 try:
                     while True:
@@ -505,6 +510,8 @@ def get_Baidu_scholar(keyword):
                         num = 0
                         html = requests.get(new_url, headers=header, timeout=5, cookies=cookie)
                         refbody = re.findall(ref_body_pattern, html.text)
+                        if len(refbody) == 0:
+                            raise ReferenceError
                         for ref in refbody:
                             ref_id = re.search(ref_id_pattern, ref).group()[16:-2]
                             if num == 0:
@@ -514,13 +521,17 @@ def get_Baidu_scholar(keyword):
                                     first_ref = ref_id
                             num += 1
                             ref_name = re.search(ref_name_pattern, ref).group()[13:-2]
-                            if ref_name.find(r'\\u'):
-                                ref_name = ref_name.encode().decode('unicode_escape')
+                            while ref_name.find('\\u') != -1:
+                                pos = ref_name.find('\\u')
+                                ref_name = ref_name[:pos] + \
+                                           ref_name[pos:pos + 6].encode().decode('unicode_escape') + ref_name[pos + 6:]
                             file2.write(ref_name + ' ')
                             ref_authors = re.findall(ref_author_pattern, ref)
                             for ref_aut in ref_authors:
-                                if ref_aut.find(r'\\u'):
-                                    ref_aut = ref_aut.encode().decode('unicode_escape')
+                                while ref_aut.find('\\u') != -1:
+                                    pos = ref_aut.find('\\u')
+                                    ref_aut = ref_aut[:pos] + \
+                                              ref_aut[pos:pos + 6].encode().decode('unicode_escape') + ref_aut[pos + 6:]
                                 if ref_aut.find('全网免费下载') >= 0:
                                     continue
                                 file2.write(ref_aut[10:] + ' ')
@@ -529,6 +540,17 @@ def get_Baidu_scholar(keyword):
                             break
                 except requests.ReadTimeout:
                     print("ref timeout")
+                    if file2 is not None:
+                        file2.close()
+                    if file_name != '':
+                        os.remove(file_name + '.txt')
+                    pass
+                except requests.ConnectionError as e:
+                    print(e.args)
+                    if file2 is not None:
+                        file2.close()
+                    if file_name != '':
+                        os.remove(file_name + '.txt')
                     pass
                 file2.close()
             except AttributeError as e:
@@ -544,9 +566,14 @@ def get_Baidu_scholar(keyword):
             except requests.ReadTimeout as e:
                 print(new_url)
                 print(url)
+                if file2 is not None:
+                    file2.close()
+                if file_name != '':
+                    os.remove(file_name + '.txt')
+                print(e.args)
+            except ReferenceError:
                 file2.close()
                 os.remove(file_name + '.txt')
-                print(e.args)
         file.close()
         print('%.2f' % (time.time() - start_time))
     os.remove('Error_message' + '.txt')
@@ -555,4 +582,4 @@ def get_Baidu_scholar(keyword):
 if __name__ == '__main__':
     # get_Google_scholar('Anomaly Detection')   谷歌没写好
     # get_ieee_search('network')
-    get_Baidu_scholar('OOAD')
+    get_Baidu_scholar('Computer Science', N_num)
