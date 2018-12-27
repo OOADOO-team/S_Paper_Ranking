@@ -42,39 +42,29 @@
 
 
             <div class="col-md-12">
-                <table class="table  table-hover">
-                    <tbody>
-
-                    {% if papers|length == 0 %}
+                {% if papers|length == 0 %}
                         <center><h3>Nothing was found!</h3></center>
                     {% else %}
-                        {% for ranking in range( papers| length) %}
-                            <tr class="col-12 col-md-12" data-width="100%">
-                                <td class="col-12 col-md-12" data-width="100%">
-                                    <h5 style="font-family: Times, TimesNR; font-weight: lighter"><a
-                                            href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a>
-                                    </h5>
-                                    <div style="color:#33CC66; font-family:verdana,sans-serif;font-size:15px; padding: 5px;">{{ papers[ranking].authors }}
-                                        &nbsp&nbsp {{ papers[ranking].public_in }}</div>
-                                    <div style="font-family:arial,sans-serif; font-size:14px ; padding: 5px;">{{ papers[ranking].abstract[:100] }}</div>
-                                    <div style="color:#0066CC;font-family:arial,sans-serif; font-size:15px; padding: 5px;">
-                                        Cited
-                                        by {{ papers[ranking].citations_number }} articles
-                                    </div>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    {% endif %}
-                    <tr>
+                {% for ranking in range( papers| length) %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" ><a style="font-family: Times, TimesNR;color: #1a0dab"
+                                    href="{{ url_for("success", title = papers[ranking].title , rank = ranking) }}">{{ papers[ranking].title }}</a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ papers[ranking].authors }}</h6>
+                            <p class="card-text">{{ papers[ranking].abstract[:200] + "..."}}</p>
+                            <p  class="card-text">{{ papers[ranking].public_in }}</p>
+                            <p class="card-text">Cited by {{ papers[ranking].citations_number }}</p>
+                        </div>
+                    </div>
 
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-{#            <div class="col-2 col-md-2 ">#}
+                {% endfor %}
+            {% endif %}
 
-            </div>
+
+
+
         </div>
+    </div>
     </div>
 
 {% endblock %}

@@ -63,7 +63,7 @@ def success(title, rank=99):
                            url=paperBean.url,
                            references=refs,
                            citations=cites,
-
+                           citations_number=paperBean.citations_number,
                            rank=rank
                            )
 
@@ -87,8 +87,8 @@ def search():
         print(request.args.get('keyword'))
         keyword = request.args.get('keyword')
         rank = request.args.get('ranking')
-        end_result = r.get_infomation(keyword=keyword, alpha=rank)
-        return render_template('results.html', name=keyword, ranking=rank, papers=end_result)
+        end_result = r.get_infomation(keyword=keyword, alpha=int(rank))
+        return render_template('results.html', name=keyword, ranking=int(rank), papers=end_result)
 
 
 if __name__ == '__main__':
