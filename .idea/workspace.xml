@@ -5,12 +5,1090 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e987d568-50d9-464a-b6bf-f82944db6090" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/algo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/paperDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/paperDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach for Efficient Traffic Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach for Feature-Sensitive Motion Planning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Accurately and Reliably Extracting Data from the Web.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Android Malware Detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Answering Questions for Reading Comprehension Tests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Assessing Knowledge Sharing During Collaborative Learning Activities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Automatic Production of Compiler Heuristics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Coreference Resolution of Noun Phrases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Inductive Query byExamples- An Experiment Using Relevance Feedback,ID3, Genetic Algorithms, and Simulated Annealing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Negation and Speculation Detection for Sentiment Analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to POS Tagging.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Phishing Detection And Defense.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Pronoun Resolution in Spoken Dialogue.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Software Requirements Prioritization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to TCP Throughput Prediction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Twitter User Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine Learning Approach to Workflow Management.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine-Learning Approach for Communication Prediction of Large-Scale Applications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine-Learning Approach to Automated Negotiation and Prospects for Electronic Commerce.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine-Learning Approach to Estimating the Referential Properties of Japanese Noun Phrases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine-Learning Approach to Keypoint Detection and Landmarking on 3D Meshes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A Machine-Learning Approach to Negation and Speculation Detection in Clinical Texts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A framework for Internet data real-time processing- A machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach for Arabic text classification using N-gram frequency statistics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach for automated recognition of movement patterns using basic, kinetic and kinematic gait data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach for tracing regulatory codes to product specific requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to building domain-specific search engines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to detecting attacks by identifying anomalies in network traffic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to multilingual and cross-lingual ontology matching.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to predicting protein-ligand binding affinity with applications to molecular docking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to reading level assessment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to sentiment analysis in multilingual Web texts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to the analysis of time–frequency maps, and its application to neural dynamics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine learning approach to web page filtering using content and structure analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach for a sintering process using a neural network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach for analyzing document layout structures with two reading orders.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach for computation of fractional flow reserve from coronary computed tomography.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach for predicting B-cell epitopes..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to combined evidence validation of genome assemblies..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to detecting unknown bacterial serovars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to modelling and forecasting the minimum temperature at Dhahran, Saudi Arabia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to multi-robot coordination.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to optimal bid pricing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to planning in complex real-world domains -.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A machine-learning approach to ranking RDF properties.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/A utility-based resource allocation scheme for IEEE 802.11 WLANs via a machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Automatic Text Summarization Using a Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Automatic and portable performance modeling for parallel I-O- a machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Biometric Authentication- A Machine Learning Approach (paperback).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Biometric Authentication- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Biometrics from brain electrical activity- a machine learning approach..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Clustering and classification of document structure-a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Convolutional LSTM Network- A Machine Learning Approach for Precipitation Nowcasting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Coordinated management of multiple interacting resources in chip multiprocessors- A machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Creating and Using Models for Engineering Design- A Machine-Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Cross-trial prediction of treatment outcome in depression- a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Database dependency discovery- a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Detecting Spam Bots in Online Social Networking Sites- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Detecting Spam blogs- A machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Disambiguating proteins, genes, and RNA in text- A machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Drug repositioning- a machine-learning approach through data integration.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Dynamic ARF for throughput improvement in 802.11 WLAN via a machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Dynamic Multicore Resource Management- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Ecophysiological Modeling of Grapevine Water Stress in Burgundy Terroirs by a Machine-Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Estimating soil moisture using remote sensing data- A machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Extracting sentence segments for text summarization- A machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Faster and better- a machine learning approach to corner detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Gene selection from microarray data for cancer classification—a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Genome-Scale Identification of Legionella pneumophila Effectors Using a Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Identification of novel Xanthomonas euvesicatoria type III effector proteins by a machine‐learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Identification of protein functions using a machine-learning approach based on sequence-derived properties..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Identifying non-referential it - a machine learning approach incorporating linguistically motivated patterns.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Image-based crystal detection- a machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Inducing deterministic Prolog parsers from treebanks- a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Inter-regional cortical thickness correlations are associated with autistic symptoms- A machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/On the Semantic Annotation of Daily Places-A Machine-Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/On the semantic annotation of daily places- A machine-learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Ontology Matching- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Recognizing Names in Biomedical Texts- a Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Reconciling Schemas of Disparate Data Sources- A Machine-Learning Approach..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Reconciling schemas of disparate data sources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/SAWSDL-MX2- A Machine-Learning Approach for Integrating Semantic Web Service Matchmaking Variants.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Segmentation of intravascular ultrasound images- a machine learning approach mimicking human vision.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/System Identification through Simulated Evolution- A Machine Learning Approach to Modeling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Theory Identity- A Machine-Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Ventricular Fibrillation and Tachycardia Classification Using a Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/Wrapper Maintenance- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/database.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/A machine/write_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/8-Isoprostane, a Marker of Oxidative Stress, Is Increased in Exhaled Breath Condensate of Patients With Obstructive Sleep Apnea After Night and Is Red.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/A Herpesvirus Associated with Mass Mortality of Juvenile and Adult Koi, a Strain of Common Carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/A New Engagement- Political Participation, Civic Life, and the Changing American Citizen.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/A Novel Cardiac-Restricted Target for Doxorubicin- CARP, A NUCLEAR MODULATOR OF GENE EXPRESSION IN CARDIAC PROGENITOR CELLS AND CARDIOMYOCYTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/A genetic linkage map of common carp ( Cyprinus carpio L.) And mapping of a locus associated with cold tolerance.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/A genetic linkage map of common carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Adjuvant vinorelbine plus cisplatin versus observation in patients with completely resected stage IB–IIIA non-small-cell lung cancer (Adjuvant Navelbi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Administration of yeast glucan enhances survival and some non-specific and specific immune parameters in carp (Cyprinus carpio) infected with Aeromona.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Anaerobic wintering of crucian carp (Carassius carassius L.)-I. Annual dynamics of glycogen reserves in nature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Anti-inflammatory and immunosuppressive drugs and reproduction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Antioxidant and biochemical properties of protein hydrolysates prepared from Silver carp ( Hypophthalmichthys molitrix ).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Assessing impacts of introduced aquatic species- Grass carp in large systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Autoantibodies recognizing carbamylated proteins are present in sera of patients with rheumatoid arthritis and predict joint damage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/BIOACCUMULATION OF HEAVY METALS IN ORGANS OF FRESH WATER FISH CYPRINUS CARPIO (COMMON CARP).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Benefits of a predtor-induced morphology in crucian carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Biology of sperm and artificial reproduction in carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Biotransformation and Induction- Implications for Toxicity, Bioaccumulation and Monitoring of Environmental Xenobiotics in Fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/CARP, a cardiac ankyrin repeat protein, is downstream in the Nkx2-5 homeobox gene pathway.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Calcium channels from Cyprinus carpio skeletal muscle..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Calcium-permeable AMPA receptor plasticity is mediated by subunit-specific interactions with PICK1 and NSF..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Carbonic Anhydrase Inhibitors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cardiac Ankyrin Repeat Protein Gene (ANKRD1) Mutations in Hypertrophic Cardiomyopathy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Carp (Cyprinus carpio) as a powerful invader in Australian waterways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Carp Muscle Calcium-binding Protein.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Carp horizontal cells in culture respond selectively to L-glutamate and its agonists..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Carp muscle calcium-binding protein. II. Structure determination and general description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Central gustatory paths in the crucian carp, -em-carassius carassius--em-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Centrality in Social Networks- ii. Experimental Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Chemical cues from piscivores induce a change in morphology in crucian carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Chinese herbs (Astragalus radix and Ganoderma lucidum) enhance immune response of carp, Cyprinus carpio, and protection against Aeromonas hydrophila.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cigarette smoke inhalation decreases alpha 1-antitrypsin activity in rat lung..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cloning and sequence analysis of cDNAs encoding precursors of urotensin II-alpha and -gamma.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cold-Induced Expression of Delta9-Desaturase in Carp by Transcriptional and Posttranslational Mechanisms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cold-induced expression of delta(super 9)-desaturase in carp by transcriptional and posttranslational mechanisms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Common evolutionary origin of aquareoviruses and orthoreoviruses revealed by genome characterization of Golden shiner reovirus, Grass carp reovirus, S.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Comparative study of digestive enzymes in fish with different nutritional habits. Proteolytic and amylase activities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Competition and the Coexistence of Species in a Mixed Podocarp Stand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Complications of anterior cervical discectomy and fusion using recombinant human bone morphogenetic protein-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Composition, Diversity, and Origin of the Bacterial Community in Grass Carp Intestine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Connections of the auditory midbrain in a teleost fish, -em-Cyprinus carpio--em-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Control of eutrophication by silver carp (-Emphasis Type=-Italic--Hypophthalmichthys molitrix) in the tropical Paranoá Reservoir (Brasília, Brazil)- a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Cryopreservation of Sperm in Common Carp Cyprinus carpio- Sperm Motility and Hatching Success of Embryos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Debromination of Polybrominated Diphenyl Ether Congeners BDE 99 and BDE 183 in the Intestinal Tract of the Common Carp (Cyprinus carpio).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Debromination of the flame retardant decabromodiphenyl ether by juvenile carp (Cyprinus carpio) following dietary exposure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Degenerative arthritis of the wrist- proximal row carpectomy versus scaphoid excision and four-corner arthrodesis..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Determination of malachite green and leucomalachite green in carp muscle by liquid chromatography with visible and fluorescence detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Differences in mucus and serum immunoglobulin of carp (Cyprinus carpio L.).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Dopamine modulates S-potential amplitude and dye-coupling between external horizontal cells in carp retina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Dynamics of microcystins-LR and -RR in the phytoplanktivorous silver carp in a sub-chronic toxicity experiment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/EVALUATION OF NMP22 IN THE DETECTION OF TRANSITIONAL CELL CARCINOMA OF THE BLADDER.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effect of probiotics for common carp (Cyprinus carpio) based on growth performance and digestive enzyme activities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of Chloro-S-Triazine Herbicides and Metabolites on Aromatase Activity in Various Human Cell Lines and on Vitellogenin Production in Male Carp .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of a microbial phytase on the utilization of native phosphorus by carp in a diet based on soybean meal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of aspartate and glutamate on the bipolar cells in the carp retina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of benthivorous bream (Abramis brama) and carp (Cyprinus carpio) on sediment resuspension and concentrations of nutrients and chlorophyll a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of chitosan coating on quality and shelf life of silver carp during frozen storage..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Effects of α-tocopherol deficiency on carp. 2. Protein composition of the dystrophic muscle..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Electromyographic Analysis of Core Trunk, Hip, and Thigh Muscles During 9 Rehabilitation Exercises.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Endocrine control of gametogenesis and spawning induction in the carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Endocrine disruptors in sewage treatment plants, receiving river waters, and sediments- integration of chemical analysis and biological effects on fer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Endocrine regulation of gametogenesis in fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Enhanced bioaccumulation of cadmium in carp in the presence of titanium dioxide nanoparticles.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Enzyme producing bacterial flora isolated from fish digestive tracts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Estimation of Fish Biomass Using Environmental DNA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Etiology and pathology of epidermal papillomas in allogynogenetic crucian carp Carassius auratus gibelio (female) x Cyprinus carpio var. singuonensis .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Evaluation of Pressurized Fluid Extraction for the Extraction of Environmental Matrix Reference Materials.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Feminisation of young males of the common carp, Cyprinus carpio, exposed to 4-tert-pentylphenol during sexual differentiation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Feminization of male carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/First feeding of common carp larvae on diets with high levels of protein hydrolysates.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Flood disturbance and the coexistence of species in a lowland podocarp forest, south Wetland, New Zealand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Fruiting of Hypogeous Fungi in Oregon Douglas-Fir Forests- Seasonal and Habitat Variation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Gen.Com- Youth, Civic Engagement, and the New Information Environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genetic differences between the Chinese and European races of the common carp - 6. Growth of fish in cages.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genetic evidence for gonochoristic reproduction in gynogenetic silver crucian carp (Carassius auratus gibelio bloch) as revealed by RAPD assays.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genetic improvement of common carp strains using intraspecific hybridization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genetic manipulations in aquaculture- a review of stock improvement by classical and modern technologies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genetic variability in reared stocks of common carp ( Cyprinus carpio L.) based on allozymes and microsatellites.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Genome Sequences of Three Koi Herpesvirus Isolates Representing the Expanding Distribution of an Emerging Disease Threatening Koi and Common Carp Worl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Growth and meat quality relations in carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Hematological and biochemical parameters in common Carp, Cyprinus carpio, following herbal treatment for Aeromonas hydrophila infection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Hepatic glucokinase is induced by dietary carbohydrates in rainbow trout, gilthead seabream, and common carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Heritability estimates for growth-related traits using microsatellite parentage assignment in juvenile common carp (Cyprinus carpio L.).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Hidden Markov model approach to text segmentation and event tracking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Histological changes induced by dietary phospholipids in intestine and liver of common carp (Cyprinus carpio L.) larvae.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Histopathological effects of microcystin-LR, a cyclic peptide from the cyanobacterium (blue-green alga) Microcystis aeruginosa, on common carp (Cyprin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Hypoxia induces adaptive and reversible gross morphological changes in crucian carp gills.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Hypoxic survival strategies in two fishes- extreme anoxia tolerance in the North European crucian carp and natural hypoxic preconditioning in a coral-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Immunization Delays the Onset of Prion Disease in Mice.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Improving surgical outcomes- standardizing the reporting of incidence and severity of acute lymphedema after sentinel lymph node biopsy and axillary l.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/In Vivo and In Vitro Debromination of Decabromodiphenyl Ether (BDE 209) by Juvenile Rainbow Trout and Common Carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/In search of the informed citizen- What Americans know about politics and why it matters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/In vitro suppression of serum elastase-inhibitory capacity by reactive oxygen species generated by phagocytosing polymorphonuclear leukocytes..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Increased 8-Isoprostane and Interleukin-6 in Breath Condensate of Obstructive Sleep Apnea Patients.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Increased leptin expression in common Carp (Cyprinus carpio) after food intake but not after fasting or feeding to satiation..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Increased leukotriene B4 and interleukin-6 in exhaled breath condensate in cystic fibrosis..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Increased tight junctional permeability is associated with the development of colon cancer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Induced ovulation and spawning of cultured freshwater fish in China- Advances in application of GnRH analogues and dopamine antagonists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Infected splenic dendritic cells are sufficient for prion transmission to the CNS in mouse scrapie..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Influences of traditional Chinese medicine on non-specific immunity of Jian Carp (Cyprinus carpio var. Jian).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Interactions of heavy metals with white-rot fungi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Isolation and Characterization of Acid-soluble and Pepsin-soluble Collagens from Skin of Grass Carp(Ctenopharyngodon idellus).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Isolation and identification of a radical scavenging antioxidant - Punicalagin from pith and carpellary membrane of pomegranate fruit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Isolation and partial characterization of pepsin-soluble collagen from the skin of grass carp (Ctenopharyngodon idella).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Isolation of carp genes encoding major histocompatibility complex antigens..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Isomer-Specific Determination and Toxic Evaluation of Polychlorinated Biphenyls, Polychlorinated-brominated Dibenzo-p-Dioxins and Dibenzofurans, Polyb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Karyotype of the abortus in recurrent miscarriage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Large‐scale identification of leaf senescence‐associated genes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Mass mortalities in Koi carp, Cyprinus carpio, associated with gill and skin disease..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Measurement of vitellogenin, a biomarker for exposure to oestrogenic chemicals, in a wide variety of cyprinid fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Measuring Political Knowledge- Putting First Things First.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Microclimate and vegetation edge effects in a fragmented podocarp-broadleaf forest in New Zealand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Microsatellite markers in common carp (Cyprinus carpio L.)..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Microsatellites within genes and ESTs of common carp and their applicability in silver crucian carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Mitochondrial N-formylmethionyl proteins as chemoattractants for neutrophils..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Modulation of cone horizontal cell activity in the teleost fish retina. II. Role of interplexiform cells and dopamine in regulating light responsivene.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Molecular Genetic Aspects of Tetraploidy in the Common Carp Cyprinus carpio.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Molecular cloning and developmental expression patterns of the MyoD and MEF2 families of muscle transcription factors in the carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Molecular cloning and expression analysis of carp (Cyprinus carpio) interleukin-1β, high affinity immunoglobulin E Fc receptor γ subunit and serum amy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Mouse polyclonal and monoclonal antibody to scrapie-associated fibril proteins.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Muscle fiber activity in carp as a function of swimming speed and muscle temperature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Myopalladin, a Novel 145-Kilodalton Sarcomeric Protein with Multiple Roles in Z-Disc and I-Band Protein Assemblies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Neuronal architecture of on and off pathways to ganglion cells in carp retina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Neuropathological changes in scrapie and Alzheimer's disease are associated with increased expression of apolipoprotein E and cathepsin D in astrocyte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/New β chain-encoding Mhc class II genes in the carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Nitrogen addition in a Norway spruce stand altered macromycete sporocarp production and below-ground ectomycorrhizal species composition..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Nutrient Spatial Heterogeneity- Effects on Community Structure, Physiognomy, and Diversity of Stream Algae.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Nutritional-Value of Hypogeal Fungal Sporocarps for the Long-Nosed Potoroo (Potorous-Tridactylus), a Forest-Dwelling Mycophagous Marsupial.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/On the Chemical Form of Mercury in Edible Fish and Marine Invertebrate Tissue.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Ontogeny of yolk-feeding fish- an ecological perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Organophosphate Effects on Antioxidant System of Carp ( Cyprinus carpio ) and Catfish ( Ictalurus nebulosus ).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Origin and domestication of the wild carp, Cyprinus carpio- from Roman gourmets to the swimming flowers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/PUBLIC DELIBERATION, DISCURSIVE PARTICIPATION, AND CITIZEN ENGAGEMENT- A Review of the Empirical Literature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Pathological and Biochemical Characterization of Microcystin-Induced Hepatopancreas and Kidney Damage in Carp (Cyprinus carpio).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Patterns of Ectomycorrhizal Host Specificity and Potential among Pacific Northwest Conifers and Fungi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Phase I-II study of paclitaxel, gemcitabine and vinorelbine as first-line chemotherapy of non-small-cell lung cancer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Polymorphism in ornamental and common carp strains (Cyprinus carpio L.) as revealed by AFLP analysis and a new set of microsatellite markers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Possible mechanisms of emphysema in smokers- cigarette smoke condensate suppresses protease inhibition in vitro..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Possible mechanisms of emphysema in smokers. In vitro suppression of serum elastase-inhibitory capacity by fresh cigarette smoke and its prevention by.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Potential mechanism of emphysema- alpha 1-proteinase inhibitor recovered from lungs of cigarette smokers contains oxidized methionine and has decrease.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Potential mediator of inflammation. Phagocyte-derived oxidants suppress the elastase-inhibitory capacity of alpha 1-proteinase inhibitor in vitro..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Predator-Induced Phenotypical Change in Body Morphology in Crucian Carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Predicting Invasion Success- Freshwater Fishes in California as a Model.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Predictions on the effect of common carp (Cyprinus carpio) exclusion on water quality, zooplankton, and submergent macrophytes in a Great Lakes wetlan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Prior Divergence- Do Researchers and Participants Share the Same Prior Probability Distributions-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Properties of collagen from skin, scale and bone of carp (Cyprinus carpio).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Properties of common carp gonadotropin I and gonadotropin II.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Protein and amino acid requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Protein nutrition in fish. 1. The utilization of dietary protein by young carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Protein requirements of grass carp fry ( Ctenopharyngodon idella Val.).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Quantification of common carp (Cyprinus carpio) IGF-I and IGF-II mRNA by real-time PCR- differential regulation of expression by GH.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Quantitative estimation of proteolytic enzyme and ultrastructural study of anterior part of intestine of Indian major carp (Catla catla) larvae during.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Rapid resolution of duck hepatitis B virus infections occurs after massive hepatocellular involvement..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Rational modification of protein stability by the mutation of charged surface residues..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Recent Duplication of the Common Carp (Cyprinus carpio L.) Genome as Revealed by Analyses of Microsatellite Loci.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Recombinant Carp Parvalbumin, the Major Cross-Reactive Fish Allergen- A Tool for Diagnosis and Therapy of Fish Allergy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Refinement of the structure of carp muscle calcium-binding parvalbumin by model building and difference fourier analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Regulatory effect of dopamine on spatial properties of horizontal cells in carp retina..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Relationship between sperm ATP content and motility of carp spermatozoa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Requirement of Grass Carp Fingerlings for .ALPHA.-Tocopherol..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Requirements of carp and rainbow trout for essential amino acids.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Responses of antioxidant systems in the hepatocytes of common carp (Cyprinus carpio L.) to the toxicity of microcystin-LR.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Responsiveness and receptive field size of carp horizontal cells are reduced by prolonged darkness and dopamine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Riboflavin requirements in carp and rainbow trout.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Rodent dispersal of vesicular-arbuscular mycorrhizal fungi in Amazonian Peru.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Seasonal Acclimatization of the Carp Involves Differential Expression of 5.8S Ribosomal RNA in Pituitary Cells.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Separation of lymphocyte subpopulations in carp, Cyprinus carpio L., by monoclonal antibodies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Some problems related to the assessment of sperm motility in freshwater fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Some properties of the Epithelioma papulosum cyprini (EPC) cell line from carp cyprinus carpio.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Species diversity and distribution of biomass above and below ground among ectomycorrhizal fungi in an old-growth Norway spruce forest in south Sweden.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Species richness, abundance, and composition of hypogeous and epigeous ectomycorrhizal fungal sporocarps in young, rotation-age, and old-growth stands.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Spectral response curves of single cones in the carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Spores of mycorrhizal Endogone species extracted from soil by wet sieving and decanting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Spring viremia of carp (SVC).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Standing Crop and Animal Consumption of Fungal Sporocarps in Pacific Northwest Forests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Stress Responses and Changes in Protein Metabolism in Carp Cyprinus carpio during Cadmium Exposure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Studies on the digestive enzymes of grass carp, Ctenopharyngodon idella  (Val.).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Suppression in function of phagocytic cells in common carp Cyprinus carpio L. injected with estradiol, progesterone or 11-ketotestosterone.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Surgical treatment of scapholunate advanced collapse.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Synaptic relationships in the plexiform layers of carp retina.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Terbium replacement of calcium in carp muscle calcium-binding parvalbumin- an x-ray crystallographic study..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The Capacitated Arc Routing Problem- Valid Inequalities and Facets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The Good Citizen- A History of American Civic Life.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The Muscle Ankyrin Repeat Proteins- CARP, ankrd2-Arpp and DARP as a Family of Titin Filament-based Stress Response Molecules.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The amino acid sequence of rabbit skeletal muscle troponin C- gene replication and homology with calcium-binding proteins from carp and hake muscle.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The capacitated arc routing problem- Valid inequalities and facets..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The complete nucleotide sequence and gene organization of carp (Cyprinus carpio) mitochondrial genome.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The destruction of aquatic vegetation by carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The effects of pollution on reproduction in fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The endocrinology of growth in carp and related species.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The enhancement of plant growth by free-living bacteria.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The gut-associated lymphoid tissue (GALT) of carp (Cyprinus carpio L.)- An immunocytochemical analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The immune system of cyprinid fish. Kinetics and temperature dependence of antibody-producing cells in carp (Cyprinus carpio)..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The origin and evolution of Archean lithospheric mantle.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The role of oxidative processes in emphysema..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The role of phospholipids in nutrition and metabolism of teleost fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/The use of a tea polyphenol dip to extend the shelf life of silver carp (Hypophthalmicthys molitrix) during storage in ice.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Tissue-specific changes in RNA synthesis in vivo during anoxia in crucian carp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Total Synthesis of Hybocarpone.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/Vitellogenin Induction and Reduced Serum Testosterone Concentrations in Feral Male Carp (Cyprinus carpio) Captured near a Major Metropolitan Sewage Tr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/What Americans Know about Politics and Why It Matters  by Michael X. Delli Carpini; Scott Keeter.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/database.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/write_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/‘Classical’ and ‘non-classical’ reproductive steroids in fish.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/异源精子在银鲫雌核发育子代中的生物学效应.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/CARP/用鲢鳙直接控制微囊藻水华的围隔试验和湖泊实践.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/IF_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/  Proceeding of the 1st ACM SIGMOBILE workshop on Mobility models  - MobilityModels -08 - Infection spread in wireless networks with random and advers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/  Proceedings from the 2006 workshop on Interdisciplinary systems approach in performance evaluation and design of computer &amp; communications sytems  -.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/  Proceedings of the 1st ACM international workshop on Wireless sensor networks and applications  - WSNA -02 - Wireless sensor networks for habitat mo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/  Proceedings of the 5th annual ACM-IEEE international conference on Mobile computing and networking  - MobiCom -99 - The broadcast storm problem in a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/ Advances in Cryptology — EUROCRYPT ’89 Volume 434 -- Random Mapping Statistics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/-em-The Brain-s Default Network--em- - -em-Anatomy, Function, and Relevance to Disease--em-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/-i-Light Scattering by Small Particles--i-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/3-D net work numerical modeling technique for random discontinuities of rock mass.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Bayesian method for the induction of probabilistic networks from data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Border Gateway Protocol 4 (BGP-4).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Design of Reliable True Random Number Generator for Cryptographic Applications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A GENERAL THEORY OF NETWORK GOVERNANCE- EXCHANGE CONDITIONS AND SOCIAL MECHANISMS..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Markov random fields model for describing unhomogeneous textures- generalized random stereograms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Neural Probabilistic Language Model.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A New Algorithm Based on Fuzzy Gibbs Random Fields for Image Segmentation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A New Two-Constant Equation of State.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Performance Comparison of Multi-Hop Wireless Ad Hoc Network Routing Protocols.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Random Linear Network Coding Approach to Multicast.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Rao-Blackwellized Random Exchange Diffusion Particle Filter for distributed emitter tracking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Review of Current Routing Protocols for Ad-Hoc Mobile Wireless Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Scalable Content Addressable Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Scalable Content-Addressable Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Simple Model of Herd Behavior.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Survey of Active Network Research.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Survey of Mobility Models for Ad Hoc Network Research.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Tutorial on Learning with Bayesian Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Unified 3D Device Simulation of Random Dopant, Interface Trap and Work Function Fluctuations on High-kappa-Metal Gate Device.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A Versatile Vector for Gene and Oligonucleotide Transfer into Cells in Culture and in vivo- Polyethylenimine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A broadcast approach to random access.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A calculus for network delay. I. Network elements in isolation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A calculus for network delay. II. Network analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A comprehensive two-hybrid analysis to explore the yeast protein interactome..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A cortical network for directed attention and unilateral neglect.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A gigabit-per-second local area network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A homogenized Love–Kirchhoff model for out-of-plane loaded random 2D lattices- Application to “quasi-periodic” brickwork panels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A model of saliency-based visual attention for rapid scene analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A new model for predicting the hydraulic conductivity of unsaturated porous media.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A new optimizer using particle swarm theory.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A psychobiological model of temperament and character.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A random-effects logit model of work-welfare transitions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A re-examination of text categorization methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A series of normal stages in the development of the chick embryo. 1951..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A syntactic approach to random walks on graphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A taxonomy of wireless micro-sensor network models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/A unified 3D device simulation of random dopant, interface trap and work function fluctuations on high-к-metal gate device.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Ad-hoc On-Demand Distance Vector Routing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Adaptive clustering for mobile wireless networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Adaptive random testing with randomly translated failure region.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Advances in Random Access protocols for satellite networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Advances in random utility models report of the workshop on advances in random utility models duke invitational symposium on choice modeling behavior.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Alliances and networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/An Architecture for Differentiated Services.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/An Energy-Efficient MAC Protocol for Wireless Sensor Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/An Information Flow Model for Conflict and Fission in Small Groups1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/An Information-Maximization Approach to Blind Separation and Blind Deconvolution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/An improved partial CSIT random beamforming for multibeam satellite systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Analog-to-information conversion via random demodulation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Angular correlations in linear copolymers from the compositional dependence of their dipole moments. I. Random copolymerization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Are We There Yet- When to Stop a Markov Chain while Generating Random Graphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Assigning Students in Group Work Projects. Can We Do Better than Random-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Batch Normalization- Accelerating Deep Network Training by Reducing Internal Covariate Shift.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Bayesian Network Classifiers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Beating a Random Assignment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Biomechanics and Motor Control of Human Movement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Bowling alone, america's declining of social capital.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/British guideline on the management of asthma- A national clinical guideline.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/CAZAC sequence and its application in LTE random access.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Caching-Aided Coded Multicasting with Multiple Random Requests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Call center capacity allocation with random workload.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Can Propensity-Score Methods Match the Findings from a Random Assignment Evaluation of Mandatory Welfare-to-Work Programs-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Capacity of Ad Hoc Wireless Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Centrality in Social Networks' Conceptual Clarification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Changes of the hemostatic network in critically ill patients - Is there a difference between sepsis, trauma, and neurosurgery patients-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Characterization of friction properties at the workmaterial-cutting tool interface during the machining of randomly structured carbon fibers reinforce.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/ChemInform Abstract- GROUND STATES OF MOLECULES. 40. MNDO RESULTS FOR MOLECULES CONTAINING FLUORINE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Collaboration Networks, Structural Holes, and Innovation- A Longitudinal Study.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Collective dynamics of ‘small-world’ networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Collectivedynamics of ’small-world’ networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Compact Multiple Antennas in a Random World.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Comparison of Random Dopant and Gate-Metal Workfunction Variability Between Junctionless and Conventional FinFETs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Comparison of housestaff-s estimates of their workday activities with results of a random work-sampling study.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Competing Technologies, Increasing Returns, and Lock-In by Historical Events.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Component Evolution in General Random Intersection Graphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Conditional lower previsions for unbounded random quantities..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Conformational Properties of the Deoxyribose and Ribose Moieties of Nucleic Acids-  A Quantum Mechanical Study.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Congestion Avoidance and Control.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Consensus and Cooperation in Networked Multi-Agent Systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Consistent Hashing and Random Trees- Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Constructive Bounds and Exact Expectations for the Random Assignment Problem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Control of goal-directed and stimulusdriven attention in the brain.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Correction.  Mechanism of the Azulene to Napthalene Rearrangement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Correlation analysis of random number sequences based on pseudo random binary sequence generation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Corrigendum- Comprehensive genomic characterization defines human glioblastoma genes and core pathways.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Cost-Constrained Random Coding and Applications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Coverage dependence of density of states and work function of a random adsorbate-surface system- Application to alkali-metal-Si(001)2 × 1 surface.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Creating and managing a high‐performance knowledge‐sharing network- the Toyota case.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Cytoscape 2.8- new features for data integration and network visualization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/DSR- The Dynamic Source Routing Protocol for Multi-Hop Wireless Ad Hoc Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/DV Based positioning in Ad Hoc networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dense Fast Random Projections and Lean Walsh Transforms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Derandomization of Euclidean Random Walks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Design of Fully and Partially Connected Random Neural Networks for Pattern Completion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Deterministic Random Walks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Directed diffusion - A scalable and robust communication paradigm for sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Discrete and continuous models for in plane loaded random elastic brickwork.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Does Regression Discontinuity Design Work- Evidence from Random Election Outcomes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dropout- A Simple Way to Prevent Neural Networks from Overfitting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dynamic Source Routing in Ad Hoc Wireless Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dynamic fine-grained localization in Ad-Hoc network of sensors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Dynamo- amazon's highly available key-value store.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Effect of Screening and Adjuvant Therapy on Mortality from Breast Cancer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Efficient 3D `atomistic' simulation technique for studying of random dopant induced threshold voltage lowering and fluctuations in decanano MOSFETs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Efficient Online Tests for True Random Number Generators.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Efficient Ring Signatures Without Random Oracles.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Efficient privatization of random bits..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Empirical study of particle swarm optimization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Encrypting by Random Rotations.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Exploiting peak device throughput from random access workload.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fast Learning in Networks of Locally-Tuned Processing Units.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fast True Random Generator in FPGAs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fast and reliable random number generators for scientific computing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fast gossip via non-reversible random walk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fast non-local filtering by random sampling- It works, especially for large images.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Faster R-CNN- Towards Real-Time Object Detection with Region Proposal Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Frank Spitzer-s Work on Random Walk and Brownian Motion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/From Molecules to Crystal Engineering- Supramolecular Isomerism and Polymorphism in Network Solids.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Functional connectivity in the resting brain- A network analysis of the default mode hypothesis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Fuzzy ARTMAP- A neural network architecture for incremental supervised learning of analog multidimensional maps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Gaze shifts as dynamical random sampling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Generalized processor sharing approach to flow control in integrated services networks- The multiple node case.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Generating Dependent Random Variables Over Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Generating random Tanner-graphs with large girth.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Generating representative Web workloads for network and server performance evaluation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Genes at work in random bouts - Stochastically discontinuous gene activity makes cell cycle duration and cell fate decisions variable, thus providing .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Genome Wide Association Analysis of the 16th QTL- MAS Workshopdataset using the Random Forest machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Geography-informed energy conservation for ad hoc routing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/GradientBased Learning Applied to Document Recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Grass, scrub, trees and random forest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Greedy Layer-Wise Training of Deep Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Greedy Perimeter Stateless Routing for Wireless Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/HEED- a hybrid, energy-efficient, distributed clustering approach for ad hoc sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Harmonic Vibrational Frequencies-- An Evaluation of Hartree-Fock, M-ller-Plesset, Quadratic Configuration Interaction, Density Functional Theory, and .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Hidden Conditional Random Fields for phone recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/High Entropy Random Selection Protocols.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/How Many Trees in a Random Forest-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/How to Make a Decision- The Analytic Hierarchy Process.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/How to model an internetwork.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/How well do random walks parallelize-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Hybrid ARQ with random transmission assignments..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/INFLUENCE OF WORKLOAD ON ERROR RECOVERY IN RANDOM ACCESS MEMORIES..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Identification of residues in DmsD for twin-arginine leader peptide binding, defined through random and bioinformatics-directed mutagenesis..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Identity-Based Cryptosystems and Signature Schemes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Imagenet classification with deep convolutional neural networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Impact of migraine symptoms on health care use and work loss in Canada in patients randomly assigned in a phase III clinical trial..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Implementing a disease management intervention for depression in primary care- a random work sampling study.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Improved methods for building protein models in electron density maps and the location of errors in these models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Improved pseudorandom generators for depth 2 circuits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Improving Random Walk Estimation Accuracy with Uniform Restarts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/In Defense of Pseudorandom Sample Selection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Influence of Hyperparameters on Random Forest Accuracy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Integrated Genomic and Proteomic Analyses of a Systematically Perturbed Metabolic Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Integration of External Signaling Pathways with the Core Transcriptional Network in Embryonic Stem Cells.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Interaction-based evolution- how natural selection and nonrandom mutation work together.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Intrinsic Capacity of Random Scattered Spatial Communication.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Investigating the energy consumption of a wireless network interface in an ad hoc networking environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Investigation of VO2 kinetics in humans with pseudorandom binary sequence work rate change.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Is the differential frequency-based attack effective against random delay insertion-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Knowledge Transfer in Intraorganizational Networks - Effects of Network Position and Absorptive Capacity on Business Unit Innovation and Performance.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/LEAP-efficient security mechanisms for large-scale distributed sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Late-onset sepsis in very low birth weight neonates- the experience of the NICHD Neonatal Research Network..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Learning Bayesian networks- The combination of knowledge and statistical data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Learning representations by back-propagating errors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Learning to move a robot with random morphology.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Leisure-time physical activity, cardiorespiratory fitness and work ability- a study in randomly selected residents of Lódź..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Lethality and Centrality in Protein Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Linear network coding.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Making knowledge the basis of a dynamic theory of the firm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Manual Therapy for Tension-type Headache related to Quality of Work Life and Work Presenteeism- secondary analysis of a randomized controlled trial.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Marketing in a Random Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/MaxProp- Routing for Vehicle-Based Disruption-Tolerant Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Measuring activities in clinical trials using random work sampling- Implications for cost-effectiveness analysis and measurement of the intervention.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Medium Access Control With Coordinated Adaptive Sleeping for Wireless Sensor Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Minimum energy mobile wireless networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Model for end-stage liver disease (MELD) and allocation of donor livers..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Modeling safety of highway work zones with random parameters and random effects models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Modularity and community structure in networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Multicarrier modulation for data transmission- an idea whose time has come.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Muscle strength and history of heavy manual work among elderly trained women and randomly chosen sample population.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Myeloid-Derived Suppressor Cells- Linking Inflammation and Cancer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Myrinet--a gigabit-per-second local-area network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Negotiation-Based Protocols for Disseminating Information in Wireless Sensor Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Neocognitron- A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Neovascularization of ischemic myocardium by human bone-marrow-derived angioblasts prevents cardiomyocyte apoptosis, reduces remodeling and improves c.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network Coding for Mobile Devices - Systematic Binary Random Rateless Codes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network Dyads in Entrepreneurial Settings- A Study of the Governance of Exchange Relationships.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network Information Flow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network Structure and Knowledge Transfer- The Effects of Cohesion and Range.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network information flow-multiple sources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network location and learning- the influence of network resources and firm capabilities on alliance formation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Network motifs- theory and experimental approaches.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Networks- Between markets and hierarchies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Neurons with graded response have collective computational properties like those of two-state neurons..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Next Century Challenges- Data-Centric Networking for Invisible Computing - The Portolano Project at the University of Washington.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Next century challenges-scalable coordination in sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Non random distribution of child undernutrition in Ethiopia- spatial analysis from the 2011 Ethiopia demographic and health survey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/OPTIMAL SCHEDULING OF RANDOM WORKS WITH RELIABILITY APPLICATION.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/ORTEP-3 for Windows - a version of ORTEP-III with a Graphical User Interface (GUI).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On Spectral Clustering- Analysis and an Algorithm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On The Sample Complexity Of Pac-Learning Using Random And Chosen Examples.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On error control codes for random network coding.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On random mappings and random permutations..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On random pattern testability of cryptographic VLSI cores.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On strategic networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On the Artifacts of Random Waypoint Simulations.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On the Construction of Random Number Generators and Random Function Generators.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On the Security of Random Sources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On the self-similar nature of Ethernet traffic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/On-line fountain codes for semi-random loss channels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/OpenFlow- Enabling innovation in campus networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Optimal Service Control of a Serial Production Line with Unreliable Workstations and Random Demand.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Optimal redundant systems for works with random processing time.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Optimal surface segmentation in volumetric images--a graph-theoretic approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Optimized Link State Routing Protocol (OLSR).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Overview of the H.264-AVC video coding standard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/PEGASIS- Power-efficient gathering in sensor information systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/PageRank in scale-free random graphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Palladium-Catalyzed Cross-Coupling Reactions of Organoboron Compounds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Parameterizing random test data according to equivalence classes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Particle Swarm Optimization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Partition coefficients and their uses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Pastry- Scalable, Decentralized Object Location, and Routing for Large-Scale Peer-to-Peer Systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Pastry- Scalable, distributed object location and routing for large-scale peer-to-peer systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Path-oriented Random Testing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Performance analysis of random neural networks in LTE-UL of a cognitive radio system.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Performance analysis of the CONFIDANT protocol- Cooperation Of Nodes-Fairness In Distributed Ad-hoc NeTworks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Performance comparison of two on-demand routing protocols for ad hoc networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Pharmaceuticals, Hormones, and Other Organic Wastewater Contaminants in U.S. Streams.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Polymer Photovoltaic Cells- Enhanced Efficiencies via a Network of Internal Donor-Acceptor Heterojunctions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Practical Network Support for IP Traceback.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Predicting Subcellular Localization of Proteins Based on their N-terminal Amino Acid Sequence.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Principles and Practices of Interconnection Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Probabilistic Encryption.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Probabilistic neural networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Process-Variation Effect, Metal-Gate Work-Function Fluctuation, and Random-Dopant Fluctuation in Emerging CMOS Technologies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Protein secondary structure prediction based on position-specific scoring matrices..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Protocols for self-organization of a wireless sensor network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Pruning reservoirs with Random Static Projections.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Query segmentation using conditional random fields.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/RANDOM UTILITY MODELS OF URBAN NONWORK TRAVEL DEMAND- A REVIEW.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Radiological Assessment of Osteo-Arthrosis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Access With Physical-Layer Network Coding.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Dopant, Line-Edge Roughness, and Gate Workfunction Variability in a Nano InGaAs FinFET.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Early Marking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Geometric Problems on ²..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Leaders and Random Spanning Trees..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Manhattan Indexing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Subsets of the Interval and P2P Protocols.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Tensors and Planted Cliques.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Work Function Variation Induced Threshold Voltage Fluctuation in 16-nm Bulk FinFET Devices with High-kappa-Metal-Gate Material.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random Work-Function-Induced Threshold Voltage Fluctuation in Metal-Gate MOS Devices by Monte Carlo Simulation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random breath testing in Australia- getting it to work according to specifications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random drug tests at work- The probability of identifying frequent and infrequent users of illicit drugs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random early detection gateways for congestion avoidance.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random intersection graph process.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random testing for security- blackbox vs. whitebox fuzzing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random testing of formal software models and induced coverage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Random-Based Scheduling New Approximations and LP Lower Bounds (Extended Abstract).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Rate control for communication networks- shadow prices, proportional fairness and stability.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Re-estimating UK Appraisal Values for Non-work Travel time Savings Using Random Coefficient Logit Model.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Receptive fields, binocular interaction and functional architecture in the cat-s visual cortex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Reducibility among combinatorial problems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Regularized orthogonal least squares algorithm for constructing radial basis function networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Report on the second international workshop on random sequential adsorption. Theory and experiment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Reserves Represented by Random Walks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Route Packets, Not Wires- On-Chip Interconnection Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Routing of multipoint connections.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/SExtractor- Software for source extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/SMOTE- Synthetic Minority Over-sampling Technique.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Saddlepoint approximation of random-coding bounds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Secure routing in wireless sensor networks- attacks and countermeasures.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Segmentation Using SubMarkov Random Walk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Segmentations of Spatio-Temporal Images by Spatio-Temporal Markov Random Field Model.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Segregation and the work function of a random alloy- PdAg(111).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Selection of Work Sampling Observation Times- Part II-Restricted Random Sampling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Selective Colorimetric Detection of Polynucleotides Based on the Distance-Dependent Optical Properties of Gold Nanoparticles.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Self-perceived psychological stress in relation to psychosocial factors and work in a random population sample of women.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Self-similarity in World Wide Web traffic- evidence and possible causes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Self-similarity through high-variability- statistical analysis of ethernet LAN traffic at the source level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Sensing by Random Convolution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Sensing-Throughput Tradeoff for Cognitive Radio Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Shape Matching by Random Sampling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Shift Work Disorder in a Random Population Sample &amp;ndash; Prevalence and Comorbidities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Sign detection in natural images with conditional random fields.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Small Worlds- The Dynamics of Networks between Order and Randomness.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Social Capital, Networks, and Knowledge Transfer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Social Cognitive Theory- An Agentic Perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Social Network Analysis- A Handbook.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Social Structure and Competition in Interfirm Networks- The Paradox of Embeddedness.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Social Support as a Moderator of Life Stress.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Some continuations of the work of Paley and Zygmund on random trigonometric series.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Span- An Energy-Efficient Coordination Algorithm for Topology Maintenance in Ad Hoc Wireless Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Speech recognitionwith segmental conditional random fields- A summary of the JHU CLSP 2010 Summer Workshop.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Spray and wait- an efficient routing scheme for intermittently connected mobile networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Stability of networked control systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Statistical Analysis of Metal Gate Workfunction Variability, Process Variation, and Random Dopant Fluctuation in Nano-CMOS Circuits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Statistical mechanics of complex networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Steps Toward Derandomizing RRTs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Support-vector networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/System architecture directions for networked sensors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Systems Competition and Network Effects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/T3, a Combinator-based Random Testing Tool for Java- Benchmarking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/TAG- a Tiny AGgregation service for ad-hoc sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/THE BIG FIVE PERSONALITY DIMENSIONS AND JOB PERFORMANCE- A META-ANALYSIS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/TOSSIM-accurate and scalable simulation of entire TinyOS applications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Tapestry- An Infastructure for Fault-tolerant Wide-area Location and Routing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Testing Randomness by Means of Random Matrix Theory.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Testing for Competence Rather Than Intelligence.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The -Independent Components- of Natural Scenes are Edge Filters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Benefits of Facebook “Friends-” Social Capital and College Students’ Use of Online Social Network Sites.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The BioGRID Interaction Database- 2008 update.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Broadcast Storm Problem in a Mobile Ad Hoc Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Complexity of Distinguishing Markov Random Fields.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Cover Time of Random Digraphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Cricket location-support system.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Dynamics of Productivity in the Telecommunications Equipment Industry.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The ERA-40 re-analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Enity-Relationship Model- Toward a Unified View of Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Entity-Relationship Model- Toward a Unified View of Data....txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The ErbB signaling network- receptor heterodimerization in development and cancer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Impact of a Randomly Assigned Time and Place Management Initiative on Work and Retirement Expectations.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Link Prediction Problem for Social Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Network Weather Service- A Distributed Resource Performance Forecasting Service for Metacomputing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Oct4 and Nanog transcription network regulates pluripotency in mouse embryonic stem cells..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Rise of the Network Society.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Small-World Phenomenon- An Algorithmic Perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The Structure and Function of Complex Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The architecture of cognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The capacity of wireless networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The case for structured random codes in network communication theorems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The general regression neural network—Rediscovered.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The influence of randomly allocated group membership when developing student task work and team work capabilities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/The spin on guided random search in verification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Theory of the backpropagation neural network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Thermally Stable, Efficient Polymer Solar Cells with Nanoscale Control of the Interpenetrating Network Morphology.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Thimble regularization at work- From toy models to chiral random matrix theories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Three-Dimensional Simulations of Random Dopant and Metal-Gate Workfunction Variability in an hboxIn_0.53hboxGa_0.47hboxAs GAA MOSFET.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Threshold Voltage Fluctuation in 16-nm-Gate FinFETs Induced by Random Work Function of Nanosized Metal Grain.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Time analysis of a general medicine service- results from a random work sampling study..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Time-frequency coherence analysis of nonstationary random processes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Tiny Families of Functions with Random Properties- A Quality-Size Trade-off for Hashing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Towards a network theory of the immune system.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Training Support Vector Machines - an Application to Face Detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Training feedforward networks with the Marquardt algorithm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Tuning the work function of randomly oriented ZnO nanostructures by capping with faceted Au nanostructure and oxygen defects- enhanced field emission .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Unbiased Random Sequences from Quasigroup String Transformations.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Uniform Random Sampling of Traces in Very Large Models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Uniform random number generation by using sparse matrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Uniform random walks in very large models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Untangling the ErbB signalling network..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Upper and Lower Bounds for Parallel Random Access Machines Without Simultaneous Writes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/VL2- A Scalable and Flexible Data Center Network.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Versatile low power media access for wireless sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Virtual-channel flow control.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Voronoi diagrams—a survey of a fundamental geometric data structure. ACM Comput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/WHO laboratory manual for the examination of human semen and sperm-cervical mucus interaction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/WHY SHOULD I SHARE- EXAMINING SOCIAL CAPITAL AND KNOWLEDGE CONTRIBUTION IN ELECTRONIC NETWORKS OF PRACTICE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/What Is Web 2.0- Design Patterns and Business Models for the Next Generation of Software.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/When Does Quasi-random Work-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/When does quasi-random work -.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/When only random testing will do.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/When random sampling does not work- standard design falsely indicates maladaptive host preferences in a butterfly.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Where do inter-organizational networks come from-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Why we Twitter- Understanding microblogging usage and communities.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Wireless Integrated Network Sensors- Towards Low Cost and Robust Self-Organizing Security Networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Wireless integrated network sensors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Wireless mesh networks- a survey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Wireless sensor network survey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Wireless sensor networks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Work analysis by random sampling..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/Work fluctuations for a harmonic oscillator driven by an external random force.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/XML Document Transformation with Conditional Random Fields.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/XORs in the Air- Practical Wireless Network Coding.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/database.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/genalex 6- genetic analysis in Excel. Population genetic software for teaching and research.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/sTopologyControl of Multihop Wireless Networks using Transmit Power Adjustment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/write_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/OOAD/{c-Myc-regulated microRN}As modulate E2F1 expression.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/2011 ASA-ACCF-AHA-AANN-AANS-ACR-ASNR-CNS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A Comparison of Methods for Multiclass S.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A Discriminatively Trained, Multiscale, .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A GA-based feature selection and parameters optimizationfor support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A Library for Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A New Discriminative Kernel from Probabilistic Models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A Review On Multi-Label Learning Algorit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A SURVEY ON PATTERN RECOGNITION APPLICATIONS OF SUPPORT VECTOR MACHINES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A Tutorial on Support Vector Machines for Pattern Recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A comparative study of artificial neural networks and support vector machines for predicting groundwater levels in a coastal aquifer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A comparison of PCA, KPCA and ICA for dimensionality reduction in support vector machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A comparison of software and hardware techniques for x86 virtualization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A decision based one-against-one method for multi-class support vector machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A digital architecture for support vector machines- theory, algorithm, and FPGA implementation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A distributed PSO–SVM hybrid system with.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A dual coordinate descent method for lar.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A family of algorithms for approximate b.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A formal analysis of stopping criteria of decomposition methods for support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A geometric approach to Support Vector M.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A hybrid machine learning approach to network anomaly detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A new fuzzy support vector machine to ev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A new learning paradigm- learning using privileged information..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A novel SVM-based hysteresis current con.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A novel method of protein secondary stru.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A novel transductive SVM for semisupervi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A re-examination of text categorization methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A real-valued genetic algorithm to optimize the parameters support vector machine for predicting bankruptcy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A relative evaluation of multiclass imag.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A self-training semi-supervised SVM algo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A study on SMO-type decomposition methods for support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A study on reduced support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A study on similarity and relatedness us.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A support vector machine approach for detection of microcalcifications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/A variant of SVM-RFE for gene selection .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/ACCF-SCAI-SVMB-SIR-ASITN 2007 Clinical E.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Actions in context..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Actions in context.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Adapting ranking SVM to document retriev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Advances In Channel Compensation For SVM.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Advances in Large Margin Classifiers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Alterations of skeletal muscle in chroni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Ambient particulate air pollution, heart rate variability, and blood markers of inflammation in a panel of elderly subjects..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/An Equivalence Between Sparse Approximat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/An Improved Training Algorithm for Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/An SVM learning approach to robotic gras.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/An application of support vector machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Application of SVM and ANN for intrusion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Application of Support Vector Machines i.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Application of support vector machines and least squares support vector machines to heart disease diagnoses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Application of support vector machines to corporate credit rating prediction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Applications of Support Vector Machines in Chemistry.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Applying Support Vector Machines to Imba.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Applying support vector machines to predict building energy consumption in tropical region.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Asymmetric Bagging and Random Subspace f.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Asymptotic Behaviors of Support Vector Machines with Gaussian Kernel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Automatic model selection for the optimi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Automatic parameters Selection for SVM b.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Benchmarking state-of-the-art classification algorithms for credit scoring.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Bias-Variance Analysis of Support Vector.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Binary tree of SVM- a new fast multiclas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/BindN- a web-based tool for efficient prediction of DNA and RNA binding sites in amino acid sequences.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Biomarker Identification by Feature Wrappers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Building Support Vector Machines with Reduced Classifier Complexity.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/CNN Features off-the-shelf- an Astounding Baseline for Recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/CSO-based feature selection and paramete.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Cellular Automata for Simulating Land Use Changes Based on Support Vector Machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classification of electrocardiogram signals with support vector machines and particle swarm optimization..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classification of gene microarrays by penalized logistic regression.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classification of multiple cancer types by multicategory support vector machines using gene expression data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classification of real and pseudo microRNA precursors using local structure-sequence features and support vector machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classification using intersection kernel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classifying Large Data Sets Using SVMs w.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classifying credit card accounts for business intelligence and decision making- A Multiple-criteria quadratic programming approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Classifying large data sets using SVMs with hierarchical clusters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Combination of Feature Extraction Method.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Combined SVM-Based Feature Selection and.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Combining SVMs with Various Feature Sele.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Combining pairwise sequence similarity and support vector machines for remote protein homology detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Comparing naive Bayes, decision trees, a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Comparison of support vector machine and artificial neural network systems for drug-nondrug classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Convergence of a Generalized SMO Algorit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Core vector machines- fast SVM training .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Creating Efficient Codebooks for Visual Recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Credit scoring with a data mining approa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/CrowdER- Crowdsourcing Entity Resolution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Cutting-plane training of structural SVMs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/De novo SVM classification of precursor .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Discriminative Learning Under Covariate Shift.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Discriminative Methods for Multi-Labeled.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Do we Need Hundreds of Classifiers to So.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Domain Adaptation Problems- A DASVM Clas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Domain transfer SVM for video concept de.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Duality and Geometry in SVM Classifiers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Efficient Object Category Recognition Using.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Efficient SVM Regression Training with S.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Efficient SVM Training Using Low-Rank Ke.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Ensemble methods for spoken emotion recognition in call-centres.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Estimating the Generalization Performanc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Evolutionary tuning of multiple SVM para.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Exploration of computational methods for classification of movement intention during human voluntary movement from single trial EEG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Extraterrestrial Cause for the Cretaceous-Tertiary Extinction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Extreme Learning Machine for Regression .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Face detection using discriminating feature analysis and Support Vector Machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Face recognition by support vector machi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Face recognition using independent component analysis and support vector machines ☆.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fast Kernel Classifiers with Online and .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fast SVM training algorithm with decompo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fast Sparse Approximation for Least Squares Support Vector Machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fast Training of Support Vector Machines Using Sequential Minimal Optimization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fault diagnosis based on Fisher discriminant analysis and support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Feature Selection for Classification of .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Feature space interpretation of SVMs with indefinite kernels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Financial time series forecasting using .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Forecasting stock market movement direct.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fusion of Heterogeneous Speaker Recognition Systems in the STBU Submission for the NIST Speaker Recognition Evaluation 2006.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fusion of Support Vector Machines for Classification of Multisensor Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fuzzy support vector machine for multi-class text categorization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Fuzzy support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Gaussian Processes for Ordinal Regression.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Gene expression profiling of liposarcoma identifies distinct biological types-subtypes and potential therapeutic targets in well-differentiated and de.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Generalized Discriminant Analysis Using a Kernel Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Genetic feature subset selection for gender classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Histograms of Oriented Gradients for Human Detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/IEEE Draft Standard for Local and Metropolitan Area Networks- Media Independent Handover Services.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/INTRODUCTION TO STATISTICAL LEARNING THEORY AND SUPPORT VECTOR MACHINES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/IRSpot-PseDNC- Identify recombination spots with pseudo dinucleotide composition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Identification of diagnostic markers for tuberculosis by proteomic fingerprinting of serum..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Image Classification using Random Forests and Ferns.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Image annotation using SVM.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Image processing and classification algo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Image segmentation feature selection and pattern classification for mammographic microcalcifications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Improved SVM regression using mixtures o.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Improvements to the SMO algorithm for SV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/In Defense of One-Vs-All Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Incorporating Prior Knowledge with Weighted Margin Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Incremental Algorithms for Hierarchical Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Intelligent Vehicle Symposium, 2002. IEEE - Pedestrian detection and tracking with night vision.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Kernel Eigenfaces vs. Kernel Fisherfaces- Face recognition using kernel methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Kernel Logistic Regression and the Import Vector Machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Kernel Methods for Relation Extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/LIBSVM- A library for support vector mac.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Lagrangian Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Land cover change assessment using decision trees, support vector machines and maximum likelihood classification algorithms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Large Scale Multiple Kernel Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Large-Scale Machine Learning with Stochastic Gradient Descent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Large-scale image classification- Fast f.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Learning from imbalanced data in surveillance of nosocomial infection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Learning the Kernel with Hyperkernels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Learning to Classify Text Using Support Vector Machines - Methods, Theory and Algorithms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Least Squares Support Vector Machine Classifiers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Least Squares Support Vector Machines Classifiers - a multi two-spiral benchmark problem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Least squares support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Less is More- Active Learning with Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Machine learning classifiers and fMRI- a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Making large-scale support vector machin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Map-Reduce for Machine Learning on Multicore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Mismatch string kernels for discriminati.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Monocular pedestrian detection - Survey and experiments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Multi-Task Feature and Kernel Selection for SVMs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Multicategory Classification by Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Multiple Kernel Learning, Conic Duality, and the SMO Algorithm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Multiple SVM-RFE for Gene Selection in C.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Nonlinear prediction of chaotic time ser.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Novel digital continuous control of SVM .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Object detection using a max-margin Hough transform.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Object-oriented software for quadratic programming.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Oligonucleotide microarray for predictio.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/On the Influence of the Kernel on the Co.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/On the algorithmic implementation of multi-class kernel-based vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/On-line Handwriting Recognition with Support Vector Machines-A Kernel Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/One--Class SVMs for Document Classificat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/One-class SVM for learning in image retr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Optimization method based extreme learni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Orange- Data Mining Toolbox in Python.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/PEBL- Positive Example Based Learning fo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/PROFILE-BASED STRING KERNELS FOR REMOTE HOMOLOGY DETECTION AND MOTIF EXTRACTION.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Parameter determination of support vector machine and feature selection using simulated annealing approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Parametric Empirical Bayes Inference- Theory and Applications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Particle swarm optimization for paramete.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Pedestrian detection and tracking with n.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Pegasos- primal estimated sub-gradient s.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Poisoning Attacks against Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Practical selection of SVM parameters an.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Predicting defect-prone software modules using support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Prediction of CTL epitopes using QM, SVM.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Prediction of MHC class I binding peptid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Predictive Direct Power Control of Three.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Probability Estimates for Multi-Class Cl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining - KDD --11 - User-level sentiment analysis incorpo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Proceedings of the 9th International Conference on Neural Information Processing, 2002. ICONIP --02. - Radius margin bounds for support vector machin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Proceedings of the ninth ACM SIGKDD international conference on Knowledge discovery and data mining  - KDD --03 - Adaptive duplicate detection using .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Quantitative Image Analysis of Cellular Heterogeneity in Breast Tumors Complements Genomic Profiling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Radius Margin Bounds for Support Vector Machines with the RBF Kernel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Ranking with Large Margin Principle- Two Approaches.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Recognizing human actions- a local SVM a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Recurrent least squares support vector machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Recursive SVM feature selection and samp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Reduced Convex Hulls- A Geometric Approach to Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Reduced Support Vector Machines- A Statistical Theory.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Reidentification by Relative Distance Comparison.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Robust Object Detection with Interleaved Categorization and Segmentation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVM Based Speaker Verification using a G.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVM optimization - inverse dependence on.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVM- and MRF-Based Method for Accurate C.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVM-KNN- Discriminative Nearest Neighbor.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVM-Prot- web-based support vector machi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/SVMTorch- support vector machines for la.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Simple Direct Power Control of Three-Pha.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Simple rules underlying gene expression profiles of more than six subtypes of acute lymphoblastic leukemia (ALL) patients.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Simplified Support Vector Decision Rules.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Soft sensing modeling based on support vector machine and Bayesian model selection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Sparse Bayesian Learning and the Relevance Vector Machine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Stacked Denoising Autoencoders- Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Statistical Analysis of Some Multi-Category Large Margin Classification Methods..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Statistical Performance of Support Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Statistical learning theory for location.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Stochastic Dual Coordinate Ascent Method.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Study on infrared spectroscopy technique.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support Vector Clustering.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support Vector Machines Applied to Face Recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support Vector Machines, Reproducing Kernel Hilbert Spaces and the Randomized GACV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support Vector Machines- Theory and Appl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support Vector Machines- Training and Ap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine active learning w.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine classification and validation of cancer tissue samples using microarray expression data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine in machine condit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine learning for image retrieval.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine with adaptive par.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machine-based classification scheme for myoelectric control applied to upper limb..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines combined with feature selection for breast cancer diagnosis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for classification in remote sensing.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for face authentication.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for histogram-based image classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for pattern clas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for prediction of protein subcellular location by incorporating quasi-sequence-order effect.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for spam categor.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines for wind speed prediction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines using GMM superv.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Support vector machines-based fault diagnosis for turbo-pump rotor.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Text Classification using String Kernels.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Text Identification in Complex Backgroun.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Text classification- A least square support vector machine approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/The Entire Regularization Path for the S.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/The PASCAL Visual Object Classes Challenge, (VOC2007) Results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/The spectrum kernel- a string kernel for.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/The use of small training sets containin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Three-dimensional space vector modulation for four-leg voltage-source converters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Top 10 algorithms in data mining.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Toward an Optimal SVM Classification Sys.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Training Support Vector Machines - an Ap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Training Support Vector Machines- An App.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Training and Testing Low-degree Polynomi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Training linear SVMs in linear time.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Training nu-support vector classifiers- .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Tumor classification by partial least squares using microarray gene expression data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Twin support vector machines for pattern.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Two view learning- SVM-2K, Theory and Pr.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Using an Ensemble of One-Class SVM Class.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Using text mining and sentiment analysis for online forums hotspot detection and forecast.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Variable Selection Using SVM-based Crite.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Variational Relevance Vector Machines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Video search reranking through random walk over document-level context graph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Virtual Screening of Molecular Databases Using a Support Vector Machine.-span---span-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Weighted least squares support vector ma.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/Which is the best multiclass SVM method-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/[ACM Press the 2006 ACM symposium - Dij.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/paper.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/write_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/一种基于支持向量机的手写汉字识别方法.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/关于统计学习理论与支持向量机.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/基于RBF核函数的支持向量机参数选择.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/基于SVM的二叉树多类分类算法及其在故障诊断中的应用.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/基于模板匹配与支持矢量机的人脸检测.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/处理非线性分类和回归问题的一种新方法（Ⅰ）——支持向量机方法简介.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/多输入特征融合的组合支持向量机电力系统暂态稳定评估.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/SVM/模式识别中的支持向量机方法.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/database.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/dao/static/database.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A Comparison of Machine Learning Methods for the Diagnosis of Pigmented Skin Lesions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A Machine Learning Approach to Twitter User Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A Review of Relational Machine Learning for Knowledge Graphs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A preliminary performance comparison of five machine learning algorithms for practical IP traffic flow classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A review of machine learning approaches to Spam filtering.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A survey of multi-view machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/A survey of techniques for internet traffic classification using machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/An Empirical Comparison of Pattern Recognition - Neural Nets and Machine Learning Classification Methods.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/An Introduction to MCMC for Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Automated traffic classification and application identification using machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Automatic analysis of malware behavior using machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Automating the Construction of Internet Portals with Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Beyond PageRank- Machine Learning for Static Ranking.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Bioinformatics — The Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Bioinformatics- the machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Business data mining — a machine learning perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Cached Sufficient Statistics for Efficient Machine Learning with Large Datasets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Challenges in real-life emotion annotation and machine learning based detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Classes of kernels for machine learning - a statistics perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Clustering by fast search and find of density peaks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Computer systems that learn- classification and prediction methods from statistics, neural nets, machine learning, and expert systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Convolutional LSTM Network- A Machine Learning Approach for Precipitation Nowcasting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Correlation-based feature selection of discrete and numeric class machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/DaDianNao- A Machine-Learning Supercomputer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Data mining using &amp;Mscr;&amp;Lscr;&amp;Cscr;++ a machine learning library in C++.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Determinantal point processes for machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/DianNao- a small-footprint high-throughput accelerator for ubiquitous machine-learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Distributed GraphLab- A Framework for Machine Learning and Data Mining in the Cloud.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Drug design by machine learning- support vector machines for pharmaceutical data analysis..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Elements of machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Emotions from text- machine learning for text-based emotion prediction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Factorizing YAGO- Scalable Machine Learning for Linked Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Feature Selection for Machine Learning- Comparing a Correlation-Based Filter Approach to the Wrapper..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Flow Clustering Using Machine Learning Techniques.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Gaussian Processes for Machine Learning (Adaptive Computation and Machine Learning).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Gaussian Processes in Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Gene selection from microarray data for cancer classification—a machine learning approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Genetic Algorithm in Search, Optimization, and Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Genetic Algorithms in Search, Optimization and Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/GraphLab- A New Framework For Parallel Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Graphical Models for Machine Learning and Digital Communication.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/IAM Graph Database Repository for Graph Based Pattern Recognition and Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Improving Machine Learning Approaches to Coreference Resolution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Incremental and Decremental Support Vector Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Information Extraction from HTML- Application of a General Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Integrating machine learning and workflow management to support acquisition and adaptation of workflow models.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Introduction to Machine Learning (Adaptive Computation and Machine Learning).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Introduction to Statistical Relational Learning (Adaptive Computation and Machine Learning).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Intrusion detection by machine learning- A review.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Large-Scale Machine Learning with Stochastic Gradient Descent.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/MLC++- A Machine Learning Library in C++.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine Learning for Detecting Gene-Gene Interactions- A Review.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine Learning for Information Extraction in Informal Domains.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine Learning for Information Retrieval- Neural Networks, Symbolic Learning, and Genetic Algorithms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine Learning- A Probabilistic Perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning - a probabilistic perspective.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning approaches for the prediction of signal peptides and other protein sorting signals.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning approaches to estimating software development effort.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning classifiers and fMRI- a tutorial overview.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning for high-speed corner detection.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning for medical diagnosis- History, state of the art and perspective..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning for real-time single-trial EEG-analysis- From brain–computer interfacing to mental state monitoring.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning for sequential data- A review.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning- a review of classification and combining techniques.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Machine learning. The art and science of algorithms that make sense of data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Making large-scale support vector machine learning practical..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Making large-scale support vector machine learning practical.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Man vs. computer- Benchmarking machine learning algorithms for traffic sign recognition.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Meta optimization- improving compiler heuristics with machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Ontology Matching- A Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/OpinionMiner- A novel machine learning system for web opinion mining and extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Orange- From Experimental Machine Learning to Interactive Data Mining..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Orange- from experimental machine learning to interactive data mining.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Pattern Recognition and Machine Learning (Information Science and Statistics).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Practical Black-Box Attacks against Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Predicting Multiple Metrics for Queries- Better Decisions Enabled by Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Proceedings of the 13th conference on World Wide Web  - WWW -04 - Meteor-s web service annotation framework.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Proceedings of the 2006 ACM Symposium on Information, computer and communications security  - ASIACCS -06 - Can machine learning be secure-.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Protein Secondary Structure Prediction using Logic-Based Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Readings in machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Recognizing Facial Expression- Machine Learning and Application to Spontaneous Behavior..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Recognizing Facial Expression- Machine Learning and Application to Spontaneous Behavior.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Recognizing Names in Biomedical Texts- a Machine Learning Approach.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Reconciling Schemas of Disparate Data Sources- A Machine-Learning Approach..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Reconciling schemas of disparate data sources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Reinforcement Learning- An Introduction (Adaptive Computation and Machine Learning).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Sparse Greedy Matrix Approximation for Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Support vector machine learning for image retrieval.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/System Identification through Simulated Evolution- A Machine Learning Approach to Modeling.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/SystemML- declarative machine learning on spark.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/TensorFlow- A system for large-scale machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/TensorFlow- Large-Scale Machine Learning on Heterogeneous Distributed Systems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/The Boosting Approach to Machine Learning- An Overview.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/The immune system, adaptation, and machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/The use of the area under the ROC curve in the evaluation of machine learning algorithms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Three-objective genetics-based machine learning for linguistic rule extraction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Uncovering social spammers- Social honeypots + machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Uncovering social spammers-social honeypots + machine learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Using Emoticons to reduce Dependency in Machine Learning Techniques for Sentiment Classification.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Using machine learning to focus iterative optimization.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/WEKA- a machine learning workbench.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Weka- A machine learning workbench for data mining.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/Weka-A Machine Learning Workbench for Data Mining.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/database.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/write_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/machine learning/“Memo” Functions and Machine Learning.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/paper.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/dao/static/paper.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/paper_ori.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/publish.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/dao/static/publish.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rank.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/rank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/read_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/SJR.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/SJR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/algo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/write_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/write_publish.py" afterDir="false" />
     </list>
     <ignored path="C:\Users\46162\PycharmProjects\S_Paper_Ranking\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +1099,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/S_Paper_Ranking$Flask__view_py_.coverage" NAME="Flask (view.py) Coverage Results" MODIFIED="1545871820072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/S_Paper_Ranking$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1545883678835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/S_Paper_Ranking$read_database.coverage" NAME="read_database Coverage Results" MODIFIED="1545887890378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/S_Paper_Ranking$read_database.coverage" NAME="read_database Coverage Results" MODIFIED="1545904392199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/S_Paper_Ranking$Flask.coverage" NAME="Flask (view.py) Coverage Results" MODIFIED="1545909146735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/S_Paper_Ranking$S_Paper_Ranking.coverage" NAME="S_Paper_Ranking Coverage Results" MODIFIED="1545318817296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -63,7 +1141,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="37" />
+          <entry key="html" value="39" />
           <entry key="js" value="1" />
           <entry key="md" value="1" />
           <entry key="paper" value="1" />
@@ -76,7 +1154,7 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="Database Element" value="1" />
-          <entry key="HTML" value="37" />
+          <entry key="HTML" value="39" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
@@ -87,15 +1165,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="72" />
-          <entry key="html" value="2392" />
+          <entry key="html" value="3209" />
           <entry key="py" value="629" />
-          <entry key="txt" value="134" />
+          <entry key="txt" value="142" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2392" />
-          <entry key="PLAIN_TEXT" value="134" />
+          <entry key="HTML" value="3209" />
+          <entry key="PLAIN_TEXT" value="142" />
           <entry key="Python" value="701" />
         </counts>
       </usages-collector>
@@ -112,9 +1190,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_database.py">
+        <entry file="file://$PROJECT_DIR$/util/read_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="-8">
               <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
@@ -126,25 +1204,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-608">
-              <caret selection-end-line="4" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/algo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="-17">
+              <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+              <folding>
+                <element signature="e#6801#7126#0#HTML" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rank.py">
+        <entry file="file://$PROJECT_DIR$/templates/algo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="-8">
+              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+              <folding>
+                <element signature="n#footer#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/rank.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -153,11 +1237,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/publishedDao.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-623">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="1748">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -165,8 +1249,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="-8">
               <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/SJR.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="350" column="25" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
+              <folding>
+                <element signature="e#4520#5647#0#HTML" />
+                <element signature="e#5045#5187#0#HTML" expanded="true" />
+                <element signature="e#7301#7321#0#HTML" expanded="true" />
+                <element signature="e#9186#9260#0#HTML" expanded="true" />
+                <element signature="e#9376#10937#0#HTML" />
+                <element signature="e#9563#9577#0#HTML" expanded="true" />
+                <element signature="e#9732#9751#0#HTML" expanded="true" />
+                <element signature="e#10166#10193#0#HTML" expanded="true" />
+                <element signature="e#10691#10714#0#HTML" expanded="true" />
+                <element signature="e#11178#11201#0#HTML" expanded="true" />
+                <element signature="e#11963#11977#0#HTML" expanded="true" />
+                <element signature="e#12132#12186#0#HTML" expanded="true" />
+                <element signature="e#12218#12281#0#HTML" expanded="true" />
+                <element signature="e#13256#13286#0#HTML" expanded="true" />
+                <element signature="e#13229#13298#0#HTML" expanded="true" />
+                <element signature="e#14322#14345#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,8 +1285,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="-8">
+              <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -184,24 +1295,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/paperDao.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="92" column="63" lean-forward="true" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dao/spider.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2945">
-              <caret line="155" column="58" selection-start-line="155" selection-start-column="58" selection-end-line="155" selection-end-column="58" />
+            <state relative-caret-position="-8">
+              <caret line="145" column="20" selection-start-line="145" selection-start-column="20" selection-end-line="177" selection-end-column="27" />
+              <folding>
+                <element signature="n#form#0;n#ul#1;n#div#0;n#div#0;n#nav#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,6 +1348,11 @@
       <find>paper.xlsx</find>
       <find>C</find>
       <find>Paper ra</find>
+      <find>place</find>
+      <find>bg-dark</find>
+      <find>bg</find>
+      <find>cover</find>
+      <find>https://mdbootstrap.com/education/bootstrap/</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\46162\PycharmProjects\S_Paper_Ranking\static\css</dir>
@@ -272,9 +1384,6 @@
         <option value="$PROJECT_DIR$/bean/__init__.py" />
         <option value="$PROJECT_DIR$/bean/Paper.py" />
         <option value="$PROJECT_DIR$/templates/hello.html" />
-        <option value="$PROJECT_DIR$/templates/results.html" />
-        <option value="$PROJECT_DIR$/templates/details.html" />
-        <option value="$PROJECT_DIR$/templates/SJR.html" />
         <option value="$PROJECT_DIR$/rank.py" />
         <option value="$PROJECT_DIR$/dao/publishedDao.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
@@ -283,6 +1392,9 @@
         <option value="$PROJECT_DIR$/read_database.py" />
         <option value="$PROJECT_DIR$/view.py" />
         <option value="$PROJECT_DIR$/templates/algo.html" />
+        <option value="$PROJECT_DIR$/templates/details.html" />
+        <option value="$PROJECT_DIR$/templates/SJR.html" />
+        <option value="$PROJECT_DIR$/templates/results.html" />
       </list>
     </option>
   </component>
@@ -293,10 +1405,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
-    <option name="y" value="47" />
+    <option name="x" value="271" />
+    <option name="y" value="-23" />
     <option name="width" value="1300" />
-    <option name="height" value="1040" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -310,11 +1422,6 @@
               <item name="S_Paper_Ranking" type="b2602c69:ProjectViewProjectNode" />
               <item name="S_Paper_Ranking" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="S_Paper_Ranking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="S_Paper_Ranking" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -325,7 +1432,12 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -353,7 +1465,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.read_database">
+  <component name="RunManager" selected="Flask server.Flask (view.py)">
     <configuration name="read_database" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="S_Paper_Ranking" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -367,7 +1479,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_database.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\46162\PycharmProjects\S_Paper_Ranking\util\read_database.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -391,10 +1503,10 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Flask" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+    <configuration name="Flask (view.py)" type="Python.FlaskServer" factoryName="Flask server" nameIsGenerated="true">
       <option name="additionalOptions" value="--host=0.0.0.0 --port=8080" />
       <option name="application" value="" />
-      <option name="flaskDebug" value="true" />
+      <option name="flaskEnv" value="production" />
       <module name="S_Paper_Ranking" />
       <option name="target" value="$PROJECT_DIR$/view.py" />
       <option name="targetType" value="PATH" />
@@ -410,17 +1522,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Flask server.Flask" />
       <item itemvalue="Flask server.Flask (view.py)" />
       <item itemvalue="Python.read_database" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.read_database" />
-        <item itemvalue="Flask server.Flask" />
         <item itemvalue="Flask server.Flask (view.py)" />
-        <item itemvalue="Flask server.Flask" />
-        <item itemvalue="Flask server.Flask" />
+        <item itemvalue="Flask server.Flask (view.py)" />
+        <item itemvalue="Flask server.Flask (view.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -519,16 +1629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1545885533404</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="..ban">
+      <created>1545901303334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1545901303335</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21581769" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="0" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5113941" side_tool="true" weight="0.28186968" />
@@ -536,13 +1653,14 @@
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.26681128" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4886059" visible="true" weight="0.48866856" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4886059" weight="0.36482084" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.7533512" weight="0.7407932" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Remote Host" visible="true" weight="0.41487935" />
       <window_info anchor="right" id="Database" order="0" weight="0.027479893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="SciView" order="2" />
@@ -601,13 +1719,14 @@
     <MESSAGE value="添加top按钮" />
     <MESSAGE value="修复叶梓元思想落后的bug" />
     <MESSAGE value="传回来的bean待修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="传回来的bean待修复" />
+    <MESSAGE value="..ban" />
+    <option name="LAST_COMMIT_MESSAGE" value="..ban" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/read_database.py</url>
+          <url>file://$PROJECT_DIR$/util/read_database.py</url>
           <line>62</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -681,10 +1800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/write_publish.py">
+    <entry file="file://$PROJECT_DIR$/util/write_publish.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider.py">
+    <entry file="file://$PROJECT_DIR$/util/spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
@@ -700,7 +1819,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/write_database.py">
+    <entry file="file://$PROJECT_DIR$/util/write_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
@@ -768,13 +1887,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MysqlPy.py" />
-    <entry file="file://$PROJECT_DIR$/templates/SJR.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3382">
-          <caret line="178" column="96" selection-start-line="178" selection-start-column="96" selection-end-line="178" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python36/Lib/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -786,13 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="322" selection-start-line="322" selection-end-line="322" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -833,14 +1938,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
+        <state relative-caret-position="-8">
           <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rank.py">
+    <entry file="file://$PROJECT_DIR$/util/rank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="-8">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
@@ -848,9 +1953,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_database.py">
+    <entry file="file://$PROJECT_DIR$/util/read_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="-8">
           <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -859,26 +1964,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/spider.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2945">
-          <caret line="155" column="58" selection-start-line="155" selection-start-column="58" selection-end-line="155" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-608">
-          <caret selection-end-line="4" selection-end-column="14" />
-        </state>
+        <state relative-caret-position="-8" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="-8">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
@@ -887,8 +1980,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/algo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="-8">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <element signature="n#footer#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+          <folding>
+            <element signature="e#6801#7126#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="145" column="20" selection-start-line="145" selection-start-column="20" selection-end-line="177" selection-end-column="27" />
+          <folding>
+            <element signature="n#form#0;n#ul#1;n#div#0;n#div#0;n#nav#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/SJR.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="350" column="25" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
+          <folding>
+            <element signature="e#4520#5647#0#HTML" />
+            <element signature="e#5045#5187#0#HTML" expanded="true" />
+            <element signature="e#7301#7321#0#HTML" expanded="true" />
+            <element signature="e#9186#9260#0#HTML" expanded="true" />
+            <element signature="e#9376#10937#0#HTML" />
+            <element signature="e#9563#9577#0#HTML" expanded="true" />
+            <element signature="e#9732#9751#0#HTML" expanded="true" />
+            <element signature="e#10166#10193#0#HTML" expanded="true" />
+            <element signature="e#10691#10714#0#HTML" expanded="true" />
+            <element signature="e#11178#11201#0#HTML" expanded="true" />
+            <element signature="e#11963#11977#0#HTML" expanded="true" />
+            <element signature="e#12132#12186#0#HTML" expanded="true" />
+            <element signature="e#12218#12281#0#HTML" expanded="true" />
+            <element signature="e#13256#13286#0#HTML" expanded="true" />
+            <element signature="e#13229#13298#0#HTML" expanded="true" />
+            <element signature="e#14322#14345#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

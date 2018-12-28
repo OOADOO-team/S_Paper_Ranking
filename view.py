@@ -1,10 +1,11 @@
-from flask import Flask, request, render_template
-from bean.Paper import *
 from urllib.parse import quote
+
+from flask import Flask, request, render_template
 # import builtins
 from flask_bootstrap import Bootstrap
-import read_database as r
 from flask_bootstrap import WebCDN
+
+from util import read_database as r
 
 app = Flask(__name__)
 
