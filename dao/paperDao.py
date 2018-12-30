@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 localhost = "10.21.92.180"
 
-engine = create_engine("mysql+mysqlconnector://user:user@10.21.92.180:3306/sys", echo=True)
+engine = create_engine("mysql+mysqlconnector://user:user@10.21.92.180:3306/sys", echo=False)
 
 metadata = MetaData(engine)
 
@@ -73,9 +73,12 @@ def insert_DB(paper=PaperBean()):
 
 def read_DB(keyword):
     session = DBSession()
-    keyword = '%'+keyword+'%'
     ret = list()
-    ret = session.query(Paper).filter(or_(Paper.title.like(keyword),Paper.authors.like(keyword))).all()
+    if keyword:
+        keyword = '%'+keyword+'%'
+        ret = session.query(Paper).filter(or_(Paper.title.like(keyword),Paper.authors.like(keyword))).all()
+    else:
+        ret = session.query(Paper).all()
     result = []
     for item in ret:
         new_paper = Paper(
@@ -85,10 +88,10 @@ def read_DB(keyword):
             url=item.url,
             abstract=item.abstract,
             citations_number=item.citations_number,
-            citations_name=item.citations_name.split(),
-            citations_url=item.citations_url.split(),
-            references_name=item.references_name.split(),
-            references_url=item.references_url.split()
+            citations_name=item.citations_name.split("', '"),
+            citations_url=item.citations_url.replace("'", "").replace(",", "").replace("\\n", "").split(),
+            references_name=item.references_name.split("', '"),
+            references_url=item.references_url.replace("'", "").replace(",", "").replace("\\n", "").split()
         )
         result.append(new_paper)
     return result

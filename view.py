@@ -1,10 +1,11 @@
-from flask import Flask, request, render_template
-from bean.Paper import *
 from urllib.parse import quote
+
+from flask import Flask, request, render_template
 # import builtins
 from flask_bootstrap import Bootstrap
-import read_database as r
 from flask_bootstrap import WebCDN
+
+from util import read_database as r
 
 app = Flask(__name__)
 
@@ -39,6 +40,11 @@ bootstrap = Bootstrap(app)
 def test():
     return render_template('SJR.html')
 
+@app.route('/algo')
+def algo():
+    return render_template('algo.html')
+
+
 @app.route('/paper?title=<title>/<int:rank>')
 def success(title, rank=99):
 
@@ -48,7 +54,7 @@ def success(title, rank=99):
     # print(request.get_json())
     # print(end_result)
     title = quote(paperBean.title)
-    # print(paperBean.citations)
+    print(type(paperBean.citations_name))
 
     refs = list(zip(paperBean.references_name,paperBean.references_url))
     cites = list(zip(paperBean.citations_name, paperBean.citations_url))
