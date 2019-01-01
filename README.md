@@ -6,19 +6,20 @@ Team Member: 宁文韬 林恺 叶梓元 卢致睿 韦青茂
 ### 1.0 完成(数据库已关闭)
 #### 最终效果展示
 ##### 首页
-![首页图片]()
+![首页图片](https://github.com/OOADOO-team/S_Paper_Ranking/blob/master/static/img/nindex.png)
 ##### 搜索结果页
-![搜索页]()
+![搜索页](https://github.com/OOADOO-team/S_Paper_Ranking/blob/master/static/img/nresults.png)
 ##### 论文详情页
-![论文详情页]()
+![论文详情页](https://github.com/OOADOO-team/S_Paper_Ranking/blob/master/static/img/ndetails.png)
 #### 概述
-(请补充项目大概描述)
+
 ##### 人员分工:
 * 后端:
    * 打分排序算法: 叶梓元 林恺
    * 数据库: 韦青茂 叶梓元
    * 论文爬虫: 卢致睿
 * 前端: 韦青茂 宁文韬
+* 项目管理: 韦青茂
 ##### 项目结构:
         Project/
             view.py  // 程序主入口
